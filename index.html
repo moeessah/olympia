@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="#f7f3ed" id="tc" name="theme-color"/>
+<script>(()=>{try{const saved=localStorage.getItem("olympia-theme"),dark=saved?saved==="dark":matchMedia("(prefers-color-scheme: dark)").matches;if(dark){document.documentElement.setAttribute("data-theme","dark");document.getElementById("tc").content="#17150f"}else{document.documentElement.removeAttribute("data-theme");document.getElementById("tc").content="#f7f3ed"}}catch(e){if(matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.setAttribute("data-theme","dark");document.getElementById("tc").content="#17150f"}}document.documentElement.classList.add("js")})();</script>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>Ageing + technology | Olympia Introductions</title>
+<meta content="Olympia Introductions: a proposed feature that helps older adults reach new people to talk to, with consent checked at every step." name="description"/>
+<meta content="Ageing + technology | Olympia Introductions" property="og:title"/>
+<meta content="Olympia Introductions: a proposed feature that helps older adults reach new people to talk to, with consent checked at every step." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d0430f'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fffdf8'/%3E%3C/svg%3E" rel="icon"/><link href="images/olympia-favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Caveat:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>*{box-sizing:border-box}
+::selection{background:var(--orange);color:var(--white)}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(calc(100% - 48px),var(--max));margin:0 auto}
+.muted{color:var(--muted)}
+.small{font-size:12px;color:var(--muted)}
+.rule{height:1px;background:var(--line)}
+.section.tight{padding:75px 0}
+h1,h2,h3,h4,p{margin-top:0}
+.lead{font-size:clamp(18px,2vw,26px);line-height:1.2;letter-spacing:-.025em}
+.max680{max-width:680px}
+/* hero */
+.hero{min-height:100svh;padding:66px 0 72px;display:flex;align-items:center;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:80px;align-items:start}
+.hero-copy{text-align:center}
+.hero-copy .lead{max-width:680px;margin:30px auto 0}
+.device-pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.hero-giant{max-width:none;font-size:clamp(45px,6.9vw,123px);line-height:.96;letter-spacing:-.06em;font-weight:700;margin-bottom:0;text-transform:uppercase}
+.hero-chip{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;overflow:hidden;margin:0 .1em;transform:translateY(-.04em)}
+.hero-chip-photo,.hero-chip-placeholder{height:.76em;width:2.15em;border-radius:.24em;background:#d8cbbc}
+.hero-chip-placeholder[data-file="images/olympia-hero-2.webp"]{width:1.075em}
+.hero-chip-photo .ph,.hero-chip-placeholder .ph{left:0;right:0;bottom:0}
+.hero-chip-emoji{height:.6em;width:.6em;border-radius:50%;background:var(--ink);color:var(--white)}
+.hero-chip-emoji .glyph{width:.46em;height:.46em}
+[data-theme=dark] .hero-chip-photo,[data-theme=dark] .hero-chip-placeholder{background:#3a352a}
+@media(max-width:680px){.hero-giant{font-size:clamp(34px,13vw,64px);letter-spacing:-.03em}
+.hero-chip-photo,.hero-chip-placeholder{width:2.4em}
+.hero-chip-placeholder[data-file="images/olympia-hero-2.webp"]{width:1.2em}}
+/* problem / decision */
+.split{display:grid;grid-template-columns:.28fr .72fr;gap:75px;align-items:start}
+.split-note{position:sticky;top:104px}
+.cards5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:44px}
+/* prototype */
+.prototype{background:var(--ink);color:var(--white)}
+.prototype-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}
+.prototype-head .note{max-width:380px;color:rgba(255,248,242,.62);font-size:12px}
+.proto-btn{width:100%;display:grid;grid-template-columns:30px 1fr;gap:10px;border:0;border-bottom:1px solid rgba(255,248,242,.1);background:transparent;color:rgba(255,248,242,.48);padding:15px 0;text-align:left;cursor:pointer}
+.proto-btn:last-child{border-bottom:0}
+.proto-btn.active{color:var(--white)}
+.proto-btn .idx{font:500 10px/1 "DM Sans",sans-serif;padding-top:2px}
+.proto-btn .label{font-size:13px}
+.proto-aside{margin-top:32px;padding:19px 0;border-top:1px solid rgba(255,248,242,.1);font-size:12px;line-height:1.5;color:rgba(255,248,242,.5)}
+.proto-window-top{display:flex;justify-content:space-between;align-items:center;padding:14px 17px;border-bottom:1px solid var(--line);font-size:11px}
+.window-brand{font-weight:700}
+.proto-kicker{font:500 9px/1.1 "DM Sans",sans-serif;color:var(--muted);letter-spacing:.11em;text-transform:uppercase;margin-bottom:12px}
+.proto-copy{font-size:14px;line-height:1.45;max-width:510px}
+.proto-card{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--white);margin-top:18px}
+.person{display:flex;gap:12px;align-items:center}
+.person strong{font-size:14px}
+.person span{display:block;font-size:10px;color:var(--muted);margin-top:3px}
+.proto-card.dark .person span{color:rgba(255,248,242,.55)}
+.proto-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.btn{border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:999px;padding:9px 12px;font-size:11px;cursor:pointer}
+.btn.ghost{background:transparent}
+.btn:disabled{opacity:.4;cursor:default}
+.side-label{font:500 9px/1.1 "DM Sans",sans-serif;letter-spacing:.11em;color:var(--muted);text-transform:uppercase;margin-bottom:14px}
+.side-row{padding:12px 0;border-top:1px solid var(--line);font-size:11px}
+.side-row strong{display:block;font-size:10px}
+.side-row span{display:block;color:var(--muted);margin-top:3px;line-height:1.35}
+.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:4px;border-top:1px solid rgba(255,248,242,.18)}
+.evidence-grid>div{position:relative;padding:34px 12px 16px}
+.evidence-grid>div:first-child{padding-left:0}
+.evidence-grid>div:last-child{padding-right:0}
+.evidence-grid>div:not(:last-child)::after{content:"";position:absolute;top:10px;bottom:10px;right:0;width:1px;background:rgba(255,248,242,.18)}
+.evidence-grid small{display:block;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,248,242,.55)}
+.evidence-grid strong{display:block;font-size:15px;line-height:1.28;letter-spacing:-.01em;margin:10px 0 6px;color:#fffdf8;font-weight:600}
+.evidence-grid span{display:block;font-size:10px;line-height:1.4;color:rgba(255,248,242,.65)}
+.evidence-grid>div.accent{background:var(--white,#fffdf8);border-right:0;border-radius:0}
+.evidence-grid .accent small{color:var(--muted)}
+.evidence-grid .accent strong{color:var(--ink)}
+.evidence-grid .accent span{color:var(--muted)}
+@media(max-width:680px){.evidence-grid{grid-template-columns:1fr;border-top:0}
+.evidence-grid>div{border-right:0;border-top:1px solid rgba(255,248,242,.18);padding:14px 0}
+.evidence-grid>div:first-child{border-top:0;padding-top:0}}
+.side-callout{margin-top:22px;padding:15px;border-radius:16px;background:var(--cream);font-size:12px;line-height:1.4}
+/* consent */
+.consent-grid{display:grid;grid-template-columns:.37fr .63fr;gap:80px;align-items:start}
+.consent-sticky{position:sticky;top:104px}
+.consent-bleed{width:100vw;margin-left:calc(50% - 50vw);margin-top:40px;padding:44px 0;border-top:1px solid rgba(255,255,255,.22)}
+.consent-bleed-inner{width:min(calc(100% - 48px),var(--max));margin:0 auto;display:flex;gap:48px;flex-wrap:wrap}
+.consent-bleed-inner p{max-width:420px;margin:0}
+.consent-divider{width:1px;align-self:stretch;flex:none;background:rgba(255,255,255,.22)}
+.layer-stack{display:grid;gap:12px;padding-right:56px}
+.layer-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.layer strong{font-size:19px;letter-spacing:-.03em}
+.layer p{font-size:12px;line-height:1.45;margin:9px 0 0;color:var(--muted)}
+.layer p.ask{font-style:italic;color:var(--ink)}
+.confidence-tag{flex:none;font:600 9px/1 "DM Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--soft);color:var(--muted);white-space:nowrap}
+.layer:nth-child(2){transform:translateX(28px);background:var(--soft)}
+.layer:nth-child(3) p{color:rgba(255,248,242,.58)}
+.layer:nth-child(3) p.ask{color:var(--white)}
+.layer:nth-child(3) .confidence-tag{background:rgba(255,248,242,.14);color:var(--white)}
+/* why match */
+.match-grid{display:grid;grid-template-columns:.4fr .6fr;gap:70px;align-items:start}
+.match-sticky{position:sticky;top:104px}
+.match-sticky h2{margin-top:14px}
+.funnel{display:grid;gap:14px}
+.funnel-band{border:1px solid var(--darkline);border-radius:26px;padding:24px}
+.funnel-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:16px}
+.funnel-head .flabel{font:500 11px/1.2 "DM Sans",sans-serif;letter-spacing:.02em;color:rgba(8,8,7,.85)}
+.funnel-head .fcount{font:600 13px/1 "DM Sans",sans-serif;letter-spacing:-.01em;color:rgba(8,8,7,.4)}
+[data-theme=dark] .funnel-head .flabel{color:rgba(255,248,242,.85)}
+[data-theme=dark] .funnel-head .fcount{color:rgba(255,248,242,.4)}
+.filter-pills{display:flex;gap:8px;flex-wrap:wrap}
+.filter-pill{font-size:11px;padding:9px 13px;border-radius:999px;background:rgba(8,8,7,.06);border:1px solid rgba(8,8,7,.12);color:rgba(8,8,7,.85)}
+[data-theme=dark] .filter-pill{background:rgba(255,248,242,.08);border-color:rgba(255,248,242,.14);color:rgba(255,248,242,.85)}
+.matrix{display:grid;grid-template-columns:1fr;gap:10px}
+.matrix-card{padding:22px;border-radius:20px;border:1px solid rgba(8,8,7,.1);background:rgba(8,8,7,.03)}
+[data-theme=dark] .matrix-card{border-color:rgba(255,248,242,.13);background:rgba(255,248,242,.07)}
+.matrix-card strong{display:block;font-size:16px}
+.matrix-card p{margin:9px 0 0;font-size:12px;line-height:1.45;color:rgba(8,8,7,.6)}
+[data-theme=dark] .matrix-card p{color:rgba(255,248,242,.6)}
+.matrix-card.miss{background:transparent;opacity:.55}
+.matrix-card.miss strong{font-size:13px;font-weight:500}
+
+/* section 02 — the loop */
+.flywheel{padding:clamp(110px,14vw,180px) 0;background:var(--paper);overflow:hidden}
+.flywheel-hero{max-width:1120px;text-align:center;margin-left:auto;margin-right:auto}
+.flywheel-lede{max-width:510px;font-size:14px;line-height:1.55;color:var(--muted);margin:26px 0 0}
+.flywheel-canvas{position:relative;margin-top:20px;min-height:170px;padding:30px 0 0}
+.flywheel-orbit-label{position:absolute;right:0;top:14px;font-size:9px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.flywheel-line{position:absolute;left:7%;right:auto;width:96px;top:71px;height:2px;background:var(--line);overflow:hidden}
+.flywheel-line i{position:absolute;left:0;top:0;display:block;width:0;height:100%;background:var(--red);transition:width 1s cubic-bezier(.16,1,.3,1) .1s}
+.flywheel-canvas.in .flywheel-line i{width:100%}
+.flywheel-step{z-index:2;min-width:0;position:relative;display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;min-height:92px;cursor:default}
+.flywheel-step:nth-child(3){margin-left:12%}
+.flywheel-step:nth-child(4){margin-left:24%}
+.flywheel-step:nth-child(5){margin-left:36%}
+.flywheel-step b{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:10px;transition:.3s}
+.flywheel-step.active b,.flywheel-step:hover b{background:var(--red);border-color:var(--red);color:#fff}
+.flywheel-step strong{display:block;font-size:clamp(16px,3vw,38px);letter-spacing:-.06em;line-height:.9;text-transform:uppercase}
+.flywheel-step span{display:block;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-top:12px;max-width:22ch;font-size:11px;line-height:1.4;color:var(--muted)}
+.flywheel-foot{align-items:end;display:grid;grid-template-columns:1.3fr .7fr;gap:12px;margin-top:60px}
+.flywheel-foot-image{min-height:340px}
+.flywheel-callout{background:#080807;color:#fff;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+.flywheel-callout small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.flywheel-callout strong{font-weight:600;display:block;font-size:clamp(22px,2.6vw,32px);line-height:1.05;letter-spacing:-.03em;margin:14px 0 10px}
+.flywheel-callout p{font-size:12px;line-height:1.5;color:rgba(255,255,255,.72);max-width:34ch;margin:0}
+@media(max-width:680px){.flywheel{padding:80px 0}
+.flywheel-canvas{margin-top:40px;padding-top:0;min-height:auto}
+.flywheel-line{left:21px;right:auto;top:0;width:1px;height:640px}
+.flywheel-line i{width:100%;height:0;transition:height 1s cubic-bezier(.16,1,.3,1) .1s}
+.flywheel-canvas.in .flywheel-line i{height:100%}
+.flywheel-orbit-label{position:static;display:block;margin:0 0 24px}
+.flywheel-step{margin-left:0!important;grid-template-columns:44px 1fr;min-height:0;padding-bottom:26px}
+.flywheel-step b{width:44px;height:44px}
+.flywheel-step strong{font-size:28px}
+.flywheel-foot{grid-template-columns:1fr}
+.flywheel-foot-image,.flywheel-callout{min-height:260px}}
+@media(prefers-reduced-motion:reduce){.flywheel-line i{transition:none;width:100%;height:100%}}
+.precedent-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.precedent-card{padding:16px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)}
+.precedent-card strong{display:block;font-size:13px;margin-bottom:4px}
+.precedent-card p{font-size:12px;color:rgba(255,255,255,.72);margin:0;line-height:1.45}
+@media(max-width:680px){.precedent-cards{grid-template-columns:1fr}}
+.matrix-card.miss p{font-size:11px}
+.operator{background:var(--white);color:var(--ink);border-radius:24px;padding:24px}
+.operator-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}
+.operator-badge{font:500 9px/1 "DM Sans",sans-serif;letter-spacing:.08em;border-radius:999px;padding:7px 9px;background:rgba(8,8,7,.06)}
+.match-person{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.match-box{padding:16px;border-radius:18px;background:var(--soft2)}
+.match-box h4{font-size:14px;margin:0 0 10px}
+.match-box p{margin:0;font-size:11px;line-height:1.45}
+.checklist{display:grid;gap:2px;margin:16px 0}
+.check-row{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line)}
+.check-row:first-child{border-top:0}
+.check-mark{flex:none;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;margin-top:1px;font-size:10px;color:var(--white);background:var(--orange)}
+.check-row div strong{display:block;font-size:12px;letter-spacing:-.01em}
+.check-row div span{display:block;font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4}
+.check-divider{margin:16px 0 4px;font:500 9px/1.2 "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.check-row.open{border-top:1px dashed var(--line)}
+.check-row.open .check-mark{background:transparent;border:1.5px solid var(--muted);color:var(--muted)}
+.check-row.open div strong{color:var(--muted);font-weight:500}
+.excluded{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.excluded span{font-size:9px;border-radius:999px;padding:6px 8px;background:rgba(8,8,7,.06);color:var(--muted)}
+.one-candidate{margin-top:4px;font-size:12px;color:rgba(8,8,7,.5)}
+[data-theme=dark] .one-candidate{color:rgba(255,248,242,.5)}
+.scale-note{margin-top:34px;padding-top:20px;border-top:1px solid var(--darkline)}
+.scale-note .hand{font-size:22px;line-height:1.15;color:#16150f}
+[data-theme=dark] .scale-note .hand{color:var(--white)}
+.scale-note p{font-size:11px;color:rgba(8,8,7,.45);margin-top:8px;max-width:280px}
+[data-theme=dark] .scale-note p{color:rgba(255,248,242,.45)}
+/* human moment */
+.call-grid{display:grid;grid-template-columns:.35fr .65fr;gap:80px;align-items:start}
+.call-title{position:sticky;top:104px;color:var(--ink)}
+.call-title h2{color:#fff}
+.call-panel{max-width:760px;border-left:1px solid var(--darkline);padding-left:30px}
+.private{margin-top:15px;font-size:11px;color:var(--muted)}
+/* pilot */
+.pilot-grid{display:grid;grid-template-columns:.66fr .34fr;gap:80px;align-items:start}
+.pilot-sticky{position:sticky;top:104px;order:2}
+.pilot-main{order:1}
+.pilot-copy{font-size:20px;line-height:1.15;letter-spacing:-.03em;max-width:520px}
+.research-status{margin-top:22px;border:1px solid rgba(255,248,242,.18);padding:18px;border-radius:18px}
+.research-status p{margin:8px 0 0;font-size:13px;line-height:1.45;color:rgba(255,248,242,.72)}
+.northstar{margin-top:28px;padding:24px;border-radius:24px;background:var(--ink);color:var(--white)}
+.northstar .eyebrow{opacity:.55}
+.northstar h3{max-width:680px;font-size:34px;margin-top:14px}
+.exclude-item{padding:14px 15px;border-radius:16px;background:rgba(255,248,242,.08);border:1px solid rgba(255,248,242,.12);font-size:11px;color:rgba(255,248,242,.7)}
+/* close */
+.close{padding:170px 0 145px;text-align:center;overflow:hidden;position:relative}
+.close:before,.close:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.close-inner{position:relative;z-index:2}
+.close p{max-width:520px;margin:35px auto 0;font-size:15px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:1000px){.hero-grid,.split,.prototype-grid,.consent-grid,.match-grid,.call-grid,.pilot-grid{grid-template-columns:1fr;gap:45px}
+.consent-bleed{gap:22px;padding:32px 0;margin-top:28px}
+.consent-bleed-inner{flex-direction:column;gap:22px}
+.consent-divider{display:none}
+.split-note,.consent-sticky,.call-title,.pilot-sticky,.match-sticky{position:static}
+.hero-visual{min-height:590px}
+.cards5{grid-template-columns:1fr 1fr}
+.proto-side{border-left:0;border-top:1px solid var(--line)}
+.match-person{grid-template-columns:1fr}
+.hero{padding:90px 0 42px}}
+@media(max-width:680px){.container{width:min(calc(100% - 28px),var(--max))}
+.section{padding:70px 0}
+.section.tight{padding:45px 0}
+h1{font-size:18vw}
+.hero{padding:85px 0 45px}
+.hero-visual{min-height:445px}
+.hero-device{width:93%;left:1%;bottom:1%;padding:19px}
+.cards5{grid-template-columns:1fr}
+.prototype-head{flex-direction:column;align-items:flex-start}
+.proto-stage{padding:9px;min-height:0}
+.proto-main{padding:24px}
+.proto-side{padding:24px}
+.proto-title{font-size:36px}
+.consent-grid{gap:35px}
+.layer:nth-child(2){transform:translateX(12px)}
+.layer:nth-child(3){transform:translateX(24px)}
+.match-grid{gap:35px}
+.matrix{grid-template-columns:1fr}
+.call-panel{padding-left:18px}
+.footer-inner{flex-direction:column}}
+/* ===== Shared component styles ===== */
+:root{--paper:#f7f3ed;--ink:#080807;--muted:#706d66;--soft:#e8e2d7;--soft2:#f7f3ed;--orange:#d0430f;--cream:#f7f3ed;--red:#d0430f;--white:#fffdf8;--line:rgba(8,8,7,.14);--darkline:rgba(255,248,242,.18);--max:1420px;--red-text:#d0430f;--green:#8bbb7f;--nav-bg:rgba(247,243,237,.94)}
+[data-theme=dark]{--red-text:#d0430f;--green:#506d49;--paper:#17150f;--ink:#f7f3ed;--muted:#9c9689;--soft:#211e17;--soft2:#26221b;--white:#2a261e;--line:rgba(242,238,231,.14);--nav-bg:rgba(23,21,15,.9)}
+.section.dark,.section.red,.section.green,.footer{--ink:#080807;--white:#fffdf8;--soft:#e8e2d7;--soft2:#f7f3ed;--muted:#706d66;--line:rgba(8,8,7,.14);--red-text:#d0430f}
+.section.red{background:var(--red);color:#fff}
+.section.green{background:var(--green);color:#fff}
+.section.dark{background:#f7f7f5;color:#16150f;--darkline:rgba(8,8,7,.14)}
+[data-theme=dark] .section.dark{background:#080807;color:#fff;--darkline:rgba(255,248,242,.18)}
+.sd-muted-72{color:rgba(8,8,7,.72)}
+[data-theme=dark] .sd-muted-72{color:rgba(255,248,242,.72)}
+.sd-muted-55{color:rgba(8,8,7,.55)}
+[data-theme=dark] .sd-muted-55{color:rgba(255,248,242,.55)}
+.section.prototype{background:var(--red)}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.38;overflow-x:hidden;font-family:"DM Sans","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;transition:background-color .25s,color .25s}
+h1,h2,h3,h4{font-weight:500}
+h1{margin-bottom:30px;max-width:1100px;font-size:clamp(48px,6vw,92px);line-height:.82;letter-spacing:-.09em;font-weight:600}
+h2{font-size:clamp(48px,6.4vw,96px);line-height:.87;letter-spacing:-.07em;padding-bottom:.14em;margin-bottom:22px}
+h3{font-size:clamp(28px,3.2vw,48px);line-height:.92;margin-bottom:16px;letter-spacing:-.06em}
+.serif{font-family:"DM Sans",sans-serif;font-style:normal;font-weight:inherit;color:var(--red-text)}
+.dark .serif{color:var(--green)}
+.green .serif,.red .serif{color:#080807}
+.eyebrow{display:block;font:700 11px/1.05 "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow+h2,.eyebrow+h3,.eyebrow+p{margin-top:26px}
+.mono,.small{font-family:"DM Sans",sans-serif}
+.mono{font-weight:600}
+.green .small,.red .small,.dark .small,.green .muted{color:rgba(255,255,255,.76)}
+.green .check-divider,.red .check-divider,.dark .check-divider{color:rgba(255,255,255,.55)}
+.lead,.statement,.pilot-copy{letter-spacing:-.04em}
+.statement{font-size:clamp(34px,4.6vw,72px);line-height:.92;letter-spacing:-.07em;max-width:930px;font-weight:500}
+.statement .wash{background:none;color:#080807}
+.body{font-size:clamp(14px,1.2vw,17px);line-height:1.5;letter-spacing:-.02em}
+.section{padding:120px 0;position:relative;overflow:hidden}
+#match,#pilot{overflow:visible}
+.footer{background:#080807;color:rgba(255,248,242,.52);padding:24px 0 38px;font:500 10px/1.4 "DM Sans",sans-serif;letter-spacing:.04em}
+.nav{position:sticky;top:0;z-index:100;height:72px;background:var(--nav-bg);backdrop-filter:blur(16px)}
+.nav-inner{height:100%;width:min(1440px,calc(100% - 34px));margin:auto;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:16px}
+.brand{font-size:21px;font-weight:700;letter-spacing:-.07em}
+.nav-brand-group{display:flex;align-items:baseline;gap:12px}
+.nav-eyebrow{font:700 9px/1 "DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+@media(max-width:1000px){.nav-eyebrow{display:none}}
+.nav-links{display:flex;justify-content:flex-end;gap:28px;font-size:11px;font-weight:600}
+.nav-links a{opacity:.6;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.theme-toggle{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer;transition:transform .2s}
+.theme-toggle:hover{transform:translateY(-2px)}
+.theme-toggle svg{width:17px;height:17px}
+.theme-toggle .icon-moon,[data-theme=dark] .theme-toggle .icon-sun{display:none}
+[data-theme=dark] .theme-toggle .icon-moon{display:block}
+.nav-current-wrap{position:relative}
+.nav-current{display:flex;align-items:center;gap:9px;width:240px;padding:11px 18px;border-radius:999px;background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(208,67,15,.28);font-size:12px;font-weight:600;border:0;cursor:pointer;font-family:inherit;text-align:left;transition:box-shadow .2s}
+.nav-current:hover{box-shadow:0 10px 26px rgba(208,67,15,.36)}
+.nav-current b{font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.75);font-variant-numeric:tabular-nums;flex:none}
+.nav-current span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-chevron{flex:none;opacity:.85;transition:transform .25s ease}
+.nav-current[aria-expanded="true"] .nav-chevron{transform:rotate(180deg)}
+.nav-menu{position:absolute;top:calc(100% + 10px);right:0;width:min(300px,calc(100vw - 28px));max-height:min(92vh,480px);overflow-y:auto;display:grid;gap:1px;background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -25px rgba(8,8,7,.35);padding:6px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:200}
+.nav-menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-menu-item{display:flex;align-items:baseline;gap:11px;padding:8px 12px;border-radius:14px;font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;transition:background .15s}
+.nav-menu-item:hover{background:var(--soft)}
+.nav-menu-item .idx{font:600 10px/1 "DM Sans",sans-serif;color:var(--muted);min-width:26px;flex:none}
+.nav-menu-item .lbl{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-menu-item.active{background:var(--red);color:#fff}
+.nav-menu-item.active .idx{color:rgba(255,255,255,.75)}
+.nav-progress{position:absolute;left:0;right:0;bottom:0;height:2px}
+.nav-progress i{display:block;height:100%;width:0;background:var(--red);transition:width .12s linear}
+.btn,.btn.primary{font-weight:700}
+.btn.primary{background:var(--red);border-color:var(--red);color:var(--white)}
+.hero-device{position:absolute;left:6%;bottom:9%;width:min(64%,360px);background:var(--white);border:1px solid var(--line);border-radius:36px;box-shadow:0 40px 90px -50px rgba(8,8,7,.7);padding:20px;transform:translateY(-350px) rotate(-3deg)}
+.device-title{font-size:19px;line-height:1.2;letter-spacing:-.06em;max-width:280px;font-weight:500}
+.device-kicker{font:10px/1.1 "DM Sans",sans-serif;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px;font-weight:700}
+.device-pill{font-size:10px;padding:7px 9px;border-radius:999px;background:rgba(8,8,7,.06);font-weight:600}
+.proto-card.dark .device-pill{background:rgba(0,0,0,.3)}
+.layer,.matrix-card,.exclude-item,.proto-card,.side-callout,.operator,.match-box{border-radius:0}
+.layer{border-radius:24px;padding:24px;background:var(--white);border:1px solid var(--line);color:#080807}
+.layer:nth-child(3){transform:translateX(56px);background:var(--ink);color:#fff;border-color:transparent}
+.status{font:500 9px/1 "DM Sans",sans-serif;letter-spacing:.08em;border:1px solid currentColor;padding:6px 8px;border-radius:999px;font-weight:700}
+.pilot-number{font-size:clamp(90px,13vw,190px);font-weight:600;line-height:.76;letter-spacing:-.1em;margin:0;color:#fff}
+.section.dark .matrix-card{border-color:rgba(255,255,255,.18)}
+/* prototype: app window sits directly on the red band */
+.proto-title{font-size:42px;line-height:.92;letter-spacing:-.07em;margin-bottom:18px;font-weight:500}
+.proto-kicker,.side-label{font-weight:700}
+.proto-btn.active .label{font-weight:700}
+.proto-side{border-left:1px solid var(--line);background:var(--soft);padding:28px}
+.reason-box{margin-top:17px;padding:14px 15px;border-left:3px solid var(--orange);background:rgba(208,67,15,.06);font-size:13px;line-height:1.45;border-left-color:var(--red)}
+/* close: wordmark between two colour blocks */
+.close:before{width:32vw;height:15vw;background:var(--red);right:0;top:0;border-radius:0}
+.close:after{width:22vw;height:9vw;background:var(--green);left:0;bottom:0;border-radius:0}
+.close h2{font-size:clamp(86px,17vw,250px);margin:0;line-height:.74;letter-spacing:-.1em;font-weight:600}
+/* motion: headline wipe, once, only when JS is present */
+.js section:not(.hero) h2{clip-path:inset(0 100% 0 0);transition:clip-path 1.05s cubic-bezier(.16,1,.3,1)}
+.js section.in h2{clip-path:inset(0)}
+.js .close.in h2{clip-path:inset(-.25em -.1em -.15em -.1em)}
+@media(prefers-reduced-motion:reduce){.js section:not(.hero) h2{clip-path:none;transition:none}}
+@media(max-width:1000px){.nav-links{display:none}
+.nav-inner{grid-template-columns:1fr auto auto}
+.nav-current{width:auto;max-width:190px}}
+@media(max-width:680px){.nav-current span{display:none}
+.nav-current{padding:11px 14px}}
+/* placeholders: shared .media / .ph / .file pattern. To swap in the real asset, add class "real" and put an <img> inside. */
+.media{position:relative;overflow:hidden;background:#d8cbbc;isolation:isolate}
+.media:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#e9e0d4,#b59c84);z-index:-1}
+.media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,8,7,.32));pointer-events:none}
+.media .ph{position:absolute;left:24px;right:24px;bottom:22px;z-index:3;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.3)}
+.ph b{display:block;font-size:17px;letter-spacing:-.03em;margin-bottom:8px;font-weight:600}
+.ph span{display:block;max-width:62ch;font-size:12px;line-height:1.5;opacity:.94}
+.file{position:absolute;right:14px;top:14px;z-index:4;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#fff;background:rgba(8,8,7,.5);padding:6px 10px;border-radius:999px}
+.media.real:after,.media.real .ph,.media.real .file{display:none}
+.media.real img{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover}
+.sb-frame.media.real:after,.sb-frame.media.real .ph{display:block}
+/* captions and scenarios */
+.cap{margin-top:22px;padding:16px 18px;background:#080807;color:#fff;border-radius:18px}
+.cap-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.cap-state{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;min-width:74px}
+.cap-bars{display:flex;align-items:center;gap:3px;height:20px;flex:1}
+.cap-bars i{display:block;width:3px;height:16px;background:var(--red);border-radius:2px;animation:capbar 1s ease-in-out infinite}
+.cap-bars i:nth-child(2n){background:#f7f3ed;animation-delay:.18s}
+.cap-bars i:nth-child(3n){animation-delay:.34s}
+@keyframes capbar{50%{transform:scaleY(.22)}}
+.cap[data-s=Quiet] .cap-bars i{animation:none;transform:scaleY(.15)}
+.cap-sim{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.55}
+.cap-text{font-size:20px;line-height:1.25;letter-spacing:-.03em;margin:0;min-height:1.3em}
+.cap-text .unsure{opacity:.4;text-decoration:underline dotted;text-underline-offset:4px}
+.cap-text .fixed{animation:capfix .5s}
+@keyframes capfix{from{opacity:.4}to{opacity:1}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.two .proto-card{margin-top:0}
+.two p{font-size:15px;line-height:1.3;margin:10px 0 0;letter-spacing:-.02em}
+.proto-what{margin:26px 0 6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
+@media(max-width:680px){.two{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.cap-bars i{animation:none}
+.cap-text .fixed{animation:none}}
+/* hero photo, storyboard, call image, accessibility switches, home display */
+.hero-photo{position:absolute;right:0;top:calc(50% - 110px);transform:translateY(-50%);width:96%;aspect-ratio:3/2;height:auto}
+.hero-photo:after{background:linear-gradient(0deg,transparent 45%,rgba(8,8,7,.34))}
+.hero-photo .ph{top:22px;bottom:auto;right:130px}
+.call-media{aspect-ratio:16/9;margin:0 0 26px}
+.storyboard{margin-top:32px}
+.sb-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;border-top:1px solid var(--line);padding-top:16px;margin-bottom:16px;flex-wrap:wrap}
+.sb-spec{font-size:12px;font-weight:600;color:var(--muted)}
+.sb-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.sb-frame{aspect-ratio:4/5}
+.sb-frame:nth-child(2):before{background:linear-gradient(200deg,#eadfd0,#a98f77)}
+.sb-frame:nth-child(3):before{background:linear-gradient(160deg,#e3d8ca,#9c8672)}
+.sb-frame:nth-child(4):before{background:linear-gradient(120deg,#efe7db,#bfa78d)}
+.sb-n{position:absolute;left:16px;top:10px;z-index:4;font-size:60px;font-weight:600;letter-spacing:-.09em;line-height:.9;color:#fff}
+.sb-frame .file{top:78px;right:auto;left:16px;bottom:auto}
+.sb-frame .ph{left:16px;right:16px;bottom:16px}
+.display:before{content:"";position:absolute;top:5px;left:50%;width:6px;height:6px;border-radius:50%;background:#2a2a28;transform:translateX(-50%)}
+.display .proto-window{width:100%;border-radius:26px;box-shadow:none}
+@media(max-width:1000px){.sb-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.hero-photo{width:100%;aspect-ratio:3/2;height:auto}
+.hero-photo .ph{right:24px}
+.display{padding:9px;border-radius:28px}
+.display .proto-window{border-radius:20px}
+.sb-n{font-size:44px}
+.sb-frame .file{top:62px}}
+/* two phones: shared phone-shell chrome (near-black bezel, notch, status bar, app bar), scaled to sit inside the prototype */
+.pn-row{display:flex;justify-content:center;gap:16px;margin-top:22px;flex-wrap:wrap}
+.pn{width:214px;height:440px;background:#0a0a09;border:8px solid #0a0a09;border-radius:38px;padding:4px;box-shadow:0 22px 50px -24px rgba(8,8,7,.5)}
+.pn-screen{position:relative;height:100%;border-radius:29px;background:#f5f1ea;color:#080807;display:flex;flex-direction:column;overflow:hidden}
+.pn-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:76px;height:16px;background:#0a0a09;border-radius:0 0 12px 12px}
+.pn-status{display:flex;justify-content:space-between;padding:9px 16px 0;font-size:9px;font-weight:700;opacity:.55}
+.pn-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 0}
+.pn-logo{font-size:14px;font-weight:700;letter-spacing:-.06em}
+.pn-av{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:700;color:#fff}
+.pn-who{display:block;padding:12px 14px 0;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.pn-body{flex:1;padding:16px 14px}
+.pn-speaker{font:700 9px/1 "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px;color:var(--red)}
+.pn-speaker.person{color:#6b6861}
+.pn-wave{display:flex;gap:3px;align-items:center;height:18px;margin-bottom:12px}
+.pn-wave i{width:3px;height:14px;border-radius:2px;background:var(--red);animation:capbar 1s ease-in-out infinite}
+.pn-wave i:nth-child(2n){animation-delay:.2s}
+.pn-wave.flat i{animation:none;transform:scaleY(.15)}
+.pn-line{font-size:16px;line-height:1.2;letter-spacing:-.03em;font-weight:500;margin:0}
+.pn-chips{display:grid;gap:7px;margin-top:16px}
+.pn-chip{padding:10px 12px;border-radius:999px;background:#080807;color:#fff;font-size:11px;font-weight:700;text-align:center}
+.pn-chip.o{background:transparent;color:#080807;border:1px solid rgba(8,8,7,.3)}
+.pn-note{padding:11px 14px 16px;font-size:11px;line-height:1.35;font-weight:600;color:#6b6861;border-top:1px solid rgba(8,8,7,.1)}
+@media(prefers-reduced-motion:reduce){.pn-wave i{animation:none}}
+.green .sb-head{border-top-color:rgba(255,248,242,.3)}
+.green .sb-spec{color:rgba(255,255,255,.78)}
+.proto-nav .proto-btn{grid-template-columns:22px 1fr;padding:13px 0}
+@media(max-width:680px){.proto-nav{grid-template-columns:1fr}}
+.proto-nav{border-top:1px solid var(--darkline);border-bottom:1px solid var(--darkline);border:0;display:block;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+/* wide tablet, horizontal process, what-if right, principles bottom */
+.prototype-grid{display:grid;grid-template-columns:1fr;gap:26px;align-items:stretch}
+.proto-navhead .proto-what{margin:14px 0}
+.proto-steps{display:grid;grid-template-columns:repeat(8,1fr)}
+.proto-steps .idx{display:block;font-size:11px;margin-bottom:4px}
+.proto-stage{background:transparent;color:var(--ink);border-radius:30px;min-height:0;padding:0;display:flex;align-items:center;justify-content:flex-start;flex-direction:column}
+.display{position:relative;width:min(100%,1240px);background:#0a0a09;padding:14px;border-radius:40px;box-shadow:0 50px 100px -50px rgba(0,0,0,.6)}
+.wi-list{display:grid;gap:8px}
+.wi-btn small{font-size:9px;font-weight:500;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.wi-btn{position:relative;transition:transform .15s,border-color .15s}
+.wi-btn::after{content:"›";position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:20px;line-height:1;color:var(--red);transition:transform .15s}
+.wi-btn:hover{border-color:var(--red);transform:translateY(-1px)}
+.wi-btn:hover::after{transform:translate(3px,-50%)}
+.wi-btn.on::after{color:#fff}
+.side-hint{font-size:12px;line-height:1.4;color:var(--muted);margin:-4px 0 14px}
+.wi-btn.on{background:var(--red);color:#fff;border-color:var(--red)}
+.wi-btn.on small{color:rgba(255,255,255,.75)}
+@media(max-width:1000px){.proto-steps{grid-template-columns:repeat(4,1fr)}
+.proto-body{grid-template-columns:1fr}}
+@media(max-width:560px){.proto-steps{grid-template-columns:repeat(2,1fr)}}
+/* interface stage and speech bubbles */
+.proto-window{width:min(100%,860px);border:0;border-radius:28px;background:var(--white);overflow:hidden;box-shadow:0 50px 100px -50px rgba(0,0,0,.6)}
+.proto-main{padding:36px 36px 30px;display:grid;grid-template-columns:.8fr 1.2fr;column-gap:40px;align-content:start}
+.proto-main>*:not(.scene){grid-column:1}
+.proto-main>.scene{grid-column:2;grid-row:1/span 6}
+.proto-main .proto-title{font-size:clamp(28px,2.9vw,40px);line-height:1.02}
+.proto-main .cap{margin-top:22px}
+.proto-main .proto-actions{margin-top:18px}
+.scene .proto-card:first-child{margin-top:0}
+.say{animation:sayIn .5s var(--d,0s) both;margin-top:12px;padding:13px 16px;border-radius:18px;font-size:15px;line-height:1.3;max-width:88%}
+.say b{display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:4px}
+.say.m{background:#d0430f;color:#fff;border-bottom-left-radius:5px}
+.say.o{background:#2b2b28;color:#fff;margin-left:auto;border-bottom-right-radius:5px}
+@keyframes sayIn{from{opacity:0;transform:translateY(10px)}}
+@media(prefers-reduced-motion:reduce){.say{animation:none}}
+.proto-steps .proto-btn{display:block;width:auto;padding:14px 14px 10px 0;border:0;border-top:2px solid rgba(255,248,242,.22);color:rgba(255,248,242,.75)}
+.proto-steps .proto-btn.active{border-top-color:#fff;color:#fff}
+.proto-navhead{display:flex;align-items:center;justify-content:flex-start;margin-bottom:10px;gap:18px}
+.wi-btn{font:inherit;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:15px;cursor:pointer;color:var(--ink);display:grid;gap:6px;font-size:13px;font-weight:600}
+.wi-btn span{font-weight:600;line-height:1.25}
+@media(max-width:1000px){.proto-main{grid-template-columns:1fr}
+.proto-main>.scene{grid-column:1;grid-row:auto;margin-top:22px}}
+.proto-card.dark{background:var(--ink);color:var(--white);border-color:transparent;border-radius:22px;padding:22px}
+.proto-body{display:grid;grid-template-columns:.76fr .24fr;min-height:500px}
+.seg{display:inline-flex;background:var(--soft);border-radius:99px;padding:3px}
+.seg button{font:600 11px/1 "DM Sans",sans-serif;border:0;background:transparent;color:var(--muted);padding:8px 14px;border-radius:99px;cursor:pointer}
+.seg button.on{background:var(--ink);color:#fff}
+.layer .eg{margin-top:10px;font-weight:600;font-size:13px;color:inherit;opacity:.95}
+@media(max-width:680px){.layer-stack{padding-right:24px}}
+.layer:nth-child(3) p.eg{color:#fff}
+.hand{font-family:"Caveat","Bradley Hand","Segoe Script","Comic Sans MS",cursive;font-weight:600;letter-spacing:0}
+.hero-visual{position:relative;min-height:670px}
+.hero-hand{position:absolute;right:16px;top:6px;font-size:26px;line-height:1.05;color:var(--red);text-shadow:0 2px 14px rgba(0,0,0,.3);transform:rotate(-3deg);z-index:6;text-align:right}
+@media(max-width:1000px){.hero-hand{position:static;transform:none;margin:14px 0}}
+.founder-note{max-width:700px}
+.founder-note .body{font-size:19px;line-height:1.5;margin:0 0 18px;max-width:none}
+.fn-title{font-size:58px;line-height:1;margin:16px 0 24px;color:var(--red)}
+.fn-sign{font-size:38px;line-height:1.05;margin:30px 0 0;color:var(--red);transform:rotate(-1.5deg)}
+/* compact experience section: fit near one screen */
+#experience.section{padding:40px 0 32px}
+#experience .prototype-head{align-items:start;margin-bottom:20px}
+#experience .prototype-head h2{font-size:clamp(24px,2.6vw,32px)}
+.proto-big-title{width:100%;margin:20px 0 0;display:flex;justify-content:space-between;align-items:center;font-size:clamp(48px,9vw,150px);line-height:.85;letter-spacing:-.01em;text-transform:uppercase;font-weight:700;color:var(--white);white-space:nowrap}
+#experience .prototype-head .note{font-size:11px;line-height:1.4;max-width:320px}
+#experience .prototype-grid{gap:14px}
+#experience .display{padding:9px;border-radius:26px}
+#experience .proto-body{min-height:340px}
+#experience .proto-main{grid-template-columns:.62fr 1.38fr;column-gap:24px;padding:22px 26px 18px}
+#experience .proto-navhead{margin-bottom:6px}
+#experience .proto-steps .proto-btn{padding:9px 10px 7px 0}
+#experience .proto-aside{margin-top:14px;font-size:11px}
+#experience .wi-list{gap:6px}
+#experience .wi-btn{padding:10px 34px 10px 12px}
+/* edge-case theme */
+#protoWindow.wi-mode{background:#1c1613;color:#f4ece6}
+#protoWindow.wi-mode .window-brand{color:#f4ece6}
+#protoWindow.wi-mode .proto-window-top{border-bottom-color:rgba(244,236,230,.14)}
+#protoWindow.wi-mode .seg{background:rgba(244,236,230,.12)}
+#protoWindow.wi-mode .seg button{color:rgba(244,236,230,.55)}
+#protoWindow.wi-mode .seg button.on{background:var(--red);color:#fff}
+#protoWindow.wi-mode .proto-kicker{color:var(--red)}
+#protoWindow.wi-mode .proto-title{color:#f4ece6}
+#protoWindow.wi-mode .proto-copy{color:rgba(244,236,230,.68)}
+#protoWindow.wi-mode .proto-side{background:#241b17;border-left-color:rgba(244,236,230,.12)}
+#protoWindow.wi-mode .side-label{color:rgba(244,236,230,.5)}
+#protoWindow.wi-mode .wi-list .wi-btn{background:#2c2117;color:#f4ece6;border-color:rgba(244,236,230,.16)}
+#protoWindow.wi-mode .wi-btn small,#protoWindow.wi-mode .side-hint{color:rgba(244,236,230,.5)}
+#protoWindow.wi-mode .wi-list .wi-btn:hover{border-color:var(--red)}
+#protoWindow.wi-mode .wi-btn.on{background:var(--red);border-color:var(--red);color:#fff}
+#protoWindow.wi-mode .wi-btn.on small{color:rgba(255,255,255,.75)}
+#protoWindow.wi-mode .proto-actions .btn.ghost{border-color:rgba(244,236,230,.3);color:#f4ece6}
+#protoWindow.wi-mode .device-pill{background:rgba(244,236,230,.12);color:#f4ece6}
+#experience .proto-card.dark{padding:16px;border-radius:18px}
+#experience .say{margin-top:8px;padding:10px 13px;font-size:13px;line-height:1.25}
+#experience .reason-box{margin-top:10px;padding:10px 12px;font-size:12px;line-height:1.35}
+#experience .proto-card{margin-top:12px}
+#experience .proto-title{font-size:clamp(22px,2.2vw,30px)!important}
+#experience .proto-copy{font-size:13px;line-height:1.4;margin-top:8px}
+#experience .cap{margin-top:14px!important}
+#experience .proto-actions{margin-top:12px!important}
+#experience .device-pill,#experience .pn-row{font-size:12px}
+
+.fn{max-width:680px;margin-top:32px;background:#fffdf8;color:#2a2622;border-radius:20px;overflow:hidden}.fn summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;font:600 17px/22px "DM Sans",sans-serif}.fn summary::-webkit-details-marker{display:none}.fn summary::after{content:"";width:8px;height:8px;border-right:2px solid #8a857c;border-bottom:2px solid #8a857c;transform:rotate(45deg);transition:transform .25s}.fn[open] summary::after{transform:rotate(-135deg)}.fn-body{padding:0 22px 26px;font-size:15px;line-height:1.45;color:#57524a}.fn-body h4{font:700 12px/1.2 "DM Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a857c;margin:26px 0 10px}.fn-body ul{padding-left:18px;margin:0}.fn-body li{margin-bottom:9px}.fn-body li b{color:#2a2622;font-weight:600}.fn-body p{margin:0}#tension .split{grid-template-columns:320px 1fr}#tension .split-note{position:static}.family-frame{display:block;width:100%;height:900px;border:0;background:transparent;margin-top:24px;color-scheme:normal}.family-open{display:inline-block;margin-top:24px;font-size:12px;font-weight:600;color:#fff;border-bottom:1px solid rgba(255,255,255,.6)}@media(max-width:1000px){#tension .split{grid-template-columns:1fr}.family-frame{max-width:380px;height:1100px}}
+
+/* Section 02 frame only: Olympia Family palette (green + coral). Light = default, dark = [data-theme=dark] */
+#protoWindow{
+  --f-bg:#FCFBF9; --f-card:#F6F1E9; --f-raise:#fff; --f-t1:#1F1B18; --f-t2:#5F5851; --f-t3:#736C64; --f-sep:#E6E0D8;
+  --f-green:#6EB36D; --f-green-ink:#3A7A3A; --f-green-soft:#E3F1DC; --f-on-green:#10290F;
+  --f-coral:#E06B52; --f-coral-ink:#B8412B; --f-coral-soft:#FBDCD3; --f-apricot:#FDF3E7;
+  --f-bub-m:#6EB36D; --f-bub-m-t:#10290F; --f-bub-o:#fff; --f-bub-o-t:#1F1B18; --f-cap:#E3F1DC; --f-cap-t:#1F1B18;
+  background:var(--f-bg); color:var(--f-t1);
+}
+[data-theme=dark] #protoWindow{
+  --f-bg:#1F1C19; --f-card:#141210; --f-raise:#3A3632; --f-t1:#F4EFE8; --f-t2:#B8B0A6; --f-t3:#9C948A; --f-sep:#34302B;
+  --f-green:#8CCB8B; --f-green-ink:#8CCB8B; --f-green-soft:rgba(140,203,139,.16); --f-on-green:#0F2410;
+  --f-coral:#F0876F; --f-coral-ink:#F0876F; --f-coral-soft:rgba(240,135,111,.16); --f-apricot:#2A2622;
+  --f-bub-m:#8CCB8B; --f-bub-m-t:#0F2410; --f-bub-o:#3A3632; --f-bub-o-t:#F4EFE8; --f-cap:#2A2622; --f-cap-t:#F4EFE8;
+}
+#protoWindow .proto-window-top{border-bottom-color:var(--f-sep)}
+#protoWindow .window-brand,#protoWindow .proto-title{color:var(--f-t1)}
+#protoWindow .proto-copy{color:var(--f-t2)}
+#protoWindow .proto-kicker,#protoWindow .side-label{color:var(--f-t3)}
+#protoWindow .seg{background:var(--f-card)}
+#protoWindow .seg button{color:var(--f-t2)}
+#protoWindow .seg button.on{background:var(--f-t1);color:var(--f-bg)}
+/* conversation scene */
+#protoWindow .proto-card.dark{background:var(--f-card);color:var(--f-t1);border:1px solid var(--f-sep)}
+#protoWindow .say.m{background:var(--f-bub-m);color:var(--f-bub-m-t)}
+#protoWindow .say.o{background:var(--f-bub-o);color:var(--f-bub-o-t);border:1px solid var(--f-sep)}
+#protoWindow .say.j{background:var(--f-coral-soft);color:var(--f-t1)}
+#protoWindow .proto-card.dark .reason-box,#protoWindow .reason-box{background:var(--f-apricot)!important;border-left-color:var(--f-coral)!important;color:var(--f-t1)!important}
+#protoWindow .proto-card.dark .device-pill,#protoWindow .device-pill{background:var(--f-green-soft);color:var(--f-t1)}
+/* listening box */
+#protoWindow .cap{background:var(--f-cap);color:var(--f-cap-t)}
+#protoWindow .cap-bars i{background:var(--f-coral)}
+#protoWindow .cap-bars i:nth-child(2n){background:var(--f-green)}
+#protoWindow .cap-state{color:var(--f-green-ink)}
+/* buttons */
+#protoWindow .btn{background:var(--f-raise);color:var(--f-t1);border-color:var(--f-sep)}
+#protoWindow .btn.ghost{background:transparent}
+#protoWindow .btn.primary{background:var(--f-green);border-color:var(--f-green);color:var(--f-on-green)}
+/* difficult moments side panel + mode */
+#protoWindow .proto-side{background:var(--f-card);border-left-color:var(--f-sep);border-top-color:var(--f-sep);color:var(--f-t1)}
+#protoWindow .side-row{border-top-color:var(--f-sep)}
+#protoWindow .side-row span,#protoWindow .side-hint,#protoWindow .wi-btn small{color:var(--f-t3)}
+#protoWindow .wi-btn,#protoWindow.wi-mode .wi-list .wi-btn{background:var(--f-raise);color:var(--f-t1);border-color:var(--f-sep)}
+#protoWindow .wi-btn::after{color:var(--f-coral)}
+#protoWindow .wi-btn:hover{border-color:var(--f-coral)}
+#protoWindow .wi-btn.on,#protoWindow.wi-mode .wi-btn.on{background:var(--f-coral-soft);border-color:var(--f-coral);color:var(--f-t1)}
+#protoWindow .wi-btn.on::after{color:var(--f-coral)}
+#protoWindow .wi-btn.on small,#protoWindow.wi-mode .wi-btn.on small{color:var(--f-coral-ink)}
+#protoWindow.wi-mode{background:var(--f-bg);color:var(--f-t1)}
+#protoWindow.wi-mode .window-brand,#protoWindow.wi-mode .proto-title{color:var(--f-t1)}
+#protoWindow.wi-mode .proto-copy{color:var(--f-t2)}
+#protoWindow.wi-mode .proto-kicker{color:var(--f-coral-ink)}
+#protoWindow.wi-mode .proto-window-top{border-bottom-color:var(--f-sep)}
+#protoWindow.wi-mode .seg{background:var(--f-card)}
+#protoWindow.wi-mode .seg button{color:var(--f-t2)}
+#protoWindow.wi-mode .seg button.on{background:var(--f-t1);color:var(--f-bg)}
+#protoWindow.wi-mode .proto-side{background:var(--f-card);border-left-color:var(--f-sep)}
+#protoWindow.wi-mode .side-label{color:var(--f-t3)}
+#protoWindow.wi-mode .wi-btn small,#protoWindow.wi-mode .side-hint{color:var(--f-t3)}
+#protoWindow.wi-mode .proto-actions .btn.ghost{border-color:var(--f-sep);color:var(--f-t1)}
+#protoWindow.wi-mode .device-pill{background:var(--f-green-soft);color:var(--f-t1)}
+/* phone mock avatars (inline colours) */
+#protoWindow .pn-av[style*="d0430f"]{background:var(--f-coral)!important}
+#protoWindow .pn-av[style*="8bbb7f"]{background:var(--f-green)!important;color:var(--f-on-green)}
+#protoWindow .pn-speaker{color:var(--f-coral-ink)}
+#protoWindow .pn-wave i{background:var(--f-coral)}
+#protoWindow .pn-wave i:nth-child(2n){background:var(--f-green)}
+#protoWindow .pn-chip{background:var(--f-green);color:var(--f-on-green)}
+#protoWindow .pn-chip.o{background:transparent;color:#080807;border-color:rgba(8,8,7,.3)}
+
+/* Difficult moments: green-tinted version of the same frame (not dark) */
+#protoWindow.wi-mode{--f-bg:#EAF4E4;--f-card:#DDEBD5;--f-raise:#fff;--f-sep:#C9DCC0;--f-cap:#fff;
+  background:var(--f-bg);color:var(--f-t1)}
+[data-theme=dark] #protoWindow.wi-mode{--f-bg:#1A231A;--f-card:#141B14;--f-raise:#2A362A;--f-sep:#2F3F2F;--f-cap:#222D22;
+  background:var(--f-bg);color:var(--f-t1)}
+#protoWindow.wi-mode .wi-btn.on{background:var(--f-green);border-color:var(--f-green);color:var(--f-on-green)}
+#protoWindow.wi-mode .wi-btn.on small{color:var(--f-on-green);opacity:.75}
+#protoWindow.wi-mode .wi-btn.on::after{color:var(--f-on-green)}
+
+/* Phone mockups: Family prototype look (soft tone card, drifting wave, pill buttons) */
+#protoWindow .pn{--wavemask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40'%3E%3Cpath d='M0 22C30 22 42 9 72 12S112 31 142 26 188 5 218 14 258 33 288 24 338 8 366 19 392 22 400 22' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background:#111;border-color:#111;border-radius:44px;padding:3px;box-shadow:0 24px 50px -26px rgba(31,27,24,.55)}
+#protoWindow .pn-screen{--p-bg:#F4F1EC;--p-card:#fff;--p-t1:#1F1B18;--p-t2:#5F5851;--p-t3:#736C64;--p-sep:#E6E0D8;--p-pill:rgba(31,27,24,.07);
+  --p-g:#6EB36D;--p-gink:#3A7A3A;--p-gwash:rgba(110,179,109,.22);--p-c:#E06B52;--p-cink:#B8412B;--p-cwash:rgba(224,107,82,.17);--p-on:#10290F;
+  background:var(--p-bg);color:var(--p-t1);border-radius:36px}
+[data-theme=dark] #protoWindow .pn-screen{--p-bg:#141210;--p-card:#1F1C19;--p-t1:#F4EFE8;--p-t2:#B8B0A6;--p-t3:#9C948A;--p-sep:#34302B;--p-pill:rgba(255,255,255,.09);
+  --p-g:#8CCB8B;--p-gink:#8CCB8B;--p-gwash:rgba(140,203,139,.18);--p-c:#F0876F;--p-cink:#F0876F;--p-cwash:rgba(240,135,111,.16);--p-on:#0F2410}
+#protoWindow .pn-notch{top:7px;width:58px;height:17px;border-radius:12px;background:#111}
+#protoWindow .pn-status{padding:11px 20px 0;font-size:10px;font-weight:700;opacity:1;color:var(--p-t1)}
+#protoWindow .pn-bar{padding:16px 14px 0}
+#protoWindow .pn-logo{color:var(--p-t1)}
+#protoWindow .pn-who{padding:2px 14px 0;font-size:11px;font-weight:500;letter-spacing:0;text-transform:none;opacity:1;color:var(--p-t3)}
+#protoWindow .pn-body{padding:12px 12px 0;display:flex;flex-direction:column;gap:12px;min-height:0}
+/* tone card */
+#protoWindow .pn-hero{--pw:var(--p-g);--pwash:var(--p-gwash);--ptag:var(--p-gwash);--ptagc:var(--p-gink);
+  position:relative;overflow:hidden;border-radius:20px;padding:13px 13px 34px;
+  background:linear-gradient(to top,var(--pwash),transparent 68%),var(--p-card)}
+#protoWindow .pn-hero.person{--pw:var(--p-c);--pwash:var(--p-cwash);--ptag:var(--p-cwash);--ptagc:var(--p-cink)}
+#protoWindow .pn-hero.mute{--pw:var(--p-t3);--pwash:rgba(120,110,100,.12)}
+#protoWindow .pn-speaker{display:inline-block;margin:0 0 9px;padding:3px 9px;border-radius:999px;background:var(--ptag);color:var(--ptagc);font:700 9px/1.3 "DM Sans",sans-serif;letter-spacing:.1em}
+#protoWindow .pn-line{font-size:15px;line-height:1.28;letter-spacing:-.015em;font-weight:600;color:var(--p-t1);margin:0}
+#protoWindow .pn-wv{position:absolute;left:0;right:0;bottom:9px;height:20px;background:var(--pw);opacity:.75;
+  -webkit-mask:var(--wavemask) 0 0/220px 20px repeat-x;mask:var(--wavemask) 0 0/220px 20px repeat-x;animation:pnDrift 22s linear infinite}
+#protoWindow .pn-hero.flat .pn-wv,#protoWindow .pn-hero.mute .pn-wv{animation:none;opacity:.28}
+@keyframes pnDrift{to{-webkit-mask-position:-220px 0;mask-position:-220px 0}}
+@media(prefers-reduced-motion:reduce){#protoWindow .pn-wv{animation:none}}
+/* pill buttons */
+#protoWindow .pn-chips{margin-top:0;gap:6px}
+#protoWindow .pn-chip{padding:0 12px;min-height:36px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--p-g);color:var(--p-on);font-size:12px;font-weight:600;border:0}
+#protoWindow .pn-chip.o{background:var(--p-pill);color:var(--p-t1);border:0}
+/* caption */
+#protoWindow .pn-note{margin-top:auto;padding:10px 14px 14px;border-top:0;font-size:10.5px;line-height:1.35;font-weight:500;color:var(--p-t3);display:flex;gap:7px;align-items:flex-start}
+#protoWindow .pn-note::before{content:"";flex:none;width:6px;height:6px;margin-top:4px;border-radius:50%;background:var(--p-g)}
+
+/* Section 02 frame: liquid-glass + soft shadows from the Family prototype, tuned for legibility */
+#protoWindow{--f-green-ink:#2F6A2F;--g-fill:rgba(255,255,255,.62);--g-hi:rgba(255,255,255,.85);--g-ring:rgba(255,255,255,.55);--g-shadow:rgba(40,60,30,.28);--f-ink:#14110F}
+[data-theme=dark] #protoWindow{--g-fill:rgba(255,255,255,.09);--g-hi:rgba(255,255,255,.2);--g-ring:rgba(255,255,255,.09);--g-shadow:rgba(0,0,0,.5);--f-ink:#F4EFE8}
+#protoWindow{box-shadow:0 40px 80px -46px rgba(31,27,24,.55),0 2px 6px rgba(31,27,24,.06)}
+/* glass needs colour behind it: soft green / apricot / coral glow on the chat area */
+#protoWindow .proto-card.dark{
+  background:radial-gradient(120% 60% at 0% 0%,rgba(110,179,109,.22),transparent 60%),radial-gradient(90% 55% at 100% 100%,rgba(243,185,138,.28),transparent 60%),var(--f-card);
+  box-shadow:inset 0 1px 0 var(--g-hi)}
+[data-theme=dark] #protoWindow .proto-card.dark{
+  background:radial-gradient(120% 60% at 0% 0%,rgba(140,203,139,.14),transparent 60%),radial-gradient(90% 55% at 100% 100%,rgba(240,135,111,.10),transparent 60%),var(--f-card)}
+/* Olympia = glass. Margaret = solid green (keeps contrast) with a soft lift */
+#protoWindow .say.o{background:var(--g-fill);color:var(--f-ink);border:0;
+  -webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);
+  box-shadow:inset 0 1px 0 var(--g-hi),inset 0 0 0 1px var(--g-ring),0 12px 24px -18px var(--g-shadow)}
+#protoWindow .say.m{background:linear-gradient(160deg,#7cc07a,#63a862);color:#10210E;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 12px 22px -16px rgba(47,106,47,.55)}
+[data-theme=dark] #protoWindow .say.m{background:linear-gradient(160deg,#9bd89a,#83c482);color:#0B1F0B}
+#protoWindow .say.j{color:var(--f-ink);box-shadow:inset 0 1px 0 var(--g-hi),0 12px 22px -18px rgba(184,65,43,.4)}
+/* small speaker labels: full-strength ink so they stay readable on green */
+#protoWindow .say b{opacity:1;color:inherit;font-weight:700;letter-spacing:.1em}
+#protoWindow .say.o b{color:var(--f-green-ink)}
+[data-theme=dark] #protoWindow .say.o b{color:#8CCB8B}
+/* listening box */
+#protoWindow .cap{background:linear-gradient(to top,rgba(110,179,109,.22),transparent 70%),var(--g-fill);color:var(--f-ink);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);
+  box-shadow:inset 0 1px 0 var(--g-hi),inset 0 0 0 1px var(--g-ring),0 14px 28px -20px var(--g-shadow)}
+#protoWindow .cap-sim{opacity:.75}
+/* segmented control + buttons + side items */
+#protoWindow .seg{background:var(--g-fill);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--g-ring)}
+#protoWindow .btn.primary{box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 20px -12px rgba(47,106,47,.6)}
+#protoWindow .wi-btn,#protoWindow.wi-mode .wi-list .wi-btn{background:var(--g-fill);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  box-shadow:inset 0 1px 0 var(--g-hi),0 10px 20px -16px var(--g-shadow)}
+#protoWindow .proto-card.dark .reason-box,#protoWindow .reason-box{box-shadow:0 10px 20px -16px rgba(160,100,46,.35)}
+/* Difficult moments: readable text on the green backgrounds */
+#protoWindow.wi-mode .proto-title,#protoWindow.wi-mode .window-brand{color:var(--f-ink)}
+#protoWindow.wi-mode .proto-copy{color:var(--f-t2)}
+[data-theme=dark] #protoWindow.wi-mode{--f-t2:#C9D6C5;--f-t3:#AAB8A6}
+/* phones: same glass tone card */
+#protoWindow .pn-hero{box-shadow:inset 0 1px 0 var(--g-hi),0 12px 24px -18px var(--g-shadow)}
+
+#protoWindow .proto-kicker .wi-q{font-weight:800;color:var(--f-coral-ink);letter-spacing:.11em;text-transform:uppercase;margin-right:2px}
+
+/* Selected difficult-moment card: the glass rule was overriding the solid green fill, leaving dark text on a dark card in dark mode. Solid fill + dark ink, both themes. */
+#protoWindow.wi-mode .wi-list .wi-btn.on{background:var(--f-green);border-color:var(--f-green);color:var(--f-on-green);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 20px -14px rgba(0,0,0,.55)}
+#protoWindow.wi-mode .wi-list .wi-btn.on span{color:var(--f-on-green)}
+#protoWindow.wi-mode .wi-list .wi-btn.on small{color:var(--f-on-green);opacity:.85}
+#protoWindow.wi-mode .wi-list .wi-btn.on::after{color:var(--f-on-green)}
+/* unselected cards in dark mode: keep label + title clearly readable */
+[data-theme=dark] #protoWindow.wi-mode .wi-list .wi-btn:not(.on){color:var(--f-t1)}
+[data-theme=dark] #protoWindow.wi-mode .wi-list .wi-btn:not(.on) small{color:var(--f-t2)}
+/* Dark mode: lighter green for accent text on dark sections (the shared --green stays dark for green section backgrounds) */
+[data-theme=dark] .dark .serif{color:#7fae74}
+#protoWindow.hold .say,#protoWindow.hold .cap-bars i,#protoWindow.hold .pn-wv,#protoWindow.hold .pn-wave i{animation-play-state:paused}
+/* Caption card: replace the long green fade with a very tight gradient (two shades close together) */
+#protoWindow .cap{background:linear-gradient(180deg,rgba(110,179,109,.10),rgba(110,179,109,.17)),var(--g-fill)}
+[data-theme=dark] #protoWindow .cap{background:linear-gradient(180deg,rgba(140,203,139,.07),rgba(140,203,139,.12)),var(--g-fill)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner"><div class="nav-brand-group"><a class="brand" href="#top">olympia</a><span class="nav-eyebrow">Feature Pitch</span></div><nav aria-label="Key sections" class="nav-links"><a href="#tension">The Problem</a><a href="#experience">The Experience</a><a href="#reach">How Far It Goes</a><a href="#pilot">The Pilot</a></nav><button aria-label="Toggle dark mode" class="theme-toggle" id="themeToggle" type="button"><svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-moon" fill="currentColor" viewbox="0 0 24 24"><path d="M20.4 14.7A8.5 8.5 0 1 1 9.3 3.6a7 7 0 0 0 11.1 11.1Z"></path></svg></button><div class="nav-current-wrap" id="navCurrentWrap"><button aria-controls="navMenu" aria-expanded="false" aria-haspopup="true" class="nav-current" id="navCurrentBtn" type="button"><b id="ncI">Intro</b><span id="ncL">Start here</span><svg aria-hidden="true" class="nav-chevron" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M6 9l6 6 6-6"></path></svg></button><div aria-label="Jump to section" class="nav-menu" id="navMenu" role="menu">
+<a class="nav-menu-item" data-id="top-hero" href="#top-hero" role="menuitem"><span class="idx">Intro</span><span class="lbl">Start here</span></a>
+<a class="nav-menu-item" data-id="tension" href="#tension" role="menuitem"><span class="idx">01</span><span class="lbl">The problem</span></a>
+<a class="nav-menu-item" data-id="experience" href="#experience" role="menuitem"><span class="idx">02</span><span class="lbl">The Introductions feature in use</span></a>
+<a class="nav-menu-item" data-id="loop" href="#loop" role="menuitem"><span class="idx">03</span><span class="lbl">The loop</span></a>
+<a class="nav-menu-item" data-id="reach" href="#reach" role="menuitem"><span class="idx">04</span><span class="lbl">How far it goes</span></a>
+<a class="nav-menu-item" data-id="pilot" href="#pilot" role="menuitem"><span class="idx">05</span><span class="lbl">Pilot</span></a>
+<a class="nav-menu-item" data-id="consent" href="#consent" role="menuitem"><span class="idx">06</span><span class="lbl">Consent</span></a>
+<a class="nav-menu-item" data-id="match" href="#match" role="menuitem"><span class="idx">07</span><span class="lbl">How one person is chosen</span></a>
+<a class="nav-menu-item" data-id="human" href="#human" role="menuitem"><span class="idx">08</span><span class="lbl">The handoff</span></a>
+<a class="nav-menu-item" data-id="note" href="#note" role="menuitem"><span class="idx">09</span><span class="lbl">A note for you</span></a>
+<a class="nav-menu-item" data-id="close" href="#close" role="menuitem"><span class="idx">End</span><span class="lbl">Close</span></a>
+</div></div></div><div class="nav-progress"><i id="ncP"></i></div></header>
+<main id="top">
+<section class="hero" data-label="Start here" id="top-hero">
+<div class="container hero-copy">
+<h1 class="hero-giant">Designing features<span aria-hidden="true" class="hero-chip hero-chip-placeholder media" data-file="images/olympia-hero-3.webp"><div class="ph"></div></span>for people<span aria-hidden="true" class="hero-chip hero-chip-photo media" data-file="images/olympia-hero.webp"><div class="ph"></div></span>who would rather just <span class="serif">talk</span><span aria-hidden="true" class="hero-chip hero-chip-placeholder media" data-file="images/olympia-hero-2.webp"><div class="ph"></div></span></h1>
+<p class="lead" style="font-size:clamp(13.21px,1.472vw,19.09px)"><strong>The idea:</strong> a conversation with Olympia can lead to meeting someone new. When something a person says points to someone they’d enjoy talking to, Olympia suggests one person, asks both, makes the hello, then steps away.</p>
+<p class="hand" style="margin-top:18px;font-size:22px;line-height:1.1">(Working idea. I expect parts of this to change.)</p>
+<p class="small" style="margin-top:22px;font-size:13px">Working assumption: Introductions comes after Olympia is in more homes. A supervised pilot with 100–500 people first, then a wider pilot of 50k–100k users once it proves itself.</p>
+</div>
+</section>
+<section class="section tight green" data-label="The problem" id="tension">
+<div class="container split">
+<div class="split-note"><span class="eyebrow">01 · THE PROBLEM</span><p class="hand" style="margin-top:18px;font-size:18px;line-height:1.1">(The assumption I would test first: a daily chat with Olympia and a hello from a person each give something different.)</p><iframe allowtransparency="true" class="family-frame" data-src="olympiafamily.html?view=phone&amp;v=3" id="familyPhone" scrolling="no" title="Olympia Family prototype"></iframe></div>
+<div>
+<p class="statement">Someone can talk to Olympia every day <span class="wash">and still have almost no human contact.</span></p>
+<p class="body max680" style="margin:28px 0 0">Family may live far away. Friends have moved, become less mobile, or died. Retirement and bereavement quietly shrink the number of reasons to leave the house or pick up the phone.</p>
+<p class="body max680" style="margin:18px 0 0">Loneliness is personal, so Olympia listens and leaves the diagnosing to others. When something a person says points to a chance to reach out, she offers it once, gently.</p>
+<a class="family-open" href="olympiafamily.html?v=3" rel="noopener" target="_blank">Open full prototype ↗</a>
+<p class="body max680" style="margin:52px 0 0;font-size:22px;font-weight:600;letter-spacing:-.03em;line-height:1.2">Build the first real hello.</p>
+<p class="body max680" style="margin:18px 0 0">Social platforms ask the person to do the work: open an app, write a profile, browse strangers, message, coordinate. Olympia was designed to fade into the background, so the hello comes through the voice they already trust.</p>
+<div class="precedent-row" style="margin-top:32px">
+<span class="side-label" style="color:rgba(255,255,255,.9)">PRECEDENT</span>
+<div class="precedent-cards">
+<div class="precedent-card"><strong>Age UK</strong><p>A long-running phone-befriending service.</p></div>
+<div class="precedent-card"><strong>Stitch</strong><p>Interest-based matching for the over-50s.</p></div>
+</div>
+<p class="small" style="margin-top:14px;color:rgba(255,255,255,.9);max-width:560px">What is different here: the introducer already knows the person, so the profile step disappears.</p>
+</div>
+<details class="fn"><summary>How I decided: notes on the family app</summary><div class="fn-body">
+<h4>The promise</h4>
+<p>Olympia is a voice-first companion in an older adult's home. This app is the family's screen. It tells them when something needs attention and leaves the day's conversations with Margaret. Every screen carries one promise: peace of mind that keeps her privacy whole.</p>
+<h4>Three decisions that shaped it</h4>
+<ul>
+<li><b>Memory Book belongs to Margaret.</b> The stories are in her own words and she decides what is kept, by voice. Family reads and listens, and she remains the only author.</li>
+<li><b>Alerts record who reached out.</b> Each card says who acted and how, with their initial. Read receipts would turn a calm app into a scoreboard between siblings, so the record lists who reached out. Who looked stays private. It is permanent because three people share it, and anything older than a week settles into History.</li>
+<li><b>Olympia always says what she is doing.</b> A wellness check moves from "Olympia is checking in" to either "Margaret is fine" or "Couldn't reach her", and a failure always offers Try again and Call Margaret, so the family has a next step in every state.</li>
+</ul>
+<details class="fn"><summary>More decisions</summary><ul><li><b>Recording is off by default.</b> If someone separately agrees to a recording, it stays off this screen too. Today is a signal, and Margaret's words stay between her and the people she talks to.</li><li><b>Alerts keeps its plain name.</b> Alerts is the one tab someone must find fast in an emergency, so speed beats a calmer name like "Updates."</li><li><b>The badge lights for urgent alone.</b> A badge promises that something deserves an interruption. Reserving it for urgent keeps that promise believable, and amber items wait inside the tab.</li><li><b>Call Margaret lives on Today.</b> Inside an alert it would suggest that calling is for emergencies. On Today it says a check-in is something families do on any day.</li><li><b>Introductions lives inside Today.</b> A tab would frame it as a signal that rises and falls. Inside Today it informs, and the wording says what happened and stops there.</li><li><b>Family splits into two decisions.</b> My notifications affect only me. Who has access affects Margaret and the whole family, so adding someone routes through her approval.</li><li><b>One trust explainer, in Settings.</b> "Urgent always reaches family, and Margaret is told at the same moment" should be findable in one place.</li><li><b>Worth a look items open a note.</b> Wellness check and mark as handled are reserved for urgent alerts on purpose.</li><li><b>Wellness check is per person; mark as handled is per alert.</b> Two urgent incidents are two things to acknowledge, but only one check-in with Margaret should be in flight. Requests need a confirm step, and a cooldown after each result.</li><li><b>Handled asks how, in one tap.</b> Marking handled opens a short sheet: a quick pick, and an optional note. The card then reads "David called her", so the next sibling knows whether to act. Notes are for family only for now.</li><li><b>Escalation is visible step by step.</b> If a care contact is set and Margaret doesn't answer, Olympia calls them and the family sees calling, answered or didn't answer, then done. If they don't answer either, the next move is the family's: call them, call Margaret, or try again.</li><li><b>A push opens the alert it is about.</b> Tapping an urgent push opens that alert, and a wellness result opens the alert that asked. Neither drops you on the list.</li><li><b>The care contact is set by the Organizer, seen by everyone.</b> It puts a third party in the loop about Margaret, so like adding a person, it is one decision for the whole family and Margaret is told who it is. Members can see who Olympia will try next, so nobody is surprised by the call. They cannot change it.</li><li><b>Anyone with access can mark an alert handled.</b> No approval step in an emergency. Only the Organizer can add or remove people, and Margaret can remove anyone by telling Olympia. Two roles only, Organizer and Member.</li><li><b>Settings is one gear.</b> The Family tab holds the circle (people, roles, care contact). The gear opens My settings, which are personal: alert cadence, account, help.</li><li><b>Today shows how she is doing.</b> Last spoke with Olympia, a good time to call, something to ask about from her own Memory Book, and who last called. Each one helps family connect. None of them says what she said.</li><li><b>The intro says the promise before anything else.</b> Three screens: know she is okay, hear if something is wrong, and she stays in charge.</li><li><b>Tab says Memories, header says Memory Book.</b> Four tabs leave no room for the full name. A guess to test at real sizes with real users.</li>
+<li><b>Severity is a fine outline and a tinted chip.</b> Red marks urgent and amber marks worth a look, on plain cards like everything else. Handled turns green and quiet.</li>
+<li><b>Time zones travel with the family.</b> When the viewer is abroad, Today adds a line such as "6:40pm where Margaret is".</li>
+</ul></details>
+<h4>What the research says</h4>
+<ul>
+<li>Most caregiver apps are care hubs: task lists, vitals, shared logs. Reviews frame the real problem as handoffs, where information gets lost between people. Olympia Family stays small and answers one question well.</li>
+<li>Older adults and their adult children describe privacy in similar terms and weigh monitoring differently. Older adults will trade some privacy for independence when they help decide (Gerontologist, 2020).</li>
+<li>One fall-detection pilot ended when the woman it protected switched it off after false alarms brought unannounced visits. Alerts that cry wolf lose the home, so severity stays rare and trustworthy.</li>
+<li>In week one I would sit with an older adult at home, watch how she responds when Olympia mentions a family check-in, and rework this section around what I see.</li>
+</ul>
+<h4>Visual system</h4>
+<p>402 x 874 frame, SF Pro, 4 pt spacing, 44 pt tap targets. Green marks anything tappable. Red and amber are reserved for alert severity, and handled states always pair colour with a tick or a word. A studio owns your visual identity, so this stays to what the prototype needed.</p>
+<h4>Still open</h4>
+<ul>
+<li>The 9 second cooldown and the confirm step are my best guesses, and real users will show where they belong.</li>
+<li>Push suppression checks the open alert screen only. A backgrounded app or a second device would need its own signal.</li>
+<li>Every resolution in the prototype (Margaret, the care contact) is a timer standing in for a real conversation or call, driven by the demo controls.</li>
+<li>Access shows who can see Margaret's world and treats what each person is told as one setting. A son who wants falls without mood dips has no way to say so yet, and I would hold that until families show which categories they want to split.</li>
+<li>Handled notes are family-only, with four quick picks (Called her, Spoke to a neighbour, Visited, No action needed) and an optional one-line note. Open question: should Margaret see them?</li>
+<li>Should family ever suggest a Memory Book topic? It could work like the wellness check, with Olympia raising it and Margaret unaware of who asked. The risk is added pressure on a book that is meant to be hers.</li>
+</ul></div></details>
+</div>
+</div>
+</section>
+<section class="section prototype red" data-label="The Introductions feature in use" id="experience">
+<div class="container">
+<div class="prototype-head"><div><span class="eyebrow" style="opacity:.55">02 · THE CONNECTIONS FEATURE IN USE</span></div></div>
+<div class="proto-big-title"><span>The</span><span>process</span></div>
+<div class="prototype-grid">
+<div class="proto-nav" id="protoNav"></div>
+<div class="proto-stage"><div class="display"><div class="proto-window" id="protoWindow"></div></div></div>
+<div class="proto-aside">Scripts and scenarios</div>
+</div>
+</div>
+</section>
+<section class="section flywheel" data-label="The loop" id="loop">
+<div class="container">
+<div class="flywheel-hero">
+<span class="eyebrow">03 · THE <span style="color:var(--red)">LOOP</span></span>
+<h2>A good hello</h2>
+</div>
+<div class="flywheel-canvas">
+<div class="flywheel-step active" data-fly="0"><b>01</b><div><strong>NOTICE</strong><span>Something a person says points to someone they'd enjoy talking to.</span></div></div>
+<div class="flywheel-step" data-fly="1"><b>02</b><div><strong>SUGGEST</strong><span>Olympia suggests one person.</span></div></div>
+<div class="flywheel-step" data-fly="2"><b>03</b><div><strong>ASK BOTH</strong><span>She asks each person separately, out loud.</span></div></div>
+<div class="flywheel-step" data-fly="3"><b>04</b><div><strong>HELLO</strong><span>She makes the hello, then steps away.</span></div></div>
+<div class="flywheel-step" data-fly="4"><b>05</b><div><strong>CONTINUE?</strong><span>If both want to talk again, she helps arrange it.</span></div></div>
+</div>
+<div class="flywheel-foot">
+<div class="flywheel-foot-image media" data-file="images/olympia-loop-still.webp"><div class="file">olympia-loop-still.webp</div><div class="ph"><b>The loop, seen end to end</b><span>Notice, suggest, ask both, hello, continue.</span></div></div>
+<div class="flywheel-callout"><small>THE QUESTION</small><strong>The question is “do you want another one?”</strong><p>Each person is asked privately and separately. A good call and a wanted call can differ, so the loop continues once both answers are yes.</p></div>
+</div>
+</div>
+</section>
+<section class="section dark" data-label="How far it goes" id="reach">
+<div class="container split">
+<div class="split-note"><span class="eyebrow" style="opacity:.55">04 · HOW FAR A CONNECTION CAN GO</span><h2 style="margin-top:14px;font-size:clamp(28px,3.4vw,44px)">The product should widen one careful step at a time, <span class="serif">from someone she knows to a whole community.</span></h2></div>
+<div>
+<div class="cards5">
+<div class="matrix-card"><span class="eyebrow" style="opacity:.5">01</span><strong style="margin-top:10px">Someone I know</strong><p>“Would you like me to call your daughter?” The existing relationship, made easier.</p></div>
+<div class="matrix-card"><span class="eyebrow" style="opacity:.5">02</span><strong style="margin-top:10px">A shared interest</strong><p>“I know someone who loves gardening too.” Grounded in something real about them.</p></div>
+<div class="matrix-card"><span class="eyebrow" style="opacity:.5">03</span><strong style="margin-top:10px">A recurring friendship</strong><p>“Jean's free Thursday, shall I arrange your usual call?” The relationship, remembered.</p></div>
+<div class="matrix-card"><span class="eyebrow" style="opacity:.5">04</span><strong style="margin-top:10px">A small group</strong><p>“Three people like talking about old films. Want to join them Thursday?”</p></div>
+<div class="matrix-card"><span class="eyebrow" style="opacity:.5">05</span><strong style="margin-top:10px">Community</strong><p>“There's a local gardening group meeting next week, want me to find out more?”</p></div>
+</div>
+<p class="hand" style="margin-top:28px;font-size:18px;opacity:.85">(This pilot stops at introducing a group. A first in-person meeting brings its own questions of trust, and a later pilot can take those on.)</p>
+</div>
+</div>
+</section>
+<section class="section red" data-label="Pilot" id="pilot">
+<div class="container pilot-grid">
+<div class="pilot-sticky"><span class="eyebrow">05 · PILOT: LEARN BEFORE YOU SCALE</span><p class="pilot-number">100–500</p><p class="small">people in a curated early cohort</p><p class="small" style="margin-top:14px;max-width:260px">The first group only needs to be large enough to get a handful of matches right.</p></div>
+<div class="pilot-main">
+<p class="pilot-copy">The first test is a service test. Before anyone is matched, older adults help shape the language, how permission gets asked for, matching rules and failure cases. Then a small supervised cohort tries the whole thing, start to finish. Calls are recorded only if someone separately agrees.</p>
+<div class="research-status"><div class="eyebrow">Co-design before build</div><p><strong>Create a small lived-experience council of around 8–12 older adults before the service is built.</strong> Arlene Astell, one of your advisors, is a leading expert in co-creating ageing technology with older people. This council borrows the same idea. Work through short interviews, role-play, prototype run-throughs and failure cases. Give participants prototypes, scripts and failure cases early enough that their comments can change the requirements.</p><p style="margin-top:12px">Bring together people with different ages, living situations, digital confidence, communication needs, cultural backgrounds and experiences of social connection. Include people who already have rich social lives alongside people who sometimes feel isolated.</p><div class="check-divider" style="margin-top:18px">THE USEFUL TEST</div><p style="margin-top:12px"><strong>A prototype passes this test when comments like these change something:</strong></p><div class="evidence-grid"><div><small>OVERSHARING</small><strong>“Why does Olympia need to know that?”</strong><span>Take that information out.</span></div><div><small>AWKWARD ASK</small><strong>“I would find that question awkward.”</strong><span>Rewrite the question.</span></div><div class="accent"><small>WANTS OUT</small><strong>“I would want an easier way to stop this.”</strong><span>Strengthen the stop rule.</span></div></div></div>
+<div class="northstar"><div class="eyebrow">Evidence</div><h3>After the first call, did both people independently want another one?</h3><p style="font-size:12px;color:rgba(255,248,242,.58);margin:0;max-width:620px">It only counts when both people say, privately, that they’d want another one. A starting target to agree with the council: at least 7 in 10 pairs say yes to a second call.</p><div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:16px"><span class="exclude-item" style="padding:8px 12px;font-size:10px;border-radius:999px">Felt in control</span><span class="exclude-item" style="padding:8px 12px;font-size:10px;border-radius:999px">Understood why they were matched</span><span class="exclude-item" style="padding:8px 12px;font-size:10px;border-radius:999px">Felt accurately represented</span><span class="exclude-item" style="padding:8px 12px;font-size:10px;border-radius:999px">Would use Introductions again</span></div></div>
+</div>
+</div>
+</section>
+<section class="section green" data-label="Consent" id="consent">
+<div class="container consent-grid">
+<div class="consent-sticky"><span class="eyebrow">06 · CONSENT IS PART OF THE PRODUCT</span><h2>Before a memory becomes part of a match, <span class="serif">ask.</span></h2></div>
+<div>
+<div class="layer-stack">
+<div class="layer"><div class="layer-top"><strong>Olympia memory</strong><span class="confidence-tag">Unconfirmed</span></div><p>Things Olympia knows because they help the existing companion relationship : some stated outright, some only a pattern she has noticed.</p><p class="eg">Margaret told her about the Lisbon tram.</p></div>
+<div class="layer"><div class="layer-top"><strong>What she'd enjoy</strong><span class="confidence-tag">Confirmed with Margaret</span></div><p>A memory only becomes a preference once Olympia asks and Margaret confirms it . That turns a guess into something she can use.</p><p class="ask">“You've mentioned Nina Simone a few times. Would you like me to keep that in mind?”</p><p class="eg">Margaret said Olympia could use music, storytelling and long talks for Introductions.</p></div>
+<div class="layer"><div class="layer-top"><strong>What gets shared when they meet</strong><span class="confidence-tag">Stated by Margaret</span></div><p>The small amount Olympia can share while each person is deciding whether to speak. Only confirmed details reach this stage.</p><p class="eg">Rosa hears: “Margaret likes talking about music and stories. Would you like to speak with her?”</p></div>
+</div>
+</div>
+</div>
+<div class="consent-bleed"><div class="consent-bleed-inner"><p class="body">Olympia already remembers things because they help the relationship. Introductions adds one more step: the person decides which of those details she can use to find someone.</p><div aria-hidden="true" class="consent-divider"></div><p class="body">Family and carers often want to know how someone is getting on. What is said on a call stays between the two people who spoke, and family sees how many social calls took place.</p></div></div>
+<p class="hand" style="text-align:center;margin-top:24px;font-size:18px;color:rgba(255,255,255,.85)">(Family has its own view, and the prototype in section 01 shows it. It shows how often Margaret connects, and the conversations stay hers.)</p>
+</section>
+<section class="section dark" data-label="How one person is chosen" id="match">
+<div class="container match-grid">
+<div class="match-sticky">
+<span class="eyebrow" style="opacity:.55">07 · HOW ONE PERSON IS CHOSEN</span>
+<h2>So, <span class="serif">why Rosa?</span></h2>
+<p class="body sd-muted-72" style="max-width:400px">Olympia narrows a small pool down to one candidate, then hands the fit to a person to check. Margaret hears the logic in plain language, and can correct it before anything moves forward.</p>
+<div class="scale-note">
+<p class="hand">PILOT MODE<br/><span style="font-family:inherit;font-size:.7em;line-height:1.4">(A person reviews each match by hand here. I’d want to see a lot more real cases before trusting an algorithm with it.)</span></p>
+</div>
+</div>
+<div class="funnel">
+<div class="funnel-band">
+<div class="funnel-head"><span class="flabel">Eligible to ask</span><span class="fcount">PEOPLE OLYMPIA ALREADY KNOWS</span></div>
+<div class="filter-pills">
+<span class="filter-pill">Shared language</span>
+<span class="filter-pill">Voice call works for both</span>
+<span class="filter-pill">Time can overlap</span>
+<span class="filter-pill">No existing relationship between them</span>
+</div>
+<div class="side-callout" style="margin-top:14px;color:var(--ink)">Everyone in this pool already uses Olympia and has agreed to be considered, so each person arrives already known to her, unlike on an open social app. The same checks apply throughout. Olympia puts the call through herself, so phone numbers stay private.</div>
+</div>
+<div class="funnel-band">
+<div class="funnel-head"><span class="flabel">Conversation fit</span><span class="fcount">A FEW PLAUSIBLE FITS</span></div>
+<div class="matrix">
+<div class="matrix-card"><strong>Stories, music, long conversations</strong><p>Margaret and Rosa have both said they enjoy taking their time and swapping stories. Their interests overlap enough to give them something easy to start with.</p></div>
+<div class="matrix-card miss"><strong>Similar interest. Different timing</strong><p>They share an interest, but their schedules don’t line up this week. Olympia keeps looking.</p></div>
+</div>
+<p class="small sd-muted-55" style="margin-top:12px">Every match comes with a reason both people can hear out loud.</p>
+</div>
+<div class="funnel-band">
+<div class="funnel-head"><span class="flabel">A person takes a closer look</span></div>
+<div class="operator">
+<div class="operator-head"><div><div class="eyebrow" style="color:var(--muted)">Human safeguarding review</div><strong style="font-size:20px;letter-spacing:-.03em">One candidate to consider</strong></div><span class="operator-badge">HUMAN REVIEW</span></div>
+<p class="body" style="margin:14px 0 0;max-width:520px;color:rgba(8,8,7,.72)">A reviewer looks at more than whether someone said yes. Someone who says yes to everything gets a different kind of attention than someone choosing carefully.</p>
+<div class="match-person">
+<div class="match-box"><h4>Margaret</h4><p>Long conversations<br/>Music and stories<br/>Weekday afternoons</p></div>
+<div class="match-box"><h4>Rosa</h4><p>Long conversations<br/>Music and stories<br/>Thursday afternoons</p></div>
+</div>
+<div class="checklist">
+<div class="check-row"><span class="check-mark">✓</span><div><strong>Did they choose what this match is built on?</strong><span>The shared reason comes from things Margaret and Rosa have said they enjoy talking about. The reviewer works from those words.</span></div></div>
+<div class="check-row"><span class="check-mark">✓</span><div><strong>Does the practical setup work for both?</strong><span>Language, call setup and available time make a one-to-one call realistic.</span></div></div>
+<div class="check-row"><span class="check-mark">✓</span><div><strong>Is there any existing relationship the reviewer needs to know about?</strong><span>Care, financial, professional or other ties between the two people change the decision.</span></div></div>
+<div class="check-row"><span class="check-mark">✓</span><div><strong>Can each person make this choice independently?</strong><span>The reviewer has enough confidence that each person can decide for themselves. A concern stops the process.</span></div></div>
+<div class="check-row"><span class="check-mark">✓</span><div><strong>Could we explain the reasoning to both people?</strong><span>The reason can be said plainly to either person, without sharing anything private about the other.</span></div></div>
+</div>
+<div class="check-divider" style="margin-top:18px">THE OVERRIDE</div>
+<div class="side-callout" style="margin-top:0;background:var(--red);color:#fff"><strong>STOP THE MATCH</strong><br/>A safety, identity, consent or privacy concern sends it back to review. The other person hears that it didn’t go ahead.</div>
+<p style="margin:12px 0 0;font-size:12px;color:var(--muted)">The reviewer can stop a match on safety grounds. Beyond that, the choice to meet belongs to the person.</p>
+<div class="side-label">Kept for Olympia’s companion relationship</div>
+<div class="excluded"><span>Health information</span><span>Private family circumstances</span><span>Financial information</span><span>Unrelated memories</span><span>Details the person has kept for Olympia alone</span></div>
+</div>
+</div>
+<p class="one-candidate">One person to consider. Margaret decides whether to meet them.</p>
+</div>
+</div>
+</section>
+<section class="section green" data-label="Steps" id="human">
+<div class="container call-grid">
+<div class="call-title"><span class="eyebrow" style="opacity:.55">08 · STEPS</span><h2>How the first <span class="serif">call works</span></h2><p class="body" style="max-width:380px">Margaret and Rosa know why they're speaking to each other. From that point, the conversation belongs to them.</p></div>
+<div class="call-panel">
+<div class="call-media media" data-file="images/olympia-call-split.webp"><div class="file">olympia-call-split.webp</div><div class="ph"><b>The first call</b><span>Margaret and Rosa, each in their own home.</span></div></div>
+</div>
+</div>
+<div class="container storyboard">
+<div class="sb-strip">
+<div class="sb-frame media" data-file="images/olympia-shot-1.webp" data-shot="SHOT 1 · 0:00 to 0:03"><div class="sb-n">1</div><div class="file">olympia-shot-1.webp</div><div class="ph"><b>The suggestion</b><span>Margaret at home. Olympia asks: “Would you like to talk to Rosa?”</span></div></div>
+<div class="sb-frame media" data-file="images/olympia-shot-2.webp" data-shot="SHOT 2 · 0:03 to 0:06"><div class="sb-n">2</div><div class="file">olympia-shot-2.webp</div><div class="ph"><b>The second yes</b><span>Rosa answers separately, out loud, in her own time. Olympia doesn’t move until she hears yes too.</span></div></div>
+<div class="sb-frame media" data-file="images/olympia-shot-3.webp" data-shot="SHOT 3 · 0:06 to 0:09"><div class="sb-n">3</div><div class="file">olympia-shot-3.webp</div><div class="ph"><b>Steps</b><span>The two voices meet for the first time. Olympia says: “I’ll leave you two to it.”</span></div></div>
+<div class="sb-frame media" data-file="images/olympia-shot-4.webp" data-shot="SHOT 4 · 0:09 to 0:12"><div class="sb-n">4</div><div class="file">olympia-shot-4.webp</div><div class="ph"><b>The follow-up</b><span>Next morning, Olympia checks in with each of them privately. Both want to talk again, so she starts arranging it.</span></div></div>
+</div>
+</div>
+</section>
+<section class="section note-sec" data-label="A note for you" id="note">
+<div class="container founder-note">
+<span class="eyebrow">09 · BEFORE YOU GO</span>
+<p class="hand fn-title">A note for you</p>
+<p class="body">I keep coming back to one question: what could Olympia do with the relationship she already has? She could put two people in touch, through a voice they already trust, and give each of them someone they might enjoy talking with.</p>
+<p class="body">I keep thinking about my grandmother on the phone with her sister. As they got older and moving around got harder, they travelled less and phoned each other more. They still had so much to gossip about. Nobody stops wanting to be heard. Introductions is a phone people already love, ringing.</p>
+<p class="body">I put this together for Harmonica. I'd like to talk it through, and spend my first week sitting with your users.</p>
+<p class="hand fn-sign">I’d like to talk it through.</p>
+</div>
+</section>
+<section class="close" data-label="Close" id="close">
+<div class="container close-inner"><div class="eyebrow"></div><h2>olympia<span style="display:inline-block;width:.08em;height:.08em;border-radius:50%;background:var(--orange);margin-left:.05em;vertical-align:middle"></span></h2><p>Olympia makes the introduction. They take it from there.</p></div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>OLYMPIA / CONNECTIONS</span><span>2026</span></div></footer>
+
+<script>(()=>{
+(()=>{const r=document.documentElement,tg=document.getElementById('themeToggle');
+function syncThemeLabel(){const dark=r.getAttribute('data-theme')==='dark';tg.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');tg.setAttribute('title',dark?'Switch to light mode':'Switch to dark mode')}syncThemeLabel();
+tg.addEventListener('click',()=>{const d=r.getAttribute('data-theme')!=='dark';d?r.setAttribute('data-theme','dark'):r.removeAttribute('data-theme');document.getElementById('tc').content=d?'#17150f':'#f7f3ed';try{localStorage.setItem('olympia-theme',d?'dark':'light')}catch(e){}syncThemeLabel()});
+const S=[...document.querySelectorAll('main > section')],I=document.getElementById('ncI'),L=document.getElementById('ncL'),P=document.getElementById('ncP');
+const navWrap=document.getElementById('navCurrentWrap'),navBtn=document.getElementById('navCurrentBtn'),navMenu=document.getElementById('navMenu'),menuItems=[...navMenu.querySelectorAll('.nav-menu-item')];
+function closeMenu(){navMenu.classList.remove('open');navBtn.setAttribute('aria-expanded','false')}
+function openMenu(){navMenu.classList.add('open');navBtn.setAttribute('aria-expanded','true')}
+let navCloseTimer=null;
+function scheduleClose(){clearTimeout(navCloseTimer);navCloseTimer=setTimeout(closeMenu,150)}
+function cancelClose(){clearTimeout(navCloseTimer)}
+navBtn.addEventListener('click',e=>{e.stopPropagation();navMenu.classList.contains('open')?closeMenu():openMenu()});
+navWrap.addEventListener('mouseenter',()=>{cancelClose();openMenu()});
+navWrap.addEventListener('mouseleave',scheduleClose);
+navWrap.addEventListener('focusin',()=>{cancelClose();openMenu()});
+navWrap.addEventListener('focusout',e=>{if(!navWrap.contains(e.relatedTarget))closeMenu()});
+document.addEventListener('click',e=>{if(!navWrap.contains(e.target))closeMenu()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+menuItems.forEach(it=>it.addEventListener('click',closeMenu));
+function tick(){let a=0;S.forEach((s,k)=>{if(s.getBoundingClientRect().top<innerHeight*.45)a=k});const sid=S[a].id,N=S.filter(x=>x.id!=='top-hero'&&x.id!=='close');I.textContent=sid==='top-hero'?'Intro':sid==='close'?'End':String(N.indexOf(S[a])+1).padStart(2,'0')+' / '+String(N.length).padStart(2,'0');L.textContent=S[a].dataset.label;menuItems.forEach(it=>it.classList.toggle('active',it.dataset.id===sid));const h=document.documentElement.scrollHeight-innerHeight;P.style.width=(h>0?scrollY/h*100:0)+'%'}
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{rootMargin:'0px 0px -12% 0px'});
+S.forEach(s=>io.observe(s));
+const flyCanvas=document.querySelector('.flywheel-canvas');
+if(flyCanvas){
+  const flySteps=[...flyCanvas.querySelectorAll('.flywheel-step')];
+  const flyLineIO=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){flyCanvas.classList.add('in');flyLineIO.unobserve(flyCanvas)}})},{rootMargin:'0px 0px -20% 0px'});
+  flyLineIO.observe(flyCanvas);
+  const flyStepIO=new IntersectionObserver(entries=>{
+    const visible=entries.filter(en=>en.isIntersecting).sort((a,b)=>Math.abs(a.boundingClientRect.top-innerHeight*.5)-Math.abs(b.boundingClientRect.top-innerHeight*.5));
+    if(visible[0]){flySteps.forEach(s=>s.classList.remove('active'));visible[0].target.classList.add('active')}
+  },{rootMargin:'-38% 0px -38% 0px',threshold:0});
+  flySteps.forEach(s=>flyStepIO.observe(s));
+}
+})();;
+
+const stages=[
+  {label:'Conversation',state:'VOICE',title:'It starts with something she said.',copy:'A person says something they would enjoy sharing. Olympia asks whether they would like her to look for someone. They can say yes, later, or leave it there.',panel:'permission'},
+  {label:'Preference',state:'PREFERENCE',title:'Built from what she chooses.',copy:'Olympia remembers details from the relationship. The person confirms which ones she may use for Introductions.',panel:'preference'},
+  {label:'Suggestion',state:'ONE PERSON',title:'Here’s why I thought of Rosa.',copy:'Olympia offers one person to consider and gives a reason Margaret can understand and correct. Several signals can work backstage. The explanation stays simple.',panel:'suggestion'},
+  {label:'Mutual choice',state:'TWO YESSES',title:'Both people answer separately.',copy:'Margaret has already said yes. Rosa is asked independently. Neither person is told the other has agreed until both have said yes.',panel:'consent'},
+  {label:'Schedule',state:'THURSDAY · 3 PM',title:'Find a time that suits you both.',copy:'Olympia finds an overlap, then asks each person to confirm the time. The appointment only exists once both have said yes.',panel:'schedule'},
+  {label:'Introduction',state:'HUMAN CALL',title:'A quick hello, then Olympia leaves.',copy:'She gives each person enough context to know why they are speaking, then steps away. Margaret and Rosa take it from there.',panel:'call'},
+  {label:'After the call',state:'NEXT MORNING',title:'Each person gets their own check-in.',copy:'Olympia checks in with each person privately. Their answers stay on their own side of the relationship.',panel:'after'},
+  {label:'Continue',state:'RELATIONSHIP',title:'Another call is another choice.',copy:'If both people want to talk again, Olympia can help arrange it. Either person can step away later, quietly and on their own terms.',panel:'continuity'}
+];
+let active=0,scn=null;
+const STEP={nothx:0,pace:1,wrong:2,how:2,no:3,wait:3,slot:4,hearing:4,ring:5,tech:5,quiet:5,stop:5,flat:6,later:7};
+function firstWI(i){return SC_ORDER.find(k=>STEP[k]===i)||null}
+const SC_ORDER=['nothx','no','wait','slot','hearing','wrong','pace','ring','tech','quiet','stop','flat','later','how'];
+const SC={
+ nothx:{label:'She says no thanks',state:'NO THANKS',title:'“No thanks.” Olympia leaves it there.',copy:'Margaret says no. Olympia leaves the offer with her and lets the subject rest.',m:'“That’s fine. I won’t bring it up again unless you do.”',j:'Rosa never gets the suggestion.',rule:'Olympia leaves the choice with Margaret and waits for her to bring it up.',watch:'Does the answer feel easy to give? Does Margaret ever come back to it herself?',cap:{s:'Speaking',t:'That’s fine. I won’t bring it up again unless you do.'},pm:{line:'“That’s fine. I won’t bring it up again unless you do.”',chips:[],note:'Margaret can raise it later.'},pj:{line:'Rosa’s side stays quiet.',mute:1,chips:[],note:'The suggestion stays private.'}},
+ no:{label:'Rosa says no',state:'ANSWER · NO',title:'Margaret said yes. Rosa said no.',copy:'Margaret already said yes. Olympia tells her it didn’t come together and gives her three ways forward. One of them is someone Margaret already knows.',m:'“That introduction didn’t come together. I can try someone else, call Emma, or leave it for a while. What would you like?”',j:'Says no. The reason stays with Rosa.',rule:'Margaret hears the outcome and Rosa keeps her reason. Olympia carries the awkward part, then offers to call Emma once. If Margaret says yes, Olympia rings Emma with Margaret’s words: “Mum would like a chat when you’re free.” If she says no, Olympia doesn’t raise it again.',watch:'Who says yes to calling Emma? Does the call happen? What do people say when they decline?',cap:{s:'Speaking',t:'That introduction didn’t come together. I can try someone else, call Emma, or leave it for a while.'},pm:{line:'“That introduction didn’t come together. I can try someone else, call Emma, or leave it for a while. What would you like?”',chips:['Try someone else','Call Emma','Leave it for a while'],note:'Asked once. Margaret gets the next choice.'},pj:{line:'“That’s fine. I’ll leave it there.”',chips:[],note:'Rosa keeps the reason to herself.'}},
+ wait:{label:'A reply hasn’t come yet',state:'WAITING',title:'A week goes by. Margaret is waiting.',copy:'A week can feel long when you are waiting. Olympia tells Margaret plainly: there is still no answer.',m:'“I haven’t heard back yet. I’ll tell you the moment I do, and until then the door stays open.”',j:'Reminded once, gently: “Margaret’s question is still open. No hurry.”',rule:'Margaret hears the status plainly. Rosa gets one gentle reminder.',watch:'Does “no answer yet” feel calm and truthful to Margaret? Does she keep the door open?',cap:{s:'Speaking',t:'I haven’t heard back yet, and the door stays open.'},pm:{line:'“I haven’t heard back yet. I’ll tell you the moment I do, and until then the door stays open.”',chips:['Keep waiting','Try someone else'],note:'Only the current status is shared.'},pj:{line:'“Margaret’s question is still open. No hurry.”',chips:['Yes','No','Not yet'],note:'One reminder.'}},
+ slot:{label:'The time falls through',state:'SCHEDULE · CHANGE',title:'Thursday no longer works.',copy:'Plans change the day before. The message stays on the new time.',m:'“Thursday doesn’t work anymore. Would Friday at three suit you?”',j:'Hears the same message, with the focus on the new time.',rule:'Both people get the same update, centred on the new time.',watch:'Does a changed time feel personal to either person?',cap:{s:'Speaking',t:'Thursday doesn’t work anymore. Would Friday at three suit you?'},pm:{line:'“Thursday doesn’t work anymore. Would Friday at three suit you?”',chips:['Friday is fine','Another day'],note:'About the time.'},pj:{line:'“Thursday doesn’t work anymore. Would Friday at three suit you?”',chips:['Friday is fine','Another day'],note:'About the time.'}},
+ hearing:{label:'One of them can’t hear well',state:'ACCESSIBILITY',title:'Ask before the call.',copy:'About a third of adults aged 65 to 74, and roughly half of those 75 and older, live with some hearing loss, and hearing loss is linked to social withdrawal as well as to a louder television. For a product built to ease isolation, it belongs in the main design. Olympia asks once, before the first call, whether captions would help, and each person chooses for their own side.',rule:'Offered before the call as an everyday call feature. Either person can turn captions on or off for themselves, and that choice stays private.',watch:'Does the offer feel like turning on subtitles? It should sit alongside every other call setting.',cap:{s:'Speaking',t:'Would live captions help for this call? You can turn them on or off any time.'},pm:{line:'“Would live captions help for this call? You can turn them on or off any time.”',chips:['Yes, captions on','No, I’m fine'],note:'Margaret decides for her own side only.'},pj:{line:'Rosa’s side stays quiet, because she told Olympia earlier that calls suit her well.',mute:1,chips:[],note:'Each side is asked independently, only when it’s relevant.'}},
+ wrong:{label:'Olympia gets it wrong',state:'CORRECTION',title:'“You both enjoy gardening.” Margaret says, “Not really.”',copy:'The suggestion was built on something Olympia got wrong. Margaret corrects it, and Olympia adjusts.',m:'“Not really.”<br>“Thank you for telling me. I’ve dropped that.”',j:'Rosa hears nothing about the mistake.',rule:'A correction removes that detail from Introductions. The updated memory stays with Margaret’s side of the story.',watch:'Does Margaret correct her out loud? Does the correction feel easy?',cap:{s:'Listening',t:'I don’t {really|much} like gardening.'},pm:{line:'“Right. Thanks for telling me. I’ll leave that out.”',chips:[],note:'The corrected detail stays out of future suggestions.'},pj:{line:'Rosa’s side stays quiet.',mute:1,chips:[],note:'The reason stays on Margaret’s side.'}},
+ pace:{label:'Confirming a memory takes time',state:'PACE · NO RUSH',title:'Olympia checks a memory, and waits.',copy:'A remembered detail can take a few tries to confirm. Margaret can come back to it when she is ready.',m:'“I think you told me you like stories about places you’ve lived. Am I remembering that right?”',j:'Rosa comes in once Margaret is comfortable with the detail.',rule:'“Not sure yet” and “ask me another day” are complete answers. Olympia waits until Margaret is confident before using the detail to find a match.',watch:'Does the question feel easy to leave for another day?',cap:{s:'Listening',t:'I think {so|so, yes}. Could you ask me again another day?'},pm:{line:'“I think you told me you like stories about places you’ve lived. Am I remembering that right?”',chips:['Yes, that’s right','Not sure yet','Ask me another day'],note:'All three are complete answers.'},pj:{line:'Rosa comes in later.',mute:1,chips:[],note:'Rosa comes in once Margaret is comfortable with the detail.'}},
+ ring:{label:'Margaret isn’t near Olympia',state:'CALL · ROUTING',title:'The call comes to her.',copy:'Margaret can be anywhere in her home. Olympia rings the phone she has picked up her whole life, and Rosa’s side rings the same way. Each of them hears an ordinary ring.',rule:'Olympia can route the call to whichever phone the person already uses, not only through her own object. The ring is the same ordinary ring it’s always been.',watch:'Does the ring feel like it belongs to Olympia, or is it indistinguishable from any other call reaching that phone?',cap:{s:'Speaking',t:'I’ll have your phone ring in a moment. That will be Rosa.'},pm:{line:'“Your phone is about to ring. That will be Rosa.”',chips:[],note:'Margaret’s own phone. No new device to learn.'},pj:{line:'Rosa’s phone rings the same way, at the same moment.',mute:1,chips:[],note:'The call reaches whichever phone either person already uses.'}},
+ tech:{label:'Something technical fails',state:'TECHNICAL FAILURE',title:'The call drops. Olympia says what she knows.',copy:'A dropped call needs a simple repair. Olympia says what happened, offers one next step and waits for an answer.',m:'“I lost the call. Would you like me to try again?”',j:'“The call dropped. Would you like me to try again?”',rule:'Olympia names the technical problem, offers one repair and waits for their answer.',watch:'Does the repair tell people what happened without asking them to start again?',cap:{s:'Speaking',t:'I lost the call. Would you like me to try again?'},pm:{line:'“I lost the call. Would you like me to try again?”',chips:['Try again','Leave it'],note:'One repair, then pause.'},pj:{line:'“The call dropped. Would you like me to try again?”',chips:['Try again','Leave it'],note:'One repair, then pause.'}},
+ quiet:{label:'The call goes quiet',state:'CALL · SILENCE',title:'Olympia leaves the quiet with them.',copy:'Olympia has left the call, so Margaret and Rosa have space to find their own rhythm.',m:'If someone says “Olympia”, she returns: “I’m here. Shall I leave you to it, or would a question help?”',j:'Hears the same. Later each is rung separately: “How did it go? Would you like to try again?”',rule:'Olympia comes back when someone asks. Her light stays off while she is away, so the people on the call can see her absence.',watch:'Do people say her name mid-call, or find their own way through the silence?',cap:{s:'Quiet',t:'Olympia has left the call. Her light is off.'},flat:1,pm:{line:'Olympia has left the call.',chips:['Say “Olympia”','End the call'],note:''},pj:{line:'Olympia has left the call.',chips:['Say “Olympia”','End the call'],note:''}},
+ stop:{label:'The stop isn’t heard',state:'CALL · STOP',title:'Someone says “I’d like to stop.”',copy:'The safest response is quick and simple: end the call first, then check what the person wants.',m:'If Olympia may have missed “I’d like to stop”, the call ends first: “Sorry, I may have missed you. I’ve ended the call to be safe. Would you like me to call you back, or leave it there?”',j:'“The call has ended.” The people on the call hear that it has ended. If the line drops: “That was on my end.”',rule:'When Olympia might have missed a stop, the call ends first. The next step comes afterwards.',watch:'Is “I’d like to stop” easy to say mid-sentence to someone new?',cap:{s:'Listening',t:'I’d like to stop.'},pm:{line:'“Sorry, I may have missed you. I’ve ended the call to be safe. Would you like me to call you back, or leave it there?”',chips:['Yes, reconnect','No thanks'],note:'Olympia errs on the side of ending the call.'},pj:{line:'“The call has ended.”',chips:['Yes, again','No thanks'],note:'The people on the call hear that it has ended.'}},
+ flat:{label:'“It was fine, I suppose”',state:'AFTER · FLAT',title:'“It was fine, I suppose.”',copy:'“Fine” can cover a few different feelings. Olympia asks which one, and lets Margaret answer in her own words.',m:'“That’s all right. Would you like me to ask again tomorrow, or leave it with you?”',j:'Asked the same morning: “How was Margaret?” Answers stay separate.',rule:'Olympia asks, listens and leaves the meaning with the person who said it.',watch:'Does “fine” turn into a yes a day later, a no, or another try?',cap:{s:'Listening',t:'It was fine, I suppose.'},pm:{line:'“That’s all right. Would you like me to ask again tomorrow, or leave it with you?”',chips:['Ask tomorrow','Leave it with me'],note:'Margaret chooses what happens next.'},pj:{line:'“How was Margaret?”',chips:[],note:'Answered separately.'}},
+ later:{label:'Week eight',state:'CONTINUITY · EXIT',title:'One of them quietly wants to stop.',copy:'By week eight, the useful question is simple: would you like another call, or are you ready to leave it here?',m:'Rung separately: “Would you like to keep talking with Rosa, or leave it here?”',j:'Rung separately, the same question about Margaret.',rule:'If either says leave it, both hear the same line: “This one has come to a natural end.” The reason stays private.',watch:'Is “leave it here” easy to say once it’s a real friendship?',cap:{s:'Speaking',t:'I ask each of you privately, so neither has to be the one to say it. Would you like to keep talking with Rosa, or leave it here?'},pm:{line:'“Would you like to keep talking with Rosa, or leave it here?”',chips:['Keep talking','Leave it here'],note:'Asked privately.'},pj:{line:'“Would you like to keep talking with Margaret, or leave it here?”',chips:['Keep talking','Leave it here'],note:'Asked separately.'}},
+ how:{label:'How was Rosa chosen?',state:'DISCLOSURE',title:'“How did you pick her?”',copy:'Margaret asks how Olympia got to Rosa. Olympia explains the process plainly.',m:'“I look at what you’ve told me you like talking about. During the pilot, a person on the safeguarding team checks each suggestion. I can still get things wrong, and I’m glad when you tell me.”',j:'Rosa can ask the same question and hears the same answer.',rule:'Olympia gives the same plain explanation to either person.',watch:'Does the explanation feel straightforward enough to build trust?',cap:{s:'Speaking',t:'I look at what you’ve told me you like talking about.'},pm:{line:'“I look at what you’ve told me you like talking about. During the pilot, a person on the safeguarding team checks each suggestion. I can still get things wrong, and I’m glad when you tell me.”',chips:['That’s fine','Tell me more'],note:'Asked out loud, answered plainly.'},pj:{line:'Hasn’t asked.',mute:1,chips:[],note:'Rosa can ask the same thing.'}}
+};
+function phone(who,col,d,flat){const sender=d.sender||(d.mute?'':'Olympia');const senderClass=sender==='Olympia'?' olympia':' person';return `<div class="pn"><div class="pn-screen"><i class="pn-notch"></i><div class="pn-status"><span>9:41</span><span>● ● ▰</span></div><div class="pn-bar"><span class="pn-logo">olympia</span><span class="pn-av" style="background:${col}">${who[0]}</span></div><small class="pn-who">${who}’s side</small><div class="pn-body"><div class="pn-hero${sender==='Olympia'||!sender?'':' person'}${d.mute?' mute':''}${flat?' flat':''}">${sender?`<div class="pn-speaker${senderClass}">${sender}</div>`:''}<p class="pn-line"${d.mute?' style="opacity:.55"':''}>${d.line}</p><i class="pn-wv"></i></div>${d.chips.length?'<div class="pn-chips">'+d.chips.map((c,i)=>`<div class="pn-chip${i?' o':''}">${c}</div>`).join('')+'</div>':''}</div>${d.note?`<div class="pn-note">${d.note}</div>`:''}</div></div>`}
+const CAP={
+ permission:{s:'Listening',t:'…and the driver let me ring the {belt|bell}. Sixty years ago, and I can still hear it.'},
+ preference:{s:'Speaking',t:'What sort of person would you enjoy talking with?'},
+ suggestion:{s:'Speaking',t:'There’s someone called Rosa. She likes talking about music and stories too. Would you like to hear why I suggested her?'},
+ consent:{s:'Speaking',t:'Margaret has said yes. Now Rosa can decide.'},
+ schedule:{s:'Speaking',t:'Thursday at three works for Rosa. Would that suit you?'},
+ call:{s:'Speaking',t:'I’ll leave you two to it.'},
+ continuity:{s:'Speaking',t:'Rosa would like another chat too. Would you like me to arrange another call?'},
+ after:{s:'Speaking',t:'How was Rosa?' }
+};
+let capT;let protoStarted=false;
+function capMarkup(s,sc){const c=sc?sc.cap:CAP[s.panel];if(!c)return'';return `<div class="cap" data-s="${c.s}" aria-label="Simulated captions"><div class="cap-top"><span class="cap-state">${c.s}</span><span class="cap-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="cap-sim">simulated</span></div><p class="cap-text" id="capText" data-t="${c.t.replace(/"/g,'&quot;')}"></p></div>`}
+function runCap(){clearInterval(capT);const el=document.getElementById('capText');if(!el)return;
+ const parts=el.dataset.t.split(/(\{[^}]+\}|\s+)/).filter(x=>x&&x.trim());
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=parts.map(p=>{const m=p.match(/^\{(.+)\|(.+)\}$/);return m?m[2]:p}).join(' ').replace(/ ([.,!?])/g,'$1');return}
+ let i=0;el.textContent='';
+ capT=setInterval(()=>{if(i>=parts.length){clearInterval(capT);return}const p=parts[i++],m=p.match(/^\{(.+)\|(.+)\}$/),sp=document.createElement('span'),lead=(el.childNodes.length&&!/^[.,!?]/.test(p))?' ':'';
+  if(m){sp.textContent=lead+m[1];sp.className='unsure';setTimeout(()=>{sp.textContent=lead+m[2];sp.className='fixed'},900)}else sp.textContent=lead+p;
+  el.appendChild(sp)},170)}
+function sideMarkup(sc){
+  const wi=`<div class="side-label">Difficult moments</div><p class="side-hint">Tap a moment to see what Olympia does.</p><div class="wi-list">${SC_ORDER.filter(k=>STEP[k]===active).map(k=>`<button type="button" class="wi-btn${scn===k?' on':''}" data-sc="${k}"><small>${String(SC_ORDER.indexOf(k)+1).padStart(2,'0')} · ${SC[k].state}</small><span>${SC[k].title}</span></button>`).join('')}</div>`;
+  const rule=sc?`<div class="side-label" style="margin-top:26px">The rule</div><div class="side-callout" style="margin-top:0;background:let(--red);color:#fff">${sc.rule}</div><div class="side-label" style="margin-top:26px">What I’d watch for</div><div class="side-row" style="border-top:0;font-size:13px">${sc.watch}</div>`:'';
+  return `<aside class="proto-side">${wi}${rule}</aside>`}
+const nav=document.getElementById('protoNav');
+const win=document.getElementById('protoWindow');
+function button(label,kind='btn'){return `<button class="${kind}" type="button">${label}</button>`}
+function renderPanel(){
+  const sc=scn?SC[scn]:null;const s=sc?{label:sc.label,state:'<b class="wi-q">What if:</b> '+sc.state,title:sc.title,copy:sc.copy,panel:'scenario'}:stages[active];
+  const navHtml=stages.map((x,i)=>`<button class="proto-btn ${i===active?'active':''}" data-step="${i}" type="button"><span class="idx">${String(i+1).padStart(2,'0')}</span><span class="label">${x.label}</span></button>`).join('');
+  nav.innerHTML=`<div class="proto-navhead"><div class="proto-what">Here’s what the first version feels like.</div></div><div class="proto-steps">${navHtml}</div>`;
+  nav.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>{const wi=scn!==null;active=Number(b.dataset.step);scn=wi?firstWI(active):null;renderPanel()}));
+  const stepButtons=sc?`<div class="proto-actions">${active>0?button('Back','btn ghost'):''}${active<stages.length-1?button('Next step','btn primary'):''}</div>`:`<div class="proto-actions">${active>0?button('Back','btn ghost'):''}${active<stages.length-1?button('Continue','btn primary'):button('Restart','btn primary')}</div>`;
+  win.classList.toggle('wi-mode',!!sc);
+  win.innerHTML=`<div class="proto-window-top"><div class="window-brand">Olympia / Introductions</div><div class="seg" role="group" aria-label="View"><button type="button" data-mode="plan" class="${sc?'':'on'}">Conversation</button><button type="button" data-mode="wi" class="${sc?'on':''}">Difficult moments</button></div></div><div class="proto-body"><div class="proto-main">${panelMarkup(s)}${capMarkup(s,sc)}${stepButtons}</div>${sideMarkup(sc)}</div>`;
+  const mn=win.querySelector('.proto-main');if(mn&&mn.children){const sn=document.createElement('div');sn.className='scene';[...mn.children].filter(n=>!n.matches('.proto-kicker,.proto-title,.proto-copy,.cap,.proto-actions')).forEach(n=>sn.appendChild(n));mn.appendChild(sn)}
+  win.querySelectorAll('[data-sc]').forEach(b=>b.addEventListener('click',()=>{scn=b.dataset.sc;active=STEP[scn];renderPanel()}));
+  const btns=win.querySelectorAll('.proto-actions .btn');
+  btns.forEach(b=>b.addEventListener('click',()=>{const wi=scn!==null;if(b.textContent==='Back')active=Math.max(0,active-1);else if(b.textContent==='Restart')active=0;else active=Math.min(stages.length-1,active+1);scn=wi?firstWI(active):null;renderPanel()}));
+  win.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{scn=b.dataset.mode==='wi'?firstWI(active):null;renderPanel()}));
+  if(protoStarted)runCap();
+}
+const STG={
+ suggestion:{m:{line:'“There’s someone called Rosa. She likes talking about music and stories too. Would you like to hear why I suggested her?”',chips:['Tell me more','Yes, ask Rosa','Not now'],note:'Margaret decides whether Olympia should reach out to Rosa.'},j:{line:'Rosa comes in after Margaret says yes.',mute:1,chips:[],note:'Margaret makes the first choice.'}},
+ consent:{m:{line:'“Yes, please. Ask Rosa.”',sender:'Margaret',chips:[],note:'Margaret has already said yes.'},j:{line:'“Margaret likes talking about music and stories. Would you like to speak with her?”',sender:'Olympia',chips:['Yes, please','Not now'],note:'Rosa answers independently. Each answer stays separate until both people have said yes.'}},
+ schedule:{m:{line:'“Thursday at three works for Rosa. Would that suit you?”',sender:'Olympia',chips:['Thursday works','Another time'],note:'Olympia has checked the overlap. Margaret decides for herself.'},j:{line:'“Thursday at three works for Margaret. Would that suit you?”',sender:'Olympia',chips:['Thursday works','Another time'],note:'Olympia has checked the overlap. Rosa decides for herself.'}},
+ call:{flat:1,m:{line:'“Margaret, this is Rosa. Rosa, this is Margaret. I’ll leave you two to it.”',sender:'Olympia',chips:[],note:'Olympia leaves. Her light goes off.'},j:{line:'“Rosa, this is Margaret. Margaret, this is Rosa. I’ll leave you two to it.”',sender:'Olympia',chips:[],note:'Olympia leaves. Her light goes off.'}},
+ continuity:{m:{line:'“Rosa would like another chat too. Would you like me to arrange another call?”',sender:'Olympia',chips:['Yes, arrange it','Another time'],note:'Only after both people want another call.'},j:{line:'“Margaret would like another chat too. Would you like me to arrange another call?”',sender:'Olympia',chips:['Yes, arrange it','Another time'],note:'Only after both people want another call.'}}
+};
+function panelMarkup(s){
+  const common=`<div class="proto-kicker">${s.state}</div><div class="proto-title">${s.title}</div><p class="proto-copy">${s.copy}</p>`;
+  if(s.panel==='scenario'){const c=SC[scn];return common+`<div class="pn-row">${phone('Margaret','#d0430f',c.pm,c.flat)}${phone('Rosa','#8bbb7f',c.pj,c.flat)}</div>`}
+  if(s.panel==='after') return common+`<div class="proto-card dark"><div class="say o" style="--d:0s"><b>Olympia · next morning</b>“How was Rosa?”</div><div class="say m" style="--d:0.8s"><b>Margaret</b>“Lovely. We got onto Nina Simone and then somehow ended up talking about a tram in Lisbon.”</div><div class="say o" style="--d:1.6s"><b>Olympia</b>“Sounds like you found plenty to talk about.”</div><div class="say m" style="--d:2.0s"><b>Margaret</b>“We did. I’d like to speak again.”</div><div class="say j" style="--d:2.8s"><b>Rosa · privately</b>“It was good. I’d like to talk to Margaret again.”</div><div class="reason-box" style="background:rgba(255,248,242,.08);border-left-color:let(--cream);color:let(--white);margin-top:16px">Each person is asked privately. Olympia only hears what either person chooses to tell her afterwards.</div></div>`;
+  if(s.panel==='permission') return common+`<div class="proto-card dark"><div class="say m" style="--d:0s"><b>Margaret</b>“…and the driver let me ring the bell. Sixty years ago, and I can still hear it.”</div><div class="say o" style="--d:0.8s"><b>Olympia</b>“You’ve mentioned that bell before. You always enjoy telling it.”</div><div class="say m" style="--d:1.6s"><b>Margaret</b>“I do. I haven’t had anyone to reminisce about it with for years.”</div><div class="say o" style="--d:2.4s"><b>Olympia</b>“Would you like me to find someone who’d enjoy hearing it too?”</div><div class="say m" style="--d:3.2s"><b>Margaret</b>“Maybe. How would that work?”</div><div class="say o" style="--d:4.0s"><b>Olympia</b>“I’ll look for someone, then tell you exactly why, before anything happens.”</div><div class="reason-box" style="background:rgba(255,248,242,.08);border-left-color:let(--cream);color:let(--white);margin-top:16px">The opening comes from something Margaret says herself. Olympia asks before using it for Introductions.</div></div>`;
+  if(s.panel==='preference') return common+`<div class="proto-card dark"><div class="say o" style="--d:0s"><b>Olympia</b>“What sort of person would you enjoy talking with?”</div><div class="say m" style="--d:0.8s"><b>Margaret</b>“Someone who can stay with a story. And maybe music. Nina Simone.”</div><div class="say o" style="--d:1.6s"><b>Olympia</b>“Right. Shall I keep that in mind?”</div><div class="say m" style="--d:2.4s"><b>Margaret</b>“Yes. And I like a long conversation.”</div><div class="say o" style="--d:3.2s"><b>Olympia</b>“Good to know. Is there a time of day that tends to suit you?”</div><div class="say m" style="--d:4.0s"><b>Margaret</b>“Weekday afternoons, usually. Mornings are for the crossword.”</div><div style="margin-top:18px;font-size:10px;letter-spacing:.1em;opacity:.6">CONNECTION PREFERENCES · CONFIRMED WITH MARGARET</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><span class="device-pill">Nina Simone</span><span class="device-pill">long conversations</span><span class="device-pill">weekday afternoons</span></div><div class="reason-box" style="background:rgba(255,248,242,.08);border-left-color:let(--cream);color:let(--white);margin-top:16px">Olympia asks before a remembered detail becomes something she can use to find a person.</div></div>`;
+  const D=STG[s.panel];if(D)return common+`<div class="pn-row">${phone('Margaret','#d0430f',D.m,D.flat)}${phone('Rosa','#8bbb7f',D.j,D.flat)}</div>`;
+}
+/* Start-on-view: the Introductions prototype (section 02) and the Family phone (section 01) wait until scrolled into view. */
+win.classList.add('hold');
+function startProto(){if(protoStarted)return;protoStarted=true;win.classList.remove('hold');runCap()}
+renderPanel();
+(function(){
+  const fp=document.getElementById('familyPhone');
+  const loadFrame=()=>{if(fp&&!fp.getAttribute('src'))fp.setAttribute('src',fp.dataset.src)};
+  if(!('IntersectionObserver' in window)){loadFrame();startProto();return}
+  if(fp){const o1=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){loadFrame();o1.disconnect()}},{threshold:.2});o1.observe(fp)}
+  const o2=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){startProto();o2.disconnect()}},{threshold:.2});o2.observe(win);
+})();
+
+/* Replace media placeholders with the referenced local image when available. */
+document.querySelectorAll('.media[data-file]').forEach(m=>{const f=m.dataset.file;
+  const i=new Image();i.alt=(m.querySelector('.ph b')||{}).textContent||'';i.onload=()=>{m.classList.add('real');m.appendChild(i)};i.src=f
+});;
+
+window.addEventListener('message',function(e){let d=e.data;if(!d||!d.olympiaFrame)return;['familyPhone','familyNotes'].forEach(function(id){let f=document.getElementById(id);if(f&&f.contentWindow===e.source)f.style.height=(d.h+2)+'px'})});
+
+})();</script>
+</body>
+</html>
