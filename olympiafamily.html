@@ -4,9 +4,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Olympia Family: connected prototype</title>
-<meta content="Prototype of the Olympia Family app: how relatives see how an older parent is doing, get alerts, and stay in touch without watching over them." name="description"/>
+<meta content="Prototype of the Olympia Family app: how relatives see how an older parent is doing, get alerts, and keep in touch without watching over them." name="description"/>
 <meta content="Olympia Family: connected prototype" property="og:title"/>
-<meta content="Prototype of the Olympia Family app: how relatives see how an older parent is doing, get alerts, and stay in touch without watching over them." property="og:description"/>
+<meta content="Prototype of the Olympia Family app: how relatives see how an older parent is doing, get alerts, and keep in touch without watching over them." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="summary" name="twitter:card"/>
 <style>:root{
@@ -34,10 +34,8 @@
   --gray-dark:var(--t2);
   --gray-light:#C7C7CC;
   --line:var(--sep);
-  --coral:var(--accent);
-  --teal:var(--accent);
   --red:#FF3B30;
-  --amber:#B26A00;
+  --amber:#96650A;
   --green:#3F7D2A;
   --r-lg:20px;
   --r-md:12px;
@@ -61,7 +59,7 @@
   --wavemask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40'%3E%3Cpath d='M0 22C30 22 42 9 72 12S112 31 142 26 188 5 218 14 258 33 288 24 338 8 366 19 392 22 400 22' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
   --lavc:#6B5A8A;
   --lav-bg:rgba(107,90,138,.14);
-  --rule-a:#B26A00;
+  --rule-a:#96650A;
   --ok:#3F7D2A;
   --ok-bg:rgba(120,168,60,.16);
   --apricot-soft:#FDF3E7;
@@ -87,7 +85,7 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 /* header */
 .head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .head-actions{display:flex;align-items:center;gap:9px}
-.icon-btn{width:36px;height:36px;border-radius:50%;border:none;background:var(--teal-soft);color:var(--teal);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;padding:0}
+.icon-btn{width:36px;height:36px;border-radius:50%;border:none;background:var(--teal-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;padding:0}
 .icon-btn:active{transform:scale(.9)}
 .icon-btn .icon{width:16px;height:16px}
 .hero{border-radius:26px;padding:21px 19px;display:flex;align-items:center;gap:15px;margin-bottom:16px;box-shadow:0 1px 2px rgba(20,10,15,.04),0 16px 28px -14px var(--hero-shadow)}
@@ -97,11 +95,11 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .hero-icon{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.68);display:flex;align-items:center;justify-content:center;flex:none}
 .hero-icon.g{color:var(--green)}.hero-icon.a{color:var(--amber)}.hero-icon.r{color:var(--red)}
 .hero-title{font-family:var(--font-display);font-size:1.1875rem;font-weight:800;letter-spacing:-.01em;line-height:1.28}
-.hero-tag{display:inline-block;margin-top:5px;font-size:.6875rem;font-weight:700;padding:3px 11px;border-radius:var(--r-pill);background:rgba(255,255,255,.78)}
+.hero-tag{display:inline-block;margin-top:5px;font-size:.75rem;font-weight:700;padding:3px 11px;border-radius:var(--r-pill);background:rgba(255,255,255,.78)}
 .hero-tag.g{color:#3F7D2A}.hero-tag.a{color:#96650a}.hero-tag.r{color:#a5341f}
 .head-name{font-family:var(--font-display);font-size:1.375rem;font-weight:800;letter-spacing:-.2px}
-.head-sub{font-size:.6875rem;color:var(--gray);margin-top:1px}
-.av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pink-2),var(--coral));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8125rem;font-weight:800;font-family:var(--font-display);flex:none;position:relative;overflow:hidden}
+.head-sub{font-size:.75rem;color:var(--gray);margin-top:1px}
+.av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pink-2),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8125rem;font-weight:800;font-family:var(--font-display);flex:none;position:relative;overflow:hidden}
 .face{width:58%;height:58%;fill:#fff;opacity:.92}
 .av img,.mav img,.notif-icon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
 
@@ -110,7 +108,7 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .group-card>.member,.group-card>.row,.group-card>.link{padding-left:15px;padding-right:15px}
 .group-card>.member:last-child,.group-card>.row:last-child,.group-card>.link:last-child{border-bottom:none}
 
-.section-label{font-size:.6875rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#948D8E;margin:16px 0 8px}
+.section-label{font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#948D8E;margin:16px 0 8px}
 .section-label:first-child{margin-top:0}
 
 /* status card */
@@ -122,10 +120,10 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .tile.g{background:var(--green-soft);color:var(--green)}
 .tile.a{background:var(--amber-soft);color:var(--amber)}
 .tile.r{background:var(--red-soft);color:var(--red)}
-.tile.teal{background:var(--teal-soft);color:var(--teal)}
+.tile.teal{background:var(--teal-soft);color:var(--accent)}
 .tile.lav{background:var(--lav);color:#6b5a8a}
 .status-title{font-size:.9375rem;font-weight:700;line-height:1.3}
-.sev-pill{display:inline-flex;align-items:center;gap:6px;font-size:.6875rem;font-weight:700;padding:3px 10px 3px 8px;border-radius:var(--r-pill);background:rgba(255,255,255,.75)}
+.sev-pill{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;padding:3px 10px 3px 8px;border-radius:var(--r-pill);background:rgba(255,255,255,.75)}
 .sev-pill::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex:none}
 .sev-pill.g{color:#3F7D2A}
 .sev-pill.a{color:#96650a}
@@ -139,12 +137,12 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .conn-stat{font-family:var(--font-display);font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
 .conn-num{font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;color:var(--ink);font-size:1.75rem}
 .conn-label{font-weight:600;color:var(--gray-dark);font-size:.8125rem}
-.trend{display:inline-flex;align-items:center;gap:3px;font-size:.625rem;font-weight:800;padding:2px 8px;border-radius:var(--r-pill)}
+.trend{display:inline-flex;align-items:center;gap:3px;font-size:.75rem;font-weight:800;padding:2px 8px;border-radius:var(--r-pill)}
 .trend.up{background:var(--green-soft);color:#3F7D2A}
 .trend.flat{background:#F1EEE9;color:var(--gray)}
 .conn-sub{font-size:.75rem;color:var(--gray);margin-top:2px}
 .chev{color:var(--gray-light);flex:none}
-.conn-boundary{display:flex;gap:7px;align-items:flex-start;font-size:.71875rem;color:var(--gray);line-height:1.5;margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
+.conn-boundary{display:flex;gap:7px;align-items:flex-start;font-size:.75rem;color:var(--gray);line-height:1.5;margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
 .conn-boundary .icon{width:13px;height:13px;margin-top:1px;color:var(--gray-light)}
 .conn-empty-copy{display:none;font-size:.875rem;line-height:1.55;padding:16px 15px;border-radius:var(--r-lg);background:#fdfdfb;border:1px solid var(--line);box-shadow:var(--shadow-card)}
 
@@ -152,8 +150,8 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .call-row:active{transform:scale(.985)}
 .call-row.reaches{border-color:#d9c9ea}
 .call-label{flex:1;text-align:left;font-size:.84375rem;font-weight:700;color:var(--ink)}
-.reach-pill{display:inline-block;font-size:.5625rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:#6b5a8a;background:#F4EDF8;border-radius:6px;padding:2px 6px;margin-left:8px;vertical-align:middle}
-.call-sub{font-size:.6875rem;color:var(--gray);margin-top:2px;font-weight:500}
+.reach-pill{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:#6b5a8a;background:#F4EDF8;border-radius:6px;padding:2px 6px;margin-left:8px;vertical-align:middle}
+.call-sub{font-size:.75rem;color:var(--gray);margin-top:2px;font-weight:500}
 .wc-modal{position:absolute;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:26px;background:rgba(32,20,38,.22);backdrop-filter:blur(7px) saturate(150%);-webkit-backdrop-filter:blur(7px) saturate(150%);opacity:0;transition:opacity .22s ease}
 .wc-modal.show{display:flex;opacity:1}
 .wc-modal-card{width:100%;max-width:230px;text-align:center;background:rgba(253,253,251,.78);backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);border:1px solid rgba(255,255,255,.65);border-radius:22px;padding:22px 18px 16px;box-shadow:0 24px 50px -16px rgba(20,10,15,.4);transform:scale(.9) translateY(6px);transition:transform .22s cubic-bezier(.2,.8,.2,1)}
@@ -167,17 +165,17 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .wc-modal-cancel{flex:1;padding:11px 8px;border-radius:999px;background:transparent;color:var(--gray-dark);font-weight:700;font-size:.75rem;border:1.5px solid var(--line);font-family:inherit;cursor:pointer}
 .wc-modal-cancel:active{background:var(--line)}
 .form-field{margin-bottom:11px;text-align:left}
-.form-label{font-size:.6875rem;font-weight:700;color:var(--gray-dark);margin-bottom:5px;display:block}
+.form-label{font-size:.75rem;font-weight:700;color:var(--gray-dark);margin-bottom:5px;display:block}
 .form-input{width:100%;padding:9px 11px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-family:inherit;font-size:.8125rem;color:var(--ink)}
 .form-input:focus{outline:none;border-color:#6b5a8a}
 .chip-row{display:flex;gap:6px;flex-wrap:wrap}
-.chip{font-size:.6875rem;padding:6px 11px;border-radius:var(--r-pill);border:1.5px solid var(--line);background:#fff;color:var(--gray-dark);cursor:pointer;font-weight:600}
+.chip{font-size:.75rem;padding:6px 11px;border-radius:var(--r-pill);border:1.5px solid var(--line);background:#fff;color:var(--gray-dark);cursor:pointer;font-weight:600}
 .chip.on{background:#6b5a8a;border-color:#6b5a8a;color:#fff}
 .inline-link{color:#6b5a8a;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .wc-callout{display:flex;gap:8px;align-items:flex-start;font-size:.75rem;color:var(--gray-dark);line-height:1.55;background:#F4EDF8;border:1px solid var(--line);border-radius:14px;padding:12px 13px;margin-bottom:4px}
 .wc-callout .icon{color:#6b5a8a}
 .spacer{flex:1}
-.footer-note{display:flex;gap:7px;align-items:flex-start;font-size:.6875rem;color:var(--gray);line-height:1.55;padding-top:14px;margin-top:6px;border-top:1px solid var(--line)}
+.footer-note{display:flex;gap:7px;align-items:flex-start;font-size:.75rem;color:var(--gray);line-height:1.55;padding-top:14px;margin-top:6px;border-top:1px solid var(--line)}
 .footer-note .icon{width:12px;height:12px;margin-top:2px}
 
 /* memory book, same list-row language as everywhere else in the app, single column */
@@ -191,7 +189,7 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .mem-body{flex:1;min-width:0}
 .mem-title{font-family:var(--font-display);font-size:.875rem;font-weight:800;line-height:1.25}
 .mem-snip{font-size:.75rem;color:var(--gray-dark);line-height:1.5;margin-top:4px}
-.mem-meta{font-size:.6875rem;color:var(--gray);font-weight:600;margin-top:8px}
+.mem-meta{font-size:.75rem;color:var(--gray);font-weight:600;margin-top:8px}
 .mem-row.cta{border-style:dashed;border-color:var(--gray-light);box-shadow:none;align-items:center}
 .mem-row.cta .mem-icon{background:transparent;border:1.5px dashed var(--gray-light);color:var(--gray)}
 .mem-row.cta .mem-title{font-size:.8125rem}
@@ -199,12 +197,12 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .mem-filled{display:flex;flex-direction:column}
 
 /* alerts */
-.day-label{font-size:.6875rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin:16px 0 8px}
+.day-label{font-size:.75rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin:16px 0 8px}
 .day-label:first-child{margin-top:0}
 .alert-text{font-size:.8125rem;font-weight:700;line-height:1.4}
 .alert-meta{display:flex;align-items:center;gap:8px;margin-top:7px;flex-wrap:wrap}
-.alert-time{font-size:.6875rem;color:var(--gray-dark);font-weight:500}
-.wc-status{font-size:.6875rem;font-weight:700;margin-top:5px;align-items:center;gap:4px}
+.alert-time{font-size:.75rem;color:var(--gray-dark);font-weight:500}
+.wc-status{font-size:.75rem;font-weight:700;margin-top:5px;align-items:center;gap:4px}
 .wc-status.pending{color:#6b5a8a}
 .wc-status.ok{color:#3F7D2A}
 .wc-status.bad{color:#a5341f}
@@ -216,41 +214,41 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .avatar-row .mav:first-child{margin-left:0}
 .member{display:flex;gap:10px;padding:13px 0;border-bottom:1px solid var(--line)}
 .mav{width:38px;height:38px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8125rem;font-weight:800;font-family:var(--font-display);position:relative;overflow:hidden}
-.mav.you{background:linear-gradient(135deg,var(--teal),#3F7D2A)}
+.mav.you{background:linear-gradient(135deg,var(--accent),#3F7D2A)}
 .mav.david{background:linear-gradient(135deg,var(--blue-card),#6d8fa8)}
-.mav.priya{background:linear-gradient(135deg,var(--coral),#c85736)}
+.mav.priya{background:linear-gradient(135deg,var(--accent),#c85736)}
 .member-name{font-size:.875rem;font-weight:700;font-family:var(--font-display)}
-.member-rel{font-size:.6875rem;color:var(--gray);font-family:var(--font-body);font-weight:500}
-.member-access{font-size:.6875rem;color:var(--gray);margin-top:3px}
+.member-rel{font-size:.75rem;color:var(--gray);font-family:var(--font-body);font-weight:500}
+.member-access{font-size:.75rem;color:var(--gray);margin-top:3px}
 .seg{display:flex;margin-top:9px;border-radius:var(--r-pill);background:#F1EEE9;padding:2px;width:fit-content}
-.seg span{text-align:center;font-size:.65625rem;padding:4px 10px;color:var(--gray);border-radius:var(--r-pill);cursor:pointer;font-weight:600}
+.seg span{text-align:center;font-size:.75rem;padding:4px 10px;color:var(--gray);border-radius:var(--r-pill);cursor:pointer;font-weight:600}
 .seg span.on{background:var(--ink);color:#fff}
 .row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
 .row-label{font-size:.8125rem;color:var(--gray)}
-.row-val{font-size:.71875rem;color:var(--gray)}
-.link{text-decoration:none;font-size:.8125rem;color:var(--coral);font-weight:700;text-align:left;display:flex;align-items:center;gap:5px;padding:13px 0;border-bottom:1px solid var(--line);background:none;border-left:none;border-right:none;border-top:none;font-family:inherit;cursor:pointer;width:100%}
+.row-val{font-size:.75rem;color:var(--gray)}
+.link{text-decoration:none;font-size:.8125rem;color:var(--accent);font-weight:700;text-align:left;display:flex;align-items:center;gap:5px;padding:13px 0;border-bottom:1px solid var(--line);background:none;border-left:none;border-right:none;border-top:none;font-family:inherit;cursor:pointer;width:100%}
 .link .icon{width:13px;height:13px}
 
 /* connections detail */
 .detail{position:absolute;inset:0;background:linear-gradient(180deg,var(--pink-1) 0%,#fdfdfb 22%);transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.8,.2,1);overflow-y:auto;padding:16px 20px 20px;display:flex;flex-direction:column;z-index:20}
 .detail.open{transform:translateX(0)}
-.back{font-size:.9375rem;font-weight:700;color:var(--coral);cursor:pointer;margin-bottom:10px;display:flex;align-items:center;gap:3px}
+.back{font-size:.9375rem;font-weight:700;color:var(--accent);cursor:pointer;margin-bottom:10px;display:flex;align-items:center;gap:3px}
 .wavepanel{padding:18px 16px 14px;border-radius:var(--r-lg);background:#fdfdfb;border:1px solid var(--line);box-shadow:var(--shadow-card);margin-top:14px}
 .bars{display:flex;align-items:flex-end;gap:6px;height:64px;border-bottom:1px solid var(--line)}
-.bar{flex:1;border-radius:5px 5px 2px 2px;background:var(--teal);opacity:.35;min-height:4px}
+.bar{flex:1;border-radius:5px 5px 2px 2px;background:var(--accent);opacity:.35;min-height:4px}
 .bar.now{opacity:1}
 .weeks{display:flex;gap:6px;margin-top:8px}
-.weeks span{flex:1;text-align:center;font-size:.5625rem;color:var(--gray-light)}
+.weeks span{flex:1;text-align:center;font-size:.75rem;color:var(--gray-light)}
 .weeks span:last-child{font-weight:700;color:var(--gray-dark)}
-.expl-toggle{font-size:.8125rem;font-weight:700;color:var(--coral);background:none;border:none;padding:0;cursor:pointer;font-family:inherit;margin:16px 0 8px;display:flex;align-items:center;gap:5px}
+.expl-toggle{font-size:.8125rem;font-weight:700;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:inherit;margin:16px 0 8px;display:flex;align-items:center;gap:5px}
 .expl-toggle .icon{width:13px;height:13px}
 .expl-body{max-height:200px;overflow:hidden;transition:max-height .3s ease}
 .expl-body.closed{max-height:0}
 .expl-copy{font-size:.8125rem;color:var(--gray-dark);line-height:1.6}
 
 .navbar{display:flex;border-top:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);position:relative;z-index:5}
-.navbtn{flex:1;text-align:center;padding:10px 0 12px;font-size:.625rem;color:var(--gray-light);cursor:pointer;border:none;background:none;font-family:inherit;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;white-space:nowrap}
-.navbtn.active{color:var(--coral)}
+.navbtn{flex:1;text-align:center;padding:10px 0 12px;font-size:.75rem;color:var(--gray-light);cursor:pointer;border:none;background:none;font-family:inherit;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;white-space:nowrap}
+.navbtn.active{color:var(--accent)}
 .badge{position:absolute;top:2px;right:25%;width:6px;height:6px;border-radius:50%;background:var(--red)}
 .badge.hide{display:none}
 
@@ -271,10 +269,10 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .tone-card.lav{background:linear-gradient(150deg,var(--lav) 0%,#f8f4fb 100%);--tone-shadow:rgba(107,90,138,.22)}
 .card-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;flex:none;margin-top:1px}
 .card-icon .icon{width:16px;height:16px}
-.card-icon.red{color:var(--red)}.card-icon.amber{color:var(--amber)}.card-icon.teal{color:var(--teal)}.card-icon.blue{color:#5c7d96}.card-icon.coral{color:var(--coral)}.card-icon.lav{color:#6b5a8a}
+.card-icon.red{color:var(--red)}.card-icon.amber{color:var(--amber)}.card-icon.teal{color:var(--accent)}.card-icon.blue{color:#5c7d96}.card-icon.coral{color:var(--accent)}.card-icon.lav{color:#6b5a8a}
 
-.notes{margin-top:16px;text-align:left;background:#fdfdfb;border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:.71875rem;line-height:1.6;color:#403c33}
-.notes b{display:block;font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;color:var(--coral);margin-bottom:6px}
+.notes{margin-top:16px;text-align:left;background:#fdfdfb;border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:.75rem;line-height:1.6;color:#403c33}
+.notes b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);margin-bottom:6px}
 .notes ul{margin:0;padding-left:16px}
 .notes li{margin-bottom:5px}
 #view-today[data-connstate="empty"] .conn-active-only{display:none}
@@ -288,18 +286,18 @@ font-family:var(--font-body);color:var(--ink);padding:32px}
 .controls{margin-top:16px;text-align:left;background:#fdfdfb;border:1px solid var(--line);border-radius:16px;padding:12px 14px}
 .annotation{display:none;margin-top:18px;text-align:left;max-width:294px}
 .annotation.show{display:block}
-.annotation-label{font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#a89f92;margin-bottom:9px}
+.annotation-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#a89f92;margin-bottom:9px}
 .annot-line{font-size:.78125rem;color:#453f4d;line-height:1.55;font-weight:500}
-.controls b{display:block;font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em;color:var(--coral);margin-bottom:8px}
+.controls b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);margin-bottom:8px}
 .state-btns{display:flex;gap:6px;flex-wrap:wrap}
-.state-btn{font-size:.6875rem;padding:6px 11px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fdfdfb;color:var(--gray);cursor:pointer;font-family:inherit}
+.state-btn{font-size:.75rem;padding:6px 11px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fdfdfb;color:var(--gray);cursor:pointer;font-family:inherit}
 .state-btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .push-banner{position:absolute;top:26px;left:10px;right:10px;z-index:30;background:#fdfdfb;border-radius:18px;padding:11px 13px;display:flex;gap:9px;align-items:flex-start;box-shadow:0 14px 34px -14px rgba(20,10,15,.4);transform:translateY(-160%);transition:transform .35s cubic-bezier(.2,.8,.2,1);pointer-events:none;cursor:pointer}
 .push-banner.show{transform:translateY(0);pointer-events:auto}
 .push-top{display:flex;justify-content:space-between;align-items:center}
-.push-app{font-size:.625rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.04em}
+.push-app{font-size:.75rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.04em}
 .push-x{font-size:.8125rem;color:var(--gray);padding:0 2px;line-height:1}
-.notif-icon{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--pink-2),var(--coral));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8125rem;flex:none;font-family:var(--font-display);position:relative;overflow:hidden}
+.notif-icon{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--pink-2),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8125rem;flex:none;font-family:var(--font-display);position:relative;overflow:hidden}
 .notif-title{font-size:.84375rem;font-weight:700;margin-top:2px}
 .notif-text{font-size:.78125rem;color:#403c33;margin-top:2px;line-height:1.4}
 /* ===== Apple-spec skin: 402x874, SF Pro, 4pt grid, one accent, solid content + glass tab bar ===== */
@@ -357,7 +355,7 @@ body{background:#EDEDEA;padding:24px;font-family:var(--font-body);-webkit-font-s
 .wc-callout{background:var(--accent-tint)!important;border:none;border-radius:16px;padding:16px;margin-top:8px}.wc-callout .icon{color:var(--accent-ink)}
 .call-row{padding:12px 16px;min-height:64px;gap:16px;margin-bottom:8px}
 .call-label{font-size:17px;font-weight:600}.call-sub{font-size:13px;color:var(--t2)}
-.reach-pill{display:block;width:fit-content;font-size:11px;font-weight:600;color:var(--t2);background:var(--bg);text-transform:none;letter-spacing:0;border-radius:6px;padding:2px 8px;margin-left:0;display:inline-block;margin-top:4px}
+.reach-pill{display:block;width:fit-content;font-size:12px;font-weight:600;color:var(--t2);background:var(--bg);text-transform:none;letter-spacing:0;border-radius:6px;padding:2px 8px;margin-left:0;display:inline-block;margin-top:4px}
 .call-row.reaches{border:none}
 .seg{background:rgba(118,118,128,.12);border-radius:9px;padding:2px;margin-top:12px}
 .seg span{font-size:13px;font-weight:500;padding:7px 16px;border-radius:7px;color:var(--t1)}.seg span.on{background:#fff;color:var(--t1);box-shadow:0 1px 3px rgba(0,0,0,.12)}
@@ -366,7 +364,7 @@ body{background:#EDEDEA;padding:24px;font-family:var(--font-body);-webkit-font-s
 .form-input{height:52px;padding:0 16px;font-size:17px;border-radius:14px;border:none;background:var(--bg)}.form-input:focus{box-shadow:0 0 0 2px var(--accent)}
 .form-field{margin-bottom:16px}
 .inline-link{color:var(--accent-ink)}
-.bars{height:88px}.bar{background:var(--accent);opacity:.25}.bar.now{opacity:1}.weeks span{font-size:11px;font-weight:500;color:var(--t3)}.weeks span:last-child{color:var(--t1)}
+.bars{height:88px}.bar{background:var(--accent);opacity:.25}.bar.now{opacity:1}.weeks span{font-size:12px;font-weight:500;color:var(--t3)}.weeks span:last-child{color:var(--t1)}
 .wavepanel{padding:20px 16px 16px;margin-top:24px}
 /* modal: temporary layer */
 .wc-modal{background:rgba(0,0,0,.28);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:16px}
@@ -383,7 +381,7 @@ body{background:#EDEDEA;padding:24px;font-family:var(--font-body);-webkit-font-s
 /* THE one glass element: floating tab bar */
 .navbar{position:absolute;left:16px;right:16px;bottom:24px;height:68px;border:none;border-radius:34px;padding:0 8px;
 background:rgba(255,255,255,.64);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.55),0 8px 30px -4px rgba(0,0,0,.12)}
-.navbtn{font-size:11px;font-weight:500;color:var(--t3);padding:10px 0 8px;gap:3px;min-height:44px}.navbtn.active{color:var(--accent-ink)}
+.navbtn{font-size:12px;font-weight:500;color:var(--t3);padding:10px 0 8px;gap:3px;min-height:44px}.navbtn.active{color:var(--accent-ink)}
 .navbtn .icon{width:24px;height:24px;stroke-width:1.7}.navbtn.active .icon{stroke-width:2.1}
 .badge{top:8px;right:28%;width:10px;height:10px;border:2px solid #fff}
 .controls{margin-top:24px;padding:16px}.controls b{font-size:13px;color:var(--t2);text-transform:none;letter-spacing:0;font-weight:500}
@@ -418,11 +416,11 @@ body{flex-direction:column;justify-content:flex-start;padding:32px 24px 64px}
 .kv:last-child{border-bottom:none}.kv span{font-size:13px;font-weight:500;line-height:18px;color:var(--t2)}.kv b{font:400 17px/22px var(--font-body);color:var(--t1)}
 .fine{font-size:13px;line-height:18px;color:var(--t2);margin:8px 4px 0}
 .hb{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:13px;font-weight:500;line-height:18px;color:var(--t2)}
-.hb.done{color:var(--t1)}.mini{width:20px;height:20px;border-radius:50%;background:#A2A2A7;color:#fff;font-size:11px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.hb.done{color:var(--t1)}.mini{width:20px;height:20px;border-radius:50%;background:#A2A2A7;color:#fff;font-size:12px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .tone-card.done .card-icon{background:rgba(120,168,60,.16)!important;color:#3F7D2A!important}.tone-card.done .alert-text{color:var(--t2);font-weight:500}.sev-pill.g{color:#3F7D2A}
 .intro{position:absolute;inset:0;z-index:45;background:var(--bg);display:flex;flex-direction:column;padding:88px 24px 40px;transition:opacity .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
 .intro.gone{opacity:0;transform:translateY(24px);pointer-events:none}
-.intro-brand{font-size:13px;font-weight:500;color:var(--t2)}
+.brand-dot{width:18px;height:18px;vertical-align:-4px;margin-right:6px}.intro-brand{font-size:13px;font-weight:500;color:var(--t2)}
 .intro-track{flex:1;overflow:hidden;margin:0 -24px}.intro-slide{display:flex;height:100%;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .intro-page{flex:0 0 100%;padding:64px 24px 0}
 .intro-ic{width:88px;height:88px;border-radius:26px;background:var(--accent-tint);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;margin-bottom:32px}
@@ -443,8 +441,8 @@ body{flex-direction:column;justify-content:flex-start;padding:32px 24px 64px}
 .who{display:flex;align-items:center;gap:12px;min-height:40px}.who b{font-size:17px;font-weight:600}.who em{margin:0 0 0 auto;font-size:15px}
 .launch{position:absolute;inset:0;z-index:48;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .35s ease}
 .launch.gone{opacity:0;pointer-events:none}
-.launch-mark{width:96px;height:96px;border-radius:26px;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;animation:lm .6s cubic-bezier(.2,.8,.2,1) both}
-.launch-mark svg{width:52px;height:52px}
+.launch-mark{width:96px;height:96px;border-radius:26px;background:#f5f1e8;display:flex;align-items:center;justify-content:center;animation:lm .6s cubic-bezier(.2,.8,.2,1) both}
+.launch-mark svg{width:88px;height:88px}
 .launch-name{font:600 20px/25px var(--font-display);color:var(--t1);animation:lm .6s .1s cubic-bezier(.2,.8,.2,1) both}
 @keyframes lm{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.launch-mark,.launch-name{animation:none}}
@@ -466,7 +464,7 @@ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='
 animation:drift 26s linear infinite,breathe 6s ease-in-out infinite}
 @keyframes drift{to{-webkit-mask-position:-400px 0;mask-position:-400px 0}}
 @keyframes breathe{50%{opacity:.35}}
-.launch{background:var(--bg)}.launch-mark{color:var(--on-accent)}
+.launch{background:var(--bg)}
 .review{background:var(--surface)}.badge{border-color:var(--bg)}.seg span.on{background:var(--surface2)}
 .navbar{background:var(--glass)}.push-banner{background:var(--pop)!important}.wc-modal-card,.wc-modal-card[style]{background:var(--pop)}
 .intro-dots i{background:var(--sep)}.intro-dots i.on{background:var(--accent)}
@@ -485,8 +483,12 @@ animation:drift 26s linear infinite,breathe 6s ease-in-out infinite}
 
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--danger:#FF7A70}}:root[data-theme=dark]{--danger:#FF7A70}
 .wv{height:40px;background:var(--wavec,var(--accent));-webkit-mask:var(--wavemask) 0 0/400px 40px repeat-x;mask:var(--wavemask) 0 0/400px 40px repeat-x;animation:drift 26s linear infinite,breathe 6s ease-in-out infinite}
-.launch-mark{background:linear-gradient(145deg,#7DC07C,#3F8A44);color:#fff;animation:lm .6s cubic-bezier(.2,.8,.2,1) both,lb 1.8s .6s ease-in-out infinite}@keyframes lb{50%{transform:scale(1.05)}}
-.launch-wave{position:absolute;left:0;right:0;bottom:24%;opacity:.5}
+.launch-mark{background:none;animation:lm .6s cubic-bezier(.2,.8,.2,1) both,lb 1.8s .6s ease-in-out infinite}@keyframes lb{50%{transform:scale(1.05)}}
+.launch-waves{position:absolute;left:0;right:0;bottom:0;height:36%;overflow:hidden;pointer-events:none}
+.lw{position:absolute;left:0;bottom:0;width:200%;height:100%;fill:var(--accent);animation:lwdrift 22s linear infinite}
+.lw1{opacity:.16}.lw2{opacity:.28;animation-duration:30s;animation-direction:reverse}.lw3{opacity:.5;animation-duration:18s}
+@keyframes lwdrift{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.lw{animation:none}}
 .mem-row[data-act]{cursor:pointer}.mem-row[data-act]:active{transform:scale(.98)}
 .mem-story{font:400 20px/30px var(--font-body);color:var(--t1)}
 .mav{position:relative;overflow:hidden;background:linear-gradient(135deg,#A2A2A7,#7C7C81)}.mav b{font-size:17px}.mav b{color:#fff;font-weight:600}
@@ -596,6 +598,7 @@ animation:drift 26s linear infinite,breathe 6s ease-in-out infinite}
 /* call screen: note under the status */
 .call-st,.call-note{text-align:center}
 .call-note{font-size:15px;line-height:21px;color:rgba(255,255,255,.6);margin-top:8px;max-width:300px;min-height:0}
+html.embedded .canvas-label{color:rgba(255,255,255,.92)!important}
 :root,html{color-scheme:normal!important}html,body{background:transparent!important}:root:not([data-theme=light]) body,:root[data-theme=dark] body,:root[data-theme=light] body{background:transparent!important}html.embedded,html.embedded body{background:transparent!important}html.embedded .wrap{zoom:.72!important}html.embedded body{padding:0!important;min-height:0!important;align-items:flex-start!important}html.embedded .phone{box-shadow:none!important}html.embedded.v-phone .review.notes{display:none}html.embedded.v-notes .canvas-label,html.embedded.v-notes .phone,html.embedded.v-notes .review.demo{display:none!important}html.embedded.v-notes .wrap{zoom:1!important;max-width:none;width:100%}html.embedded.v-notes .review{width:100%;margin:0}html.embedded.v-phone .review{margin-top:16px}.rv-body .annotation{max-width:none;margin:0 0 4px}.rv-body .annotation h4{margin-top:20px}.rv-body .annotation .tone-card{margin-bottom:8px}
 
 /* final visual details and alert surfaces */
@@ -649,37 +652,127 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 #alertList .hb{margin-top:14px;padding-top:12px;border-top:1px solid var(--sep);font-size:13px;color:var(--t3)}
 #alertList .hb.done{color:var(--t2)}
 #alertList .chev{align-self:center;opacity:.5}
+html.tx-lg{font-size:112.5%}html.tx-xl{font-size:125%}
+html.tx-lg .alert-text,html.tx-lg .status-title{font-size:18.0px!important}
+html.tx-lg .mem-title{font-size:19.1px!important}
+html.tx-lg .mem-snip{font-size:16.9px!important}
+html.tx-lg .alert-time{font-size:14.6px!important}
+html.tx-lg .section-label,html.tx-lg .day-label{font-size:14.6px!important}
+html.tx-lg .fine{font-size:14.6px!important}
+html.tx-lg .kv b{font-size:19.1px!important}
+html.tx-lg .kv span{font-size:14.6px!important}
+html.tx-lg .notif-text{font-size:16.9px!important}
+html.tx-lg .call-label{font-size:19.1px!important}
+html.tx-lg .call-sub{font-size:14.6px!important}
+html.tx-lg .lb>span{font-size:14.6px!important}
+html.tx-lg .hb{font-size:14.6px!important}
+html.tx-lg .navbtn{font-size:12.4px!important}
+html.tx-lg .seg span{font-size:14.6px!important}
+html.tx-lg .mem-meta{font-size:14.6px!important}
+html.tx-lg .sev-pill{font-size:14.6px!important}
+html.tx-xl .alert-text,html.tx-xl .status-title{font-size:20.0px!important}
+html.tx-xl .mem-title{font-size:21.2px!important}
+html.tx-xl .mem-snip{font-size:18.8px!important}
+html.tx-xl .alert-time{font-size:16.2px!important}
+html.tx-xl .section-label,html.tx-xl .day-label{font-size:16.2px!important}
+html.tx-xl .fine{font-size:16.2px!important}
+html.tx-xl .kv b{font-size:21.2px!important}
+html.tx-xl .kv span{font-size:16.2px!important}
+html.tx-xl .notif-text{font-size:18.8px!important}
+html.tx-xl .call-label{font-size:21.2px!important}
+html.tx-xl .call-sub{font-size:16.2px!important}
+html.tx-xl .lb>span{font-size:16.2px!important}
+html.tx-xl .hb{font-size:16.2px!important}
+html.tx-xl .navbtn{font-size:13.8px!important}
+html.tx-xl .seg span{font-size:16.2px!important}
+html.tx-xl .mem-meta{font-size:16.2px!important}
+html.tx-xl .sev-pill{font-size:16.2px!important}
+html.hc:root{--t2:var(--t1);--t3:var(--t1);--sep:#7A736B}
+html.rm *{transition:none!important;animation:none!important}
+
+/* Launch: waves rise in under the logo, then the logo lifts away and the waves sink out */
+.launch-waves{animation:lwrise 1s .15s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes lwrise{from{transform:translateY(45%);opacity:0}}
+.launch-name{animation:lm .6s .25s cubic-bezier(.2,.8,.2,1) both}
+.launch.gone{transition:opacity .45s ease .15s,visibility 0s linear .65s}
+.launch.gone .launch-mark,.launch.gone .launch-name{animation:none;opacity:0;transform:translateY(-10px);transition:opacity .25s ease,transform .4s ease}
+.launch.gone .launch-waves{animation:none;opacity:0;transform:translateY(35%);transition:opacity .4s ease .05s,transform .55s cubic-bezier(.5,0,.75,0)}
+@media(prefers-reduced-motion:reduce){.launch-waves{animation:none}.launch.gone .launch-mark,.launch.gone .launch-name,.launch.gone .launch-waves{transform:none}}
+/* Filled launch-style waves replace the thin wave lines (story progress line kept) */
+.wv{height:48px;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 48'%3E%3Cpath d='M0 24.0Q100 3.84 200 24.0T400 24.0V48H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/400px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 48'%3E%3Cpath d='M0 27.839999999999996Q130 46.08 260 27.839999999999996T520 27.839999999999996V48H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/520px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 48'%3E%3Cpath d='M0 33.599999999999994Q90 19.199999999999996 180 33.599999999999994T360 33.599999999999994V48H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/360px 48px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 48'%3E%3Cpath d='M0 24.0Q100 3.84 200 24.0T400 24.0V48H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/400px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 48'%3E%3Cpath d='M0 27.839999999999996Q130 46.08 260 27.839999999999996T520 27.839999999999996V48H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/520px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 48'%3E%3Cpath d='M0 33.599999999999994Q90 19.199999999999996 180 33.599999999999994T360 33.599999999999994V48H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/360px 48px repeat-x;animation:wdrift 26s linear infinite,breathe 6s ease-in-out infinite}
+.wv.pl-wave{height:40px;-webkit-mask:var(--wavemask) 0 0/400px 40px repeat-x;mask:var(--wavemask) 0 0/400px 40px repeat-x;animation:drift 30s linear infinite}
+.wv.pl-wave.on{animation-duration:8s}
+.hero::after{bottom:0;height:48px;opacity:1;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 48'%3E%3Cpath d='M0 24.0Q100 3.84 200 24.0T400 24.0V48H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/400px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 48'%3E%3Cpath d='M0 27.839999999999996Q130 46.08 260 27.839999999999996T520 27.839999999999996V48H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/520px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 48'%3E%3Cpath d='M0 33.599999999999994Q90 19.199999999999996 180 33.599999999999994T360 33.599999999999994V48H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/360px 48px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 48'%3E%3Cpath d='M0 24.0Q100 3.84 200 24.0T400 24.0V48H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/400px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 48'%3E%3Cpath d='M0 27.839999999999996Q130 46.08 260 27.839999999999996T520 27.839999999999996V48H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/520px 48px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 48'%3E%3Cpath d='M0 33.599999999999994Q90 19.199999999999996 180 33.599999999999994T360 33.599999999999994V48H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/360px 48px repeat-x;animation:wdrift 26s linear infinite,breathe 6s ease-in-out infinite}
+.wcp-wave{margin:12px -16px -14px}
+@keyframes wdrift{to{-webkit-mask-position:-400px 0,520px 0,-360px 0;mask-position:-400px 0,520px 0,-360px 0}}
+@media(prefers-reduced-motion:reduce){.wv:not(.pl-wave),.hero::after{animation:none}}
+
+/* Round 1: honest hero, visible arrows, anchored waves, a voice for Margaret's stories */
+:focus-visible{outline-color:var(--accent-ink)}
+.chev{color:var(--t3)}.chev .icon{width:16px;height:16px;stroke-width:2.4}#alertList .chev{opacity:1}
+.tone-card.red .chev{display:none}
+.hb-open{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hb-open b{font-weight:600;color:var(--danger);white-space:nowrap}
+.hero.tone-red .hero-icon{color:var(--danger)}
+.hero[data-act]{cursor:pointer}
+.hero-title{font-size:2rem!important;line-height:2.25rem!important}
+.call-wave{position:absolute;left:0;right:0;bottom:0;width:auto;height:150px;margin:0;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 150'%3E%3Cpath d='M0 75.0Q130 12.0 260 75.0T520 75.0V150H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/520px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 150'%3E%3Cpath d='M0 87.0Q170 144.0 340 87.0T680 87.0V150H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/680px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 150'%3E%3Cpath d='M0 105.0Q115 60.0 230 105.0T460 105.0V150H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/460px 150px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 150'%3E%3Cpath d='M0 75.0Q130 12.0 260 75.0T520 75.0V150H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/520px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 150'%3E%3Cpath d='M0 87.0Q170 144.0 340 87.0T680 87.0V150H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/680px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 150'%3E%3Cpath d='M0 105.0Q115 60.0 230 105.0T460 105.0V150H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/460px 150px repeat-x;animation:wdriftL 30s linear infinite,breathe 6s ease-in-out infinite;pointer-events:none}
+.call[data-ph=on] .call-wave{animation-duration:14s,2.2s}
+.call-btns{position:relative;z-index:1}
+.intro::after{content:"";position:absolute;left:0;right:0;bottom:0;height:150px;background:var(--accent);opacity:.35;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 150'%3E%3Cpath d='M0 75.0Q130 12.0 260 75.0T520 75.0V150H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/520px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 150'%3E%3Cpath d='M0 87.0Q170 144.0 340 87.0T680 87.0V150H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/680px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 150'%3E%3Cpath d='M0 105.0Q115 60.0 230 105.0T460 105.0V150H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/460px 150px repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 150'%3E%3Cpath d='M0 75.0Q130 12.0 260 75.0T520 75.0V150H0Z' fill='black' fill-opacity='0.2'/%3E%3C/svg%3E") 0 0/520px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 150'%3E%3Cpath d='M0 87.0Q170 144.0 340 87.0T680 87.0V150H0Z' fill='black' fill-opacity='0.32'/%3E%3C/svg%3E") 0 0/680px 150px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 150'%3E%3Cpath d='M0 105.0Q115 60.0 230 105.0T460 105.0V150H0Z' fill='black' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0/460px 150px repeat-x;animation:wdriftL 40s linear infinite;pointer-events:none}
+.intro>*{position:relative;z-index:1}
+.intro-ic{background:linear-gradient(145deg,#7DC07C,#3F8A44)!important;color:#fff!important}
+.intro-dots i{background:var(--t3);opacity:.4}.intro-dots i.on{background:var(--accent-ink);opacity:1}
+.mem-lead{font-weight:600;letter-spacing:-.01em}
+@keyframes wdriftL{to{-webkit-mask-position:-520px 0,680px 0,-460px 0;mask-position:-520px 0,680px 0,-460px 0}}
+@media(prefers-reduced-motion:reduce){.call-wave,.intro::after{animation:none}}
+
+.mem-card p,#memRest{font-size:17px;line-height:1.6}
+
+/* Round 2/3: quiet when nothing is happening, bigger hit areas */
+.alerts-empty .wv,.ae-wave{animation:none!important}
+.push-x{padding:14px;margin:-14px;display:inline-block}
+.expl-toggle{min-height:44px}
+#introDots i{position:relative;cursor:pointer}#introDots i::after{content:"";position:absolute;inset:-14px -6px}
+
+/* check-in result and Mark as handled must read as two separate things */
+#wcWrap .wcp{margin-bottom:20px;border:1px solid var(--sep)}
+#wcWrap .wcp[data-st=ok]{border-color:rgba(120,168,60,.38)}
+#wcWrap .wcp[data-st=pending]{border-color:rgba(120,100,170,.30)}
+#wcWrap .wcp[data-st=bad]{border-color:rgba(255,59,48,.30)}
+#markHandledBtn,#wcBtn{background:var(--bg)!important;border:1px solid var(--sep)!important;padding:11px 15px}
+#markHandledBtn{margin-bottom:20px}
 </style>
 
-<link href="images/olympia-favicon.png" rel="icon" type="image/png"/></head>
-<body>
+<link href="images/favicon.svg" rel="icon" type="image/svg+xml"/><link href="images/olympia-favicon.png" rel="icon" sizes="192x192" type="image/png"/><link href="images/apple-touch-icon.png" rel="apple-touch-icon"/></head>
+<body><svg aria-hidden="true" style="position:absolute;width:0;height:0"><symbol id="hlogo" viewBox="29.5 29.5 140 140"><g fill="#fe860e"><circle cx="74.5" cy="54.5" r="16"/><circle cx="125.5" cy="54.5" r="16"/><circle cx="74.5" cy="145" r="16"/><circle cx="125.5" cy="145" r="16"/><ellipse cx="47.5" cy="99.5" rx="16" ry="28"/><ellipse cx="100.5" cy="99.5" rx="16" ry="28"/><ellipse cx="151.5" cy="99.5" rx="16" ry="28"/></g></symbol></svg>
 <div class="wrap">
 <div class="canvas-label">Olympia Family · The app for family</div>
 <div class="phone"><div class="screen">
 <i class="notch"></i>
-<div class="launch" id="launch"><div class="launch-mark"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.6" viewbox="0 0 64 64"><path d="M9 34c4 0 5-11 9-11s5 20 10 20 5-27 10-27 5 24 9 24 4-6 8-6"></path></svg></div><div class="launch-name">Olympia Family</div><div class="wv launch-wave"></div></div>
-<div class="intro" id="intro"><div class="intro-brand">Olympia Family</div>
-<div class="intro-track"><div class="intro-slide" id="introSlide"><div class="intro-page"><div class="intro-ic" style="background:linear-gradient(145deg,#7DC07C,#3F8A44);color:#fff"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.6" style="width:46px;height:46px" viewbox="0 0 64 64"><path d="M9 34c4 0 5-11 9-11s5 20 10 20 5-27 10-27 5 24 9 24 4-6 8-6"></path></svg></div><h2>Know she's okay.</h2><p>Olympia keeps Margaret company at home. This app lets you know how she is, and when something changes.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><rect height="9" rx="2.5" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3"></path></svg></div><h2>What she says stays hers.</h2><p>You’ll hear if something is wrong. Her conversations stay between her and Olympia.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l3 3 5-6"></path></svg></div><h2>She stays in charge.</h2><p>Margaret is told about anything urgent at the same moment you are, and she approves who has access.</p></div></div></div>
+<div class="launch" id="launch"><div class="launch-mark"><svg aria-hidden="true" viewBox="0 0 140 140"><use href="#hlogo"/></svg></div><div class="launch-name">Olympia Family</div><div class="launch-waves" aria-hidden="true"><svg class="lw lw1" viewBox="0 0 800 200" preserveAspectRatio="none"><path d="M0 62Q100 8 200 62T400 62T600 62T800 62V200H0Z"/></svg><svg class="lw lw2" viewBox="0 0 1040 200" preserveAspectRatio="none"><path d="M0 92Q130 140 260 92T520 92T780 92T1040 92V200H0Z"/></svg><svg class="lw lw3" viewBox="0 0 920 200" preserveAspectRatio="none"><path d="M0 122Q115 76 230 122T460 122T690 122T920 122V200H0Z"/></svg></div></div>
+<div class="intro" id="intro"><div class="intro-brand"><svg aria-hidden="true" class="brand-dot" viewBox="0 0 140 140"><use href="#hlogo"/></svg>Olympia Family</div>
+<div class="intro-track"><div class="intro-slide" id="introSlide"><div class="intro-page"><div class="intro-ic" style="background:linear-gradient(145deg,#7DC07C,#3F8A44);color:#fff"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.6" style="width:46px;height:46px" viewbox="0 0 64 64"><path d="M9 34c4 0 5-11 9-11s5 20 10 20 5-27 10-27 5 24 9 24 4-6 8-6"></path></svg></div><h2>Know she's okay.</h2><p>Olympia keeps Margaret company at home. This app lets you know how she is, and when something changes.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><rect height="9" rx="2.5" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3"></path></svg></div><h2>What she says stays hers.</h2><p>You’ll hear if something is wrong, never a transcript. The only words you can hear are stories Margaret chooses to keep in her Memory Book.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l3 3 5-6"></path></svg></div><h2>She’s in charge.</h2><p>Margaret is told about anything urgent at the same moment you are. She approves who has access, and she agrees to the few things Olympia may pass on.</p></div></div></div>
 <div class="intro-foot"><div class="intro-dots" id="introDots"><i class="on"></i><i></i><i></i></div>
 <button class="intro-btn" data-act="introNext" id="introBtn">Continue</button>
 <button class="intro-skip" data-act="closeIntro" id="introSkip">Skip</button></div></div>
 <div class="wc-modal" data-act="overlayCancelWc" id="wcModal">
 <div class="wc-modal-card sh">
 <div class="wc-modal-icon"><svg class="icon" style="width:20px;height:20px" viewbox="0 0 24 24"><path d="M12 21s-7-4.4-9-9c-1.4-3.4.5-7 4-7 2 0 3.3 1 5 3 1.7-2 3-3 5-3 3.5 0 5.4 3.6 4 7-2 4.6-9 9-9 9z"></path></svg></div>
-<div class="wc-modal-title">Check in on Margaret?</div>
-<div class="wc-modal-body">Olympia will bring it up herself, in conversation, Margaret won't be told you asked.</div>
+<div class="wc-modal-title">Ask Olympia to check in?</div>
+<div class="wc-modal-body">Olympia will check in herself, in conversation. If Margaret asks whether someone requested it, she will be told it was you.</div>
 <div class="wc-modal-actions">
 <button class="wc-modal-cancel" data-act="cancelWcConfirm" data-args='["@event"]'>Not now</button>
-<button class="wc-modal-go" data-act="confirmWc">Ask her to check in</button>
+<button class="wc-modal-go" data-act="confirmWc">Ask Olympia</button>
 </div>
 </div>
 </div>
 <div class="push-banner" data-act="openFromPush" id="pushBanner">
 <div class="notif-icon"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="Margaret" data-remove-on-error src="images/margaret.webp"/></div>
 <div style="flex:1">
-<div class="push-top"><span class="push-app">Olympia Family</span><span class="push-x" data-act="closePush" data-args='["@event"]'>✕</span></div>
+<div class="push-top"><span class="push-app"><svg aria-hidden="true" class="brand-dot" viewBox="0 0 140 140"><use href="#hlogo"/></svg>Olympia Family</span><span class="push-x" data-act="closePush" data-args='["@event"]'>✕</span></div>
 <div class="notif-title" id="pushTitle">Margaret</div>
-<div class="notif-text" id="pushText">Seemed confused about the time, twice earlier today.</div>
+<div class="notif-text" id="pushText">No answer to Olympia’s check-in since this morning.</div>
 </div>
 </div>
 <div class="wc-modal" data-act="overlayCloseSheet" id="sheetM"><div class="wc-modal-card sh" id="sheetC"></div></div>
@@ -689,7 +782,7 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <div class="views">
 <div aria-labelledby="nav-today" class="view active" data-connstate="active" id="view-today" role="tabpanel">
 <div class="head">
-<div><h1 class="head-name">Margaret</h1><div class="head-sub" id="lastSpoke">Last spoke at 2:10pm</div><div class="head-sub" id="tzLine" style="display:none"></div></div>
+<div><h1 class="head-name">Margaret</h1><div class="head-sub" id="lastSpoke">Talked with Olympia at 2:10pm</div><div class="head-sub" id="tzLine" style="display:none"></div></div>
 <div class="head-actions">
 <button aria-label="Call Margaret" class="call-pill" data-act="callMargaret"><svg class="icon" style="fill:currentColor;stroke:none;width:18px;height:18px" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call</button>
 <div class="av"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="Margaret" data-remove-on-error src="images/margaret.webp"/></div>
@@ -698,27 +791,27 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <div class="fresh"><div class="fresh-t">Olympia is getting to know Margaret</div><p>Once they’ve talked a few times, how she’s doing shows up here. Nothing to check yet.</p><div class="wv fresh-wave"></div></div>
 <div class="hero tone-green" id="statusCard">
 <div class="hero-icon g" id="statusTile"><svg class="icon" viewbox="0 0 24 24"><path d="M5 12l5 5 9-10"></path></svg></div>
-<div><div class="hero-title">Doing well today</div><span class="hero-tag g" id="statusTag">Fine</span></div>
+<div><div class="hero-title">Doing well today</div><span class="hero-tag g" id="statusTag">Nothing to flag</span></div>
 </div>
 <div class="section-label">When you call</div>
 <div class="group-card">
 <div class="lr"><span class="lic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="lb"><span>Good time to call</span><h3>After 4pm</h3><em>She's usually up for a chat</em></div></div>
 <div class="lr tap" data-act="showMemoryAndOpen"><span class="lic"><svg class="icon" viewbox="0 0 24 24"><path d="M5 5.2c1.5-1 3.5-1 5 0v13.6c-1.5-1-3.5-1-5 0z"></path><path d="M19 5.2c-1.5-1-3.5-1-5 0v13.6c1.5-1 3.5-1 5 0z"></path></svg></span><div class="lb"><span>Something to ask about</span><h3>The bakery on Kirkstall Road</h3><em>From her Memory Book</em></div><span class="chev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></div>
 <div class="lr"><div class="lb"><span>Family last called</span>
-<div class="who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="David" data-remove-on-error src="images/david.webp"/></span><b>David</b><em>yesterday</em></div>
-<div class="who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="You" data-remove-on-error src="images/emma.webp"/></span><b>You</b><em>6 days ago</em></div></div></div>
+<div class="who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="David" data-remove-on-error src="images/david.webp"/></span><b data-who="david">David</b><em>yesterday</em></div>
+<div class="who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="You" data-remove-on-error src="images/emma.webp"/></span><b data-who="you">You</b><em>6 days ago</em></div></div></div>
 </div>
 <div class="section-label conn-section">Introductions</div>
 <div class="conn-section">
 <div class="discover-card conn-active-only" data-act="openDetail">
 <div class="tile teal"><svg class="icon" viewbox="0 0 24 24"><circle cx="9" cy="12" r="6"></circle><circle cx="15" cy="12" r="6"></circle></svg></div>
 <div class="dc-body">
-<div class="dc-top"><span class="conn-num" id="connNum">2</span><span class="conn-label" id="connLabel">social calls this week</span></div>
-<div class="conn-sub" id="connSub">usual is 1</div>
+<div class="dc-top"><span class="conn-num" id="connNum">2</span><span class="conn-label" id="connLabel">Introductions this week</span></div>
+<div class="conn-sub" id="connSub">Calls with people Olympia introduced her to, shared by Margaret</div>
 </div>
 <span class="chev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span>
 </div>
-<div class="conn-empty-copy">Margaret hasn't had a Introductions call yet. You'll see how often once she starts.</div>
+<div class="conn-empty-copy">Margaret hasn't had an Introduction yet. You'll see how often only if she chooses to share it.</div>
 </div>
 <div class="spacer"></div>
 </div>
@@ -750,18 +843,18 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <div id="people"></div>
 <button class="link" data-act="openAdd" id="addLink" style="margin-top:2px;border-bottom:none" type="button">Add someone <svg class="icon" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button>
 <div class="fine">Margaret can remove anyone at any time by telling Olympia.</div>
-<div class="section-label">If a wellness check goes unanswered</div>
+<div class="section-label">If a check-in goes unanswered</div>
 <div class="group-card" id="view-settings-care">
 <div class="row care-unset" style="flex-direction:column;align-items:stretch;gap:9px;padding-top:13px;padding-bottom:13px;border-bottom:none">
 <div style="display:flex;gap:11px;align-items:center">
-<span class="tile a" style="width:34px;height:34px"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" fill="currentColor" r=".5" stroke="none"></circle></svg></span>
+<span class="tile" style="width:34px;height:34px;background:var(--bg);color:var(--t2)"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" fill="currentColor" r=".5" stroke="none"></circle></svg></span>
 <div style="flex:1"><div class="member-name">No one set yet</div><div class="member-access" id="careUnsetSub">If you request a check-in and Margaret doesn't answer, this is who Olympia tries next.</div></div>
 </div>
 <button class="link care-edit" data-act="openCareModal" style="padding:0;border-bottom:none" type="button">Add a care contact <svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button>
 </div>
 <div class="member care-set" style="display:none;border-bottom:none">
 <span class="tile g" style="width:38px;height:38px;border-radius:50%"><svg class="icon" style="width:17px;height:17px" viewbox="0 0 24 24"><path d="M5 12l5 5 9-10"></path></svg></span>
-<div style="flex:1"><div class="member-name" id="careSetName">Sunnyside Care Line</div><div class="member-access" id="careSetSub">Called if a wellness check goes unanswered</div></div>
+<div style="flex:1"><div class="member-name" id="careSetName">Sunnyside Care Line</div><div class="member-access" id="careSetSub">Called if a check-in goes unanswered</div></div>
 <button class="link care-edit" data-act="openCareModal" style="padding:0;border-bottom:none" type="button">Change</button>
 </div>
 </div>
@@ -775,14 +868,14 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <div class="wc-modal-card sh">
 <div class="wc-modal-icon"><svg class="icon" style="width:20px;height:20px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" fill="currentColor" r=".5" stroke="none"></circle></svg></div>
 <div class="wc-modal-title" id="careModalTitle">Who should Olympia try next?</div>
-<div class="wc-modal-body">If a wellness check goes unanswered, Olympia calls this person. Margaret is told who this is, same as anyone else with access.</div>
-<div class="form-field"><label class="form-label">Name</label><input class="form-input" id="careNameInput" placeholder="e.g. Sunnyside Care Line"/></div>
+<div class="wc-modal-body">If a check-in goes unanswered, Olympia calls this person. Margaret is told who this is, same as anyone else with access.</div>
+<div class="form-field"><label class="form-label" for="careNameInput">Name</label><input class="form-input" id="careNameInput" placeholder="e.g. Sunnyside Care Line"/></div>
 <div class="form-field"><label class="form-label">Relationship</label><div class="chip-row" id="careRelChips">
 <span class="chip on" data-act="pickCareRel" data-args='["@this", "Family member"]'>Family member</span>
 <span class="chip" data-act="pickCareRel" data-args='["@this", "Neighbour"]'>Neighbour</span>
 <span class="chip" data-act="pickCareRel" data-args='["@this", "Paid care line"]'>Paid care line</span>
 </div></div>
-<div class="form-field" style="margin-bottom:2px"><label class="form-label">Phone number</label><input class="form-input" id="carePhoneInput" placeholder="07…" type="tel"/></div>
+<div class="form-field" style="margin-bottom:2px"><label class="form-label" for="carePhoneInput">Phone number</label><input class="form-input" id="carePhoneInput" placeholder="07…" type="tel"/></div>
 <div class="wc-modal-actions">
 <button class="wc-modal-cancel" data-act="closeCareModal">Cancel</button>
 <button class="wc-modal-go" data-act="saveCareContact">Save</button>
@@ -793,8 +886,8 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <div class="back" data-act="closeDetail"><svg class="icon" style="width:14px;height:14px" viewbox="0 0 24 24"><path d="M15 6l-6 6 6 6"></path></svg> <span id="detailBack">Today</span></div>
 <div id="detail-connections">
 <div class="section-label" style="margin:6px 0 2px">Introductions</div>
-<div style="display:flex;align-items:baseline;gap:7px;flex-wrap:wrap"><span class="conn-num" id="connDetailNum" style="font-size:2.25rem">2</span><span class="conn-label" id="connDetailLabel" style="font-size:.9375rem">social calls this week</span></div>
-<div class="conn-sub" id="connDetailSub">usual is 1</div>
+<div style="display:flex;align-items:baseline;gap:7px;flex-wrap:wrap"><span class="conn-num" id="connDetailNum" style="font-size:2.25rem">2</span><span class="conn-label" id="connDetailLabel" style="font-size:.9375rem">Introductions this week</span></div>
+<div class="conn-sub" id="connDetailSub">Calls with people Olympia introduced her to, shared by Margaret</div>
 <div class="wavepanel">
 <div class="bars">
 <div class="bar" style="height:22%"></div><div class="bar" style="height:12%"></div><div class="bar" style="height:38%"></div><div class="bar" style="height:14%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:22%"></div><div class="bar" style="height:38%"></div><div class="bar now" style="height:75%"></div>
@@ -802,34 +895,52 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <div class="weeks"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>Now</span></div>
 </div>
 <button class="expl-toggle" data-act="toggleExplain"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-5M12 8h.01"></path></svg><span>Hide explanation</span></button>
-<div class="expl-body" id="e"><div class="expl-copy">Introductions is between the two people who spoke. Olympia tells you whether it's happening more or less, and what was said stays between them.</div></div>
+<div class="expl-body" id="e"><div class="expl-copy">Introductions is between the two people who spoke. Margaret chose to share this number when she said yes to Introductions, and she can turn it off by telling Olympia. What was said belongs to the two of them, nothing more.</div></div>
 </div>
 <div id="detail-alert" style="display:none">
 <div class="section-label" id="alertDetailMeta" style="margin:6px 0 2px">Urgent, today, 3:15pm</div>
-<div class="conn-stat" id="alertDetailText" style="cursor:default;font-size:1.375rem;line-height:1.35">Margaret seemed confused about the time, twice this afternoon.</div>
+<div class="conn-stat" id="alertDetailText" style="cursor:default;font-size:1.375rem;line-height:1.35">Margaret hasn’t answered Olympia’s check-in since this morning.</div>
 <button class="call-row" data-act="callMargaret" style="margin-top:16px"><span class="tile teal" style="width:34px;height:34px"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><span class="call-label">Call Margaret</span><span class="chev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></button>
-<div class="wc-callout" id="worthNote" style="display:none"><svg class="icon" style="width:14px;height:14px;flex:none;margin-top:1px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-5M12 8h.01"></path></svg><span>Nothing to act on here, Olympia flagged this as worth a look, and nothing needs answering. Wellness checks and "mark as handled" are reserved for urgent alerts, so they don't show up for these.</span></div>
+<div class="wc-callout" id="worthNote" style="display:none"><svg class="icon" style="width:14px;height:14px;flex:none;margin-top:1px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-5M12 8h.01"></path></svg><span>Nothing to act on here, Olympia flagged this as worth a look, and nothing needs answering. Check-ins and "mark as handled" are reserved for urgent alerts, so they don't show up for these.</span></div>
 <div id="urgentOnlyBlock">
 <div id="wcWrap">
-<button class="call-row" data-act="openWcConfirm" id="wcBtn"><span class="tile wc-ic" id="wcTile" style="width:34px;height:34px"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><path d="M12 21s-7-4.4-9-9c-1.4-3.4.5-7 4-7 2 0 3.3 1 5 3 1.7-2 3-3 5-3 3.5 0 5.4 3.6 4 7-2 4.6-9 9-9 9z"></path></svg></span><div style="flex:1;text-align:left;min-width:0"><div class="call-label" id="wcLabel">Request a wellness check</div><div class="call-sub" id="wcSub" style="display:none"></div></div><span class="chev" id="wcChev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></button>
+<button class="call-row" data-act="openWcConfirm" id="wcBtn"><span class="tile wc-ic" id="wcTile" style="width:34px;height:34px"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><path d="M12 21s-7-4.4-9-9c-1.4-3.4.5-7 4-7 2 0 3.3 1 5 3 1.7-2 3-3 5-3 3.5 0 5.4 3.6 4 7-2 4.6-9 9-9 9z"></path></svg></span><div style="flex:1;text-align:left;min-width:0"><div class="call-label" id="wcLabel">Ask Olympia to check in</div><div class="call-sub" id="wcSub" style="display:none"></div></div><span class="chev" id="wcChev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></button>
 <div aria-live="polite" class="wcp" id="wcPanel" role="status" style="display:none"></div>
 </div>
 <button class="call-row" data-act="markHandled" data-args='["@this"]' id="markHandledBtn"><span class="tile g" style="width:34px;height:34px"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><path d="M5 12l5 5 9-10"></path></svg></span><div style="flex:1;text-align:left;min-width:0"><div class="call-label" id="markHandledLabel">Mark as handled</div><div class="call-sub" id="markHandledSub" style="display:none"></div></div></button>
-<div class="wc-callout" id="wcNote"><svg class="icon" style="width:14px;height:14px;flex:none;margin-top:1px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-5M12 8h.01"></path></svg><span>This asks Olympia to check in herself, in conversation, the same way she'd bring anything up on her own, Margaret isn't told a family member asked, and she can say as little as she likes. Only one check-in happens at a time, even if more than one alert is open, and every family member sees the same outcome the moment it happens. <span id="wcEscalationLine"></span></span></div>
+<div class="wc-callout" id="wcNote"><svg class="icon" style="width:14px;height:14px;flex:none;margin-top:1px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-5M12 8h.01"></path></svg><span>This asks Olympia to check in herself, in conversation, the same way she'd bring anything up on her own. If Margaret asks whether someone requested it, Olympia tells her it was you. She can say as little as she likes. Once she answers, Olympia waits two hours before asking again. Only one check-in happens at a time, even if more than one alert is open, and every family member sees the same outcome the moment it happens. <span id="wcEscalationLine"></span></span></div>
 </div>
 </div>
 <div id="detail-my" style="display:none">
 <h1 class="head-name" style="margin:6px 0 24px">My settings</h1>
-<div class="group-card"><div class="lr" style="align-items:center"><span class="pf" style="width:56px;height:56px"><img alt="" id="meImg" data-remove-on-error src="images/emma.webp"/></span><div class="lb"><h3 id="meName">You</h3><span id="meRole">Organizer</span></div></div></div>
+<div class="group-card"><div class="lr" style="align-items:center"><span class="pf" style="width:56px;height:56px"><img alt="" id="meImg" data-remove-on-error src="images/emma.webp"/></span><div class="lb"><h3 id="meName">You</h3><span id="meRole">Organiser</span></div></div></div>
 <div class="section-label" style="margin-top:0">Alerts</div>
-<div class="group-card"><div class="member"><div style="flex:1"><div class="member-name">Alerts</div><div class="member-access">How urgent and worth-a-look items reach you</div><div class="seg" id="digestSeg"><span class="on" data-act="setDigest" data-args='["immediate"]'>Immediate</span><span data-act="setDigest" data-args='["weekly"]'>Weekly</span></div></div></div></div>
-<div class="section-label">Display</div>
-<div class="group-card"><div class="member"><div style="flex:1"><div class="member-name">Appearance</div><div class="member-access" id="themeSub">Automatic follows your phone</div><div class="seg" id="themeSeg"><span class="on" data-act="setTheme" data-args='["auto"]' data-th="auto">Automatic</span><span data-act="setTheme" data-args='["light"]' data-th="light">Light</span><span data-act="setTheme" data-args='["dark"]' data-th="dark">Dark</span></div></div></div></div>
+<div class="group-card"><div class="member"><div style="flex:1"><div class="member-name">Worth a look</div><div class="member-access">When patterns reach you. Urgent alerts always reach you straight away.</div><div class="seg" id="digestSeg"><span class="on" data-act="setDigest" data-args='["immediate"]'>Straight away</span><span data-act="setDigest" data-args='["weekly"]'>Weekly summary</span></div></div></div></div>
+<div class="section-label">Preferences</div>
+<div class="group-card"><div class="member" data-act="openA11y" role="button" tabindex="0" style="cursor:pointer;align-items:center"><div style="flex:1"><div class="member-name">Display and accessibility</div><div class="member-access" id="a11ySummary">Automatic, standard text</div></div><span class="chev"><svg class="icon" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span></div></div>
+<div class="section-label">Sign-in and security</div>
+<div class="group-card">
+<div class="member"><div style="flex:1"><div class="member-name">Signed in with your phone number</div><div class="member-access">Olympia texts you a code when you sign in on a new phone.</div></div></div>
+<div class="member"><div style="flex:1"><div class="member-name">Lock the app</div><div class="member-access">Ask for Face ID or your passcode when you open Olympia Family. Alerts still arrive.</div><div class="seg" id="lockSeg" role="group" aria-label="Lock the app"><span class="on" data-act="setLock" data-args='["off"]' data-v="off">Off</span><span data-act="setLock" data-args='["on"]' data-v="on">On</span></div></div></div>
+</div>
 <div class="section-label">Account</div>
 <div class="group-card">
 <button class="link" data-act="openHelp" type="button">Help and feedback <svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button>
 <button class="link" data-act="openSignOut" style="color:var(--danger)" type="button">Sign out</button>
 </div>
+</div>
+<div id="detail-a11y" style="display:none">
+<h1 class="head-name" style="margin:6px 0 24px">Display and accessibility</h1>
+<div class="section-label" style="margin-top:0">Display</div>
+<div class="group-card"><div class="member"><div style="flex:1"><div class="member-name">Appearance</div><div class="member-access" id="themeSub">Automatic follows your phone</div><div class="seg" id="themeSeg"><span class="on" data-act="setTheme" data-args='["auto"]' data-th="auto">Automatic</span><span data-act="setTheme" data-args='["light"]' data-th="light">Light</span><span data-act="setTheme" data-args='["dark"]' data-th="dark">Dark</span></div></div></div></div>
+<div class="section-label">Reading and movement</div>
+
+<div class="group-card">
+<div class="member"><div style="flex:1"><div class="member-name">Text size</div><div class="member-access" id="textSub">Standard</div><div class="seg" id="textSeg" role="group" aria-label="Text size"><span class="on" data-act="setA11y" data-args='["tx","std"]' data-v="std">Standard</span><span data-act="setA11y" data-args='["tx","lg"]' data-v="lg">Large</span><span data-act="setA11y" data-args='["tx","xl"]' data-v="xl">Largest</span></div></div></div>
+<div class="member"><div style="flex:1"><div class="member-name">Stronger contrast</div><div class="member-access">Darker secondary text and dividers</div><div class="seg" id="hcSeg" role="group" aria-label="Stronger contrast"><span class="on" data-act="setA11y" data-args='["hc","off"]' data-v="off">Off</span><span data-act="setA11y" data-args='["hc","on"]' data-v="on">On</span></div></div></div>
+<div class="member"><div style="flex:1"><div class="member-name">Reduce motion</div><div class="member-access">Stops animations in this app</div><div class="seg" id="rmSeg" role="group" aria-label="Reduce motion"><span class="on" data-act="setA11y" data-args='["rm","off"]' data-v="off">Off</span><span data-act="setA11y" data-args='["rm","on"]' data-v="on">On</span></div></div></div>
+</div>
+<div class="fine">Changes apply straight away and are remembered on this phone.</div>
 </div>
 <div id="detail-mem" style="display:none">
 <div class="mem-hero"><div class="mem-tag"><span class="mem-tagic" id="memIc"></span><span id="memD"></span></div>
@@ -843,14 +954,21 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 </div>
 <div id="detail-how" style="display:none">
 <div class="section-label" style="margin:6px 0 2px">How Olympia decides what reaches you</div>
-<div class="expl-copy" style="font-size:.875rem;line-height:1.65">Worth a look stays private unless Margaret chooses to share it herself. Urgent always reaches family, no exceptions, and Margaret is told the moment it happens too, at the same time you are. Everything else in this app follows from that one rule.</div>
+<div class="expl-copy" style="font-size:.875rem;line-height:1.65">Worth a look flags a pattern Olympia notices, never what was said on a call. Urgent always reaches family, no exceptions, and Margaret is told the moment it happens too, at the same time you are. Everything else in this app follows from that one rule.</div>
+<div class="section-label" style="margin:22px 0 6px">What Margaret has agreed to share</div>
+<div class="group-card" id="signalList">
+<div class="row"><div style="flex:1"><div class="member-name">Not answering</div><div class="member-access">A check-in or the phone goes unanswered. Urgent.</div></div></div>
+<div class="row"><div style="flex:1"><div class="member-name">Calling a lot</div><div class="member-access">Several calls to Olympia in a short time. Worth a look.</div></div></div>
+<div class="row"><div style="flex:1"><div class="member-name">Much quieter than usual</div><div class="member-access">Fewer or shorter conversations than normal. Worth a look.</div></div></div>
+</div>
+<div class="fine">Nothing else is passed on. Margaret can change this any time by telling Olympia.</div>
 </div>
 <div class="spacer"></div>
 </div>
 </div>
 <div aria-label="Sections" class="navbar" role="tablist">
 <button aria-controls="view-today" aria-selected="true" class="navbtn active" data-act="showTab" data-args='["today"]' id="nav-today" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5"></path><path d="M6 10v9h5v-5h2v5h5v-9"></path></svg>Today</button>
-<button aria-controls="view-memory" aria-selected="false" class="navbtn" data-act="showTab" data-args='["memory"]' id="nav-memory" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M5 5.2c1.5-1 3.5-1 5 0v13.6c-1.5-1-3.5-1-5 0z"></path><path d="M19 5.2c-1.5-1-3.5-1-5 0v13.6c1.5-1 3.5-1 5 0z"></path></svg>Memories</button>
+<button aria-controls="view-memory" aria-selected="false" class="navbtn" data-act="showTab" data-args='["memory"]' id="nav-memory" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M5 5.2c1.5-1 3.5-1 5 0v13.6c-1.5-1-3.5-1-5 0z"></path><path d="M19 5.2c-1.5-1-3.5-1-5 0v13.6c1.5-1 3.5-1 5 0z"></path></svg>Memory Book</button>
 <button aria-controls="view-alerts" aria-selected="false" class="navbtn" data-act="showTab" data-args='["alerts"]' id="nav-alerts" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M7 9a5 5 0 0110 0c0 4.3 1.6 5.6 1.6 5.6H5.4S7 13.3 7 9z"></path><path d="M10.4 17.6a1.6 1.6 0 003.2 0"></path></svg>Alerts<span aria-hidden="true" class="badge" id="alertBadge"></span></button>
 <button aria-controls="view-settings" aria-selected="false" class="navbtn" data-act="showTab" data-args='["settings"]' id="nav-settings" role="tab"><svg class="icon" viewbox="0 0 24 24"><circle cx="9" cy="8" r="2.6"></circle><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5"></path><circle cx="17" cy="9" opacity=".55" r="2"></circle><path d="M14.6 14.3c2.1.4 3.7 2.1 3.7 4.2" opacity=".55"></path></svg>Family</button>
 </div>
@@ -858,7 +976,8 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <details class="review demo"><summary>Demo controls</summary>
 <div class="rv-body">
 <div class="controls"><b>Demo: appearance</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn" data-act="setTheme" data-args='["light"]' data-th="light">Light</button><button class="state-btn" data-act="setTheme" data-args='["dark"]' data-th="dark">Dark</button></div></div>
-<div class="controls"><b>Demo: who is viewing</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setViewer" data-args='["you"]' data-v="you">You (Organizer)</button><button class="state-btn" data-act="setViewer" data-args='["david"]' data-v="david">David</button><button class="state-btn" data-act="setViewer" data-args='["priya"]' data-v="priya">Priya</button></div></div><div class="controls"><b>Demo: Today</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setToday" data-args='["norm", "@this"]'>Normal</button><button class="state-btn" data-act="setToday" data-args='["fresh", "@this"]'>Brand-new install</button></div></div><div class="controls"><b>Demo: viewer location</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn" data-act="setTz" data-args='[false, "@this"]'>Same time zone</button><button class="state-btn on" data-act="setTz" data-args='[true, "@this"]'>Abroad, 5 hours behind</button></div></div><div class="controls"><b>Demo: wellness check</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setWcDemo" data-args='["wc", "answered", "@this"]'>Margaret answers</button><button class="state-btn" data-act="setWcDemo" data-args='["wc", "noanswer", "@this"]'>Margaret doesn't answer</button></div><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setWcDemo" data-args='["care", "answers", "@this"]'>Care contact answers</button><button class="state-btn" data-act="setWcDemo" data-args='["care", "noanswer", "@this"]'>Care contact doesn't answer</button></div><div class="state-btns"><button class="state-btn" data-act="resetWc">Reset check-in</button><button class="state-btn" data-act="resetAlerts">Reset alerts</button></div></div><div class="controls"><b>Demo: notification</b><div class="state-btns"><button class="state-btn" data-act="firePush">Send urgent alert push</button></div></div>
+<div class="controls"><b>Demo: accessibility</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setA11y" data-args='["tx","std"]' data-dx="tx:std">Standard text</button><button class="state-btn" data-act="setA11y" data-args='["tx","lg"]' data-dx="tx:lg">Large text</button><button class="state-btn" data-act="setA11y" data-args='["tx","xl"]' data-dx="tx:xl">Largest text</button></div><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setA11y" data-args='["hc","off"]' data-dx="hc:off">Normal contrast</button><button class="state-btn" data-act="setA11y" data-args='["hc","on"]' data-dx="hc:on">Stronger contrast</button></div><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setA11y" data-args='["rm","off"]' data-dx="rm:off">Motion on</button><button class="state-btn" data-act="setA11y" data-args='["rm","on"]' data-dx="rm:on">Reduce motion</button></div></div>
+<div class="controls"><b>Demo: who is viewing</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setViewer" data-args='["you"]' data-v="you">Emma (Organiser)</button><button class="state-btn" data-act="setViewer" data-args='["david"]' data-v="david">David</button><button class="state-btn" data-act="setViewer" data-args='["priya"]' data-v="priya">Priya</button></div></div><div class="controls"><b>Demo: Today</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setToday" data-args='["norm", "@this"]'>Normal</button><button class="state-btn" data-act="setToday" data-args='["fresh", "@this"]'>Brand-new install</button></div></div><div class="controls"><b>Demo: viewer location</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn" data-act="setTz" data-args='[false, "@this"]'>Same time zone</button><button class="state-btn on" data-act="setTz" data-args='[true, "@this"]'>Abroad, 5 hours behind</button></div></div><div class="controls"><b>Demo: check-in</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setWcDemo" data-args='["wc", "answered", "@this"]'>Margaret answers</button><button class="state-btn" data-act="setWcDemo" data-args='["wc", "noanswer", "@this"]'>Margaret doesn't answer</button></div><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="setWcDemo" data-args='["care", "answers", "@this"]'>Care contact answers</button><button class="state-btn" data-act="setWcDemo" data-args='["care", "noanswer", "@this"]'>Care contact doesn't answer</button></div><div class="state-btns"><button class="state-btn" data-act="skipCooldown">Skip cooldown</button><button class="state-btn" data-act="resetWc">Reset check-in</button><button class="state-btn" data-act="resetAlerts">Reset alerts</button></div></div><div class="controls"><b>Demo: notification</b><div class="state-btns"><button class="state-btn" data-act="firePush">Send urgent alert push</button></div></div>
 <div class="controls"><b>Demo: what Margaret does</b><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="dp" data-args='["call", "answer", "@this"]'>Call: answers</button><button class="state-btn" data-act="dp" data-args='["call", "no", "@this"]'>Call: no answer</button><button class="state-btn" data-act="dp" data-args='["call", "unavailable", "@this"]'>Call: unavailable</button></div><div class="state-btns" style="margin-bottom:6px"><button class="state-btn on" data-act="dp" data-args='["add", "approve", "@this"]'>New person: approves</button><button class="state-btn" data-act="dp" data-args='["add", "decline", "@this"]'>New person: declines</button></div></div>
 <div class="controls"><b>Demo: opening the app</b><div class="state-btns"><button class="state-btn on" data-act="replayLaunch">Launch screen</button><button class="state-btn" data-act="replayIntro">First-run intro</button></div></div>
 <div class="controls">
@@ -899,53 +1018,49 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 <p>Olympia is a voice companion in an older adult's home: no screen, no camera. This app is the one part that has a screen, for the people who love her. Family finds out if something is wrong. They do not get a transcript of the day it happened in. Every screen has to hold that: peace of mind that leaves her privacy whole.</p>
 <h4>Decisions</h4>
 <ul>
-<li><b>Alerts stays a blunt label.</b> Alerts is the one tab someone must find fast in an emergency. Speed wins over brand softness.</li>
-<li><b>The badge lights only for urgent.</b> A badge is a promise that this is worth interrupting you. If amber items also fire it, people learn it means little.</li>
+<li><b>Alerts stays blunt, and the badge is rationed.</b> Alerts is the one tab someone must find fast in an emergency, so speed wins over brand softness. The badge is a promise that this is worth interrupting you, so only urgent lights it. If amber items fired it too, people would learn it means little.</li>
 <li><b>Family splits into two decisions.</b> My notifications affect only me. Who has access affects Margaret and the whole family, so adding someone routes through her approval.</li>
 <li><b>Call Margaret lives on Today.</b> Inside an alert it implies you call when something is wrong. On Today it says checking in is just something you do.</li>
 <li><b>One trust explainer, in Settings.</b> "Urgent always reaches family, and Margaret is told at the same moment" should be findable in one place.</li>
-<li><b>Introductions stays inside Today.</b> A tab would present it as a signal that can go up or down in a way that matters. It is informational only. The copy never implies better or worse.</li>
+<li><b>Introductions lives inside Today.</b> A tab would present it as a signal that can go up or down in a way that matters. It is informational only. The copy never implies better or worse.</li>
 <li><b>Memory Book has no add action.</b> The stories are in Margaret's own words and she decides what is kept, by voice. Family cannot add or edit, so the card that looked like an add button is now a plain note.</li>
-<li><b>Worth a look items open a note.</b> Wellness check and mark as handled are reserved for urgent alerts on purpose.</li>
-<li><b>Wellness check is per person; mark as handled is per alert.</b> Two urgent incidents are two things to acknowledge, but only one check-in with Margaret should be in flight. Requests need a confirm step, and a cooldown after each result.</li>
-<li><b>Alerts are a permanent record: handled by, never seen by.</b> The list shows who reached out and how, with their initial. It never shows who opened it. Read receipts between siblings turn a calm app into a scoreboard. Nothing can be deleted, because three people share the record and Margaret is told about urgent alerts anyway. Anything older than a week moves into History and stays as a quiet log.</li>
-<li><b>Handled asks how, in one tap.</b> Marking handled opens a short sheet: a quick pick, and an optional note. The card then reads "David called her", so the next sibling knows whether to act. Notes are for family only for now.</li>
-<li><b>Olympia acting is lavender, and it is never silent.</b> A wellness check moves through Olympia is checking in, then either Margaret is fine or Couldn't reach her. The failure state always offers Try again and Call Margaret, and it never leaves the family with nothing to do.</li>
+<li><b>Check-in and handled, kept simple.</b> Both are reserved for urgent alerts on purpose. Only one check-in with Margaret is ever in flight, with a confirm step and a cooldown after each result. Marking handled opens a short sheet: a quick pick, and an optional note, so the card reads "David called her" and the next sibling knows whether to act.</li>
+<li><b>The handled sheet asks what actually happened.</b> "How did you reach out?" assumes the person acted. When Olympia's check-in already settled it, they did not: Margaret answered, and nobody had to call. In that case the sheet asks "How was this resolved?", says when Margaret answered, and preselects "Olympia checked in", so it takes one tap and the log is true. The same happens when the care contact checked on her. The reach-out chips stay available for someone who also followed up themselves. With no check-in, nothing is preselected and the sheet is unchanged.</li>
+<li><b>What Olympia did and what you can do are separate.</b> The check-in result and Mark as handled used to blur into one block, because the result faded into the same off-white as the button. The result now has an outline in its own colour (green, lavender or red), a wider gap below it, and Mark as handled has its own edge. The family should never wonder whether tapping the tick is part of the result or a separate step.</li>
+<li><b>Today shows Margaret's local time when the viewer is elsewhere.</b> Many families live far away, so a call time only helps if it is in her clock, not yours.</li>
+<li><b>Alerts are a permanent record: handled by, never seen by.</b> The list shows who reached out and how, with their initial. It never shows who opened it. Read receipts between siblings turn a calm app into a scoreboard. Nothing can be deleted, because three people share the record and Margaret is told about urgent alerts anyway. Anything older than a week moves into History as a quiet log.</li>
+<li><b>Olympia acting is lavender, and it is never silent.</b> A check-in moves through Olympia is checking in, then either Margaret is fine or Couldn't reach her. The failure state always offers Try again and Call Margaret, and it never leaves the family with nothing to do.</li>
 <li><b>Escalation is visible step by step.</b> If a care contact is set and Margaret doesn't answer, Olympia calls them and the family sees calling, answered or didn't answer, then done. If they don't answer either, the next move is the family's: call them, call Margaret, or try again.</li>
-<li><b>A push opens the alert it is about.</b> Tapping an urgent push opens that alert, and a wellness result opens the alert that asked. Neither drops you on the list.</li>
-<li><b>Severity is a slim rule on a plain card.</b> Red for urgent and amber for worth a look, on the same white cards as everything else. Handled turns green and quiet.</li>
-<li><b>The care contact is set by the Organizer, seen by everyone.</b> It puts a third party in the loop about Margaret, so like adding a person, it is one decision for the whole family and Margaret is told who it is. Members can see who Olympia will try next, so nobody is surprised by the call. They cannot change it.</li>
-<li><b>Anyone with access can mark an alert handled.</b> No approval step in an emergency. Only the Organizer can add or remove people, and Margaret can remove anyone by telling Olympia. Two roles only, Organizer and Member.</li>
+<li><b>Two roles, one clear line of authority.</b> Setting the care contact is the Organiser's call, seen by everyone so nobody is surprised by who Olympia tries next, but not editable by Members. Marking an alert handled has no approval step, since an emergency shouldn't wait on one; only the Organiser can add or remove people, and Margaret can remove anyone by telling Olympia. The Organiser role can be handed over: it asks first, says what the role allows, and the person handing it over becomes a Member, so there is always exactly one.</li>
 <li><b>Settings is one gear.</b> The Family tab holds the circle (people, roles, care contact). The gear opens My settings, which are personal: alert cadence, account, help.</li>
 <li><b>Today shows how she is doing.</b> Last spoke with Olympia, a good time to call, something to ask about from her own Memory Book, and who last called. Each one helps family connect. None of them says what she said.</li>
-<li><b>Two different opening screens.</b> The launch screen (logo and name) shows on every cold open, only as long as the app needs to load. In this prototype it holds for 2.2s so the logo can be reviewed; in the real app it goes the moment loading finishes. The first-run intro shows once, on first install. In this prototype both play on load so you can review them.</li>
-<li><b>The intro says the promise before anything else.</b> Three screens: know she is okay, hear if something is wrong, and she stays in charge.</li>
-<li><b>Tab says Memories, header says Memory Book.</b> Four tabs leave no room for the full name. A guess to test at real sizes with real users.</li>
+<li><b>The intro says the promise before anything else.</b> Three screens: know she is okay, hear if something is wrong, and she’s in charge.</li>
 </ul>
 <h4>What the research says</h4>
 <ul>
-<li>Most caregiver apps are care hubs: task lists, vitals, shared logs. Reviews frame the real problem as handoffs, where information gets lost between people. Olympia Family should stay small and answer one question well.</li>
-<li>Older adults and their adult children value privacy in similar terms but disagree about how much monitoring costs it. Older adults will trade some privacy for independence, if they help decide (Gerontologist, 2020).</li>
-<li>A fall-detection pilot was switched off by the woman it protected after false alarms led to unannounced visits. Alerts that cry wolf get the product removed, so severity must stay rare and trustworthy.</li>
+<li>Most caregiver apps are care hubs: task lists, vitals, shared logs. Reviews frame the real problem as handoffs, where information gets lost between people. Olympia Family should keep its footprint small and answer one question well.</li>
+<li>Older adults and their adult children value privacy in similar terms but disagree about how much monitoring costs it. Older adults will trade some privacy for independence, if they help decide (a hypothesis to test, not a finding).</li>
+<li>Unverified, find the source before pitching: a fall-detection pilot was switched off by the woman it protected after false alarms led to unannounced visits. Alerts that cry wolf get the product removed, so severity can only mean something if it’s rare.</li>
 </ul>
 <h4>Visual system (this pass)</h4>
 <ul>
 <li>402 x 874 frame, SF Pro stack, 4 pt spacing, 20 pt margins, 44 pt tap targets.</li>
 <li>Solid white content cards, one 20 pt radius, no gradients or coloured shadows.</li>
-<li>One green accent (#6EB36D) for anything tappable, with a deeper green (#3A7A3A) for text and links so they stay readable. Red and amber appear only for alert severity. Handled and doing well use a deeper olive green and always carry a tick or a word, never colour alone.</li>
+<li>One green accent (#6EB36D) for anything tappable, with a deeper green (#3A7A3A) for text and links so they remain readable. Red and amber appear only for alert severity. Handled and doing well use a deeper olive green and always carry a tick or a word, never colour alone.</li>
 <li>Glass is used once, on the floating tab bar, plus the push banner as a temporary layer.</li>
+<li>A status panel and the action below it never share a fill without an edge. The check-in result carries a 1 pt outline in its status colour, and the two rows above and below it carry a neutral one. Note the result panel still uses a soft tint, an exception to the no-gradients line above.</li>
 </ul>
 <h4>Still open</h4>
 <ul>
-<li>The 9 second cooldown and the confirm step are guesses. They need real user testing.</li>
+<li>Settings covers alerts, display and accessibility, sign-in and app lock. Still not designed: managing signed-in phones (there is sign out, but no list of phones), leaving the circle, and what happens when an urgent alert goes unseen.</li> <li>The two hour wait after Margaret answers a check-in, and the confirm step, are guesses. They need real user testing.</li>
 <li>Push suppression only checks the open alert screen. It cannot know about a backgrounded app or a second device.</li>
 <li>Sunnyside Care Line is a placeholder, and every resolution (Margaret, the care contact) is a timer standing in for a real conversation or call, driven by the demo controls.</li>
 <li>Who has access shows that someone has access, not what they are told. A son who wants falls but not mood dips cannot say so yet. Left alone until we know which categories families want split.</li>
-<li>Handled notes are built as family-only: four quick picks (Called her, Spoke to a neighbour, Visited, No action needed) and an optional one-line note. Open question: should Margaret be able to see them?</li>
-<li>The logo mark is a placeholder (a dot and two voice arcs). Swap in the real identity.</li>
-<li>The demo shows both "You" and "Priya" as separate people, but the viewer toggle treats Priya as you. Decide who the signed-in person is.</li>
-<li>Time zones: many families live far away, so Today may need "6:40pm where Margaret is".</li>
-<li>Should family ever be able to suggest a Memory Book topic? It would work like the wellness check (Olympia raises it, Margaret is not told who asked), but it puts pressure on a space that is meant to be hers.</li>
+<li>Handled notes are family-only: one pick (Olympia checked in, Care contact checked in, Called her, Spoke to a neighbour, Visited, or No action needed) and an optional one-line note. The first two appear only when that check-in happened. Open questions: should Margaret be able to see them? Should more than one pick be allowed, for someone who saw Margaret answer and also called her? And an answer with a concern in it is not modelled yet: the prototype only has answered and didn't answer, and it should not preselect "resolved" when Margaret answered but something was off.</li>
+<li>The care contact chip says "Care contact checked in" and not the name, because the quick picks are a fixed list. Naming Sunnyside there would read better on the card.</li>
+<li>The launch screen uses the Harmonica logo. The “Olympia Family” wordmark is plain app type, since a studio owns final identity.</li>
+
+<li>Should family ever be able to suggest a Memory Book topic? It would work like the check-in (Olympia raises it, and tells Margaret who asked if she wonders), but it puts pressure on a space that is meant to be hers.</li>
 </ul>
 </div></details>
 </div>
@@ -954,8 +1069,8 @@ box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 0 0 1px rgba(255,255,255,
 
 function da(name,args){return ' data-act="'+name+'"'+(args&&args.length?' data-args="'+JSON.stringify(args).replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'"':'')}
 let connCopy = {
-  up:     { num:'2', label:'social calls this week', sub:'usual is 1' },
-  steady: { num:'1', label:'social call this week',  sub:'usual is 1' }
+  up:     { num:'2', label:'Introductions this week', sub:'Calls with people Olympia introduced her to, shared by Margaret' },
+  steady: { num:'1', label:'Introduction this week',  sub:'Calls with people Olympia introduced her to, shared by Margaret' }
 };
 function updateAnnotation(){
   let panel = document.getElementById('annotation');
@@ -974,7 +1089,7 @@ function updateAnnotation(){
   if(detailOpen && document.getElementById('detail-alert').style.display==='block'){
     if(alertsData[currentAlertId].sev==='urgent'){
       lines.push("Margaret was told this too, at "+alertsData[currentAlertId].short+", the same moment you were.");
-      lines.push("Mark as handled is per alert, since each is its own incident. Request a wellness check is per Margaret, since it isn't, either alert can start one, and it's the same check-in either way.");
+      lines.push("Mark as handled is per alert, since each is its own incident. Ask Olympia to check in is per Margaret, since it isn't, either alert can start one, and it's the same check-in either way.");
     } else {
       lines.push("Worth-a-look items don't page anyone or need a response, Olympia just leaves a note here in case it's useful context, unlike urgent, which always reaches family right away.");
     }
@@ -1010,12 +1125,14 @@ function openHowDetail(){
   document.getElementById('detail').classList.add('open');
 }
 function closeDetail(){
+  if($('detail-a11y').style.display==='block'){openMySettings();return}
   document.getElementById('detail').classList.remove('open');
   updateAnnotation();
   stopPlay();
   setTimeout(function(){
     if(!document.getElementById('detail').classList.contains('open')){
       document.getElementById('detail-my').style.display='none';
+      document.getElementById('detail-a11y').style.display='none';
       document.getElementById('detail-mem').style.display='none';
     }
   },380);
@@ -1032,7 +1149,7 @@ function pickCareRel(el, v){
   el.classList.add('on');
 }
 function openCareModal(){
-  if(typeof isOrg==='function' && !isOrg()){ let _o=people.filter(function(p){return p.role==='Organizer'})[0]; return sheet('Only the Organizer can change the care contact','Ask '+_o.name+' to set who Olympia tries next. You can see who it is here once it is set.',sb('OK','closeSheet')); }
+  if(typeof isOrg==='function' && !isOrg()){ let _o=people.filter(function(p){return p.role==='Organiser'})[0]; return sheet('Only the Organiser can change the care contact','Ask '+_o.name+' to set who Olympia tries next. You can see who it is here once it is set.',sb('OK','closeSheet')); }
   document.getElementById('careModalTitle').textContent = careState==='set' ? 'Change care contact' : 'Who should Olympia try next?';
   document.getElementById('careNameInput').value = careState==='set' ? careName : '';
   document.getElementById('carePhoneInput').value = careState==='set' ? carePhone : '';
@@ -1048,7 +1165,7 @@ function saveCareContact(){
   carePhone = document.getElementById('carePhoneInput').value.trim();
   careState = 'set';
   document.getElementById('careSetName').textContent = careName;
-  document.getElementById('careSetSub').textContent = careRel+' · called if a wellness check goes unanswered';
+  document.getElementById('careSetSub').textContent = careRel+' · called if a check-in goes unanswered';
   document.querySelector('#view-settings-care .care-unset').style.display = 'none';
   document.querySelector('#view-settings-care .care-set').style.display = 'flex';
   document.getElementById('cc-unset').classList.remove('on');
@@ -1060,7 +1177,7 @@ function setCareState(v){
   careState = v;
   if(v==='set' && careName==='Sunnyside Care Line'){
     document.getElementById('careSetName').textContent = careName;
-    document.getElementById('careSetSub').textContent = careRel+' · called if a wellness check goes unanswered';
+    document.getElementById('careSetSub').textContent = careRel+' · called if a check-in goes unanswered';
   }
   document.querySelector('#view-settings-care .care-unset').style.display = (v==='unset') ? 'flex' : 'none';
   document.querySelector('#view-settings-care .care-set').style.display = (v==='set') ? 'flex' : 'none';
@@ -1095,6 +1212,8 @@ function setMemState(s){
   document.getElementById('mb-filled').classList.toggle('on', s==='filled');
   document.getElementById('mb-empty').classList.toggle('on', s==='empty');
 }
+function openA11y(){showDet('detail-a11y','Settings')}
+function setLock(v){document.querySelectorAll('#lockSeg [data-v]').forEach(function(e){let on=e.dataset.v===v;e.classList.toggle('on',on);e.setAttribute('aria-pressed',on)});toast(v==='on'?'Olympia Family will ask for Face ID when you open it':'App lock is off')}
 function setDigest(v){
   let seg = document.getElementById('digestSeg');
   seg.children[0].classList.toggle('on', v==='immediate');
@@ -1109,7 +1228,7 @@ function showPushBanner(){
   }, 6000);
 }
 function triggerPush(){ showPushBanner(); }
-setTimeout(triggerPush, 3800);
+setTimeout(triggerPush, 7000);
 function closePush(e){ e.stopPropagation(); clearTimeout(pushAutoHideTimer); document.getElementById('pushBanner').classList.remove('show'); }
 let pushKind = 'urgent';
 
@@ -1119,7 +1238,7 @@ function pushWellnessResolved(outcome){
     && document.getElementById('detail-alert').style.display==='block';
   if(onAlertDetail) return;
   pushKind = 'wc';
-  document.getElementById('pushTitle').textContent = 'Wellness check';
+  document.getElementById('pushTitle').textContent = 'Check-in';
   document.getElementById('pushText').textContent = outcome==='answered'
     ? "Margaret's fine, she answered when Olympia checked in."
     : "No answer when Olympia checked in."+(careState==='unset' ? '' : ' Escalating to '+careName+'.');
@@ -1134,16 +1253,22 @@ function introGo(n){introI=n;document.getElementById('introSlide').style.transfo
 function introNext(){ if(introI<2) introGo(introI+1); else closeIntro(); }
 function closeIntro(){ document.getElementById('intro').classList.add('gone'); }
 function replayIntro(){ introGo(0); document.getElementById('intro').classList.remove('gone'); }
+
+(function(){let ds=document.querySelectorAll('#introDots i');ds.forEach(function(d,i){d.onclick=function(){introGo(i)}});
+let sl=document.getElementById('introSlide'),x0=null;sl.addEventListener('pointerdown',function(e){x0=e.clientX});
+sl.addEventListener('pointerup',function(e){if(x0===null)return;let dx=e.clientX-x0;x0=null;if(dx<-40&&introI<2)introGo(introI+1);else if(dx>40&&introI>0)introGo(introI-1)})})();
 function openMySettings(){
-  ['detail-connections','detail-alert','detail-how'].forEach(function(id){document.getElementById(id).style.display='none'});
+  ['detail-connections','detail-alert','detail-how','detail-a11y'].forEach(function(id){document.getElementById(id).style.display='none'});
   document.getElementById('detail-my').style.display='block';
   document.getElementById('detailBack').textContent='Family';
   document.getElementById('detail').classList.add('open'); updateAnnotation();
 }
 
 
-function replayLaunch(){ let l=document.getElementById('launch'); l.classList.remove('gone'); l.style.animation='none'; void l.offsetWidth; l.style.animation=''; setTimeout(function(){l.classList.add('gone')},2200); }
-setTimeout(function(){ document.getElementById('launch').classList.add('gone'); },2200);;
+var launchT;
+function hideLaunch(){clearTimeout(launchT);launchT=setTimeout(function(){document.getElementById('launch').classList.add('gone')},2400)}
+function replayLaunch(){ let l=document.getElementById('launch'); l.classList.remove('gone'); l.querySelectorAll('.launch-mark,.launch-name,.launch-waves').forEach(function(e){e.style.animation='none'}); void l.offsetWidth; l.querySelectorAll('.launch-mark,.launch-name,.launch-waves').forEach(function(e){e.style.animation=''}); hideLaunch(); }
+hideLaunch();
 
 (function(){
 document.querySelectorAll('[data-act]').forEach(function(el){
@@ -1165,12 +1290,12 @@ function sib(b){[].forEach.call(b.parentNode.children,function(x){x.classList.to
 let tzOn=true;
 function fmt(d){return d.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}
 function tick(){let d=new Date();$('clk').textContent=fmt(d).replace(/\s?[AP]M/i,'');
-  let z=$('tzLine');z.style.display=tzOn?'block':'none';z.textContent=fmt(new Date(+d+5*36e5)).replace(/\s?([AP])M/i,function(m,x){return x.toLowerCase()+'m'})+' where Margaret is'}
+  let z=$('tzLine');z.style.display=tzOn?'block':'none';z.textContent='It\u2019s '+fmt(new Date(+d+5*36e5)).replace(/\s?([AP])M/i,function(m,x){return x.toLowerCase()+'m'})+' for Margaret'}
 function setTz(v,b){tzOn=v;sib(b);tick()}
 setInterval(tick,15000);tick();
-function setToday(v,b){sib(b);let f=v==='fresh';$('view-today').dataset.fresh=f?'1':'';$('lastSpoke').textContent=f?'Hasn\u2019t spoken with Olympia yet':'Last spoke at 2:10pm'}
+function setToday(v,b){sib(b);let f=v==='fresh';$('view-today').dataset.fresh=f?'1':'';$('lastSpoke').textContent=f?'Hasn\u2019t spoken with Olympia yet':'Talked with Olympia at 2:10pm'}
 /* detail routing + memory */
-function showDet(id,back){['detail-connections','detail-alert','detail-how','detail-my','detail-mem'].forEach(function(x){$(x).style.display=x===id?'block':'none'});$('detailBack').textContent=back;$('detail').classList.add('open');updateAnnotation()}
+function showDet(id,back){['detail-connections','detail-alert','detail-how','detail-my','detail-a11y','detail-mem'].forEach(function(x){$(x).style.display=x===id?'block':'none'});$('detailBack').textContent=back;$('detail').classList.add('open');updateAnnotation()}
 
 
 /* sheets + toast */
@@ -1181,18 +1306,18 @@ function sb(l,act,c,args){return '<button class="wc-modal-'+(c==='cancel'?'cance
 function sheet(t,b,btns,extra){openSheet('<div class="wc-modal-title">'+t+'</div><div class="wc-modal-body">'+b+'</div>'+(extra||'')+'<div class="wc-modal-actions">'+btns+'</div>')}
 /* roster */
 let viewerNames={you:'You',david:'David',priya:'Priya'}; let hbImg={you:'emma.webp',david:'david.webp',priya:'priya.webp'}; let hbAbs={you:'You',david:'David',priya:'Priya'}; let currentViewer='you';
-let people=[{id:'you',name:'Emma',rel:'daughter',role:'Organizer',img:'emma.webp',tone:'teal',status:'active'},{id:'david',name:'David',rel:'son',role:'Member',img:'david.webp',tone:'blue',status:'active'},{id:'priya',name:'Priya',rel:'daughter-in-law',role:'Member',img:'priya.webp',tone:'coral',status:'active'}],uid=0;
+let people=[{id:'you',name:'Emma',rel:'daughter',role:'Organiser',img:'emma.webp',tone:'teal',status:'active'},{id:'david',name:'David',rel:'son',role:'Member',img:'david.webp',tone:'blue',status:'active'},{id:'priya',name:'Priya',rel:'daughter-in-law',role:'Member',img:'priya.webp',tone:'coral',status:'active'}],uid=0;
 function P(id){return people.filter(function(x){return x.id===id})[0]}
-function isOrg(){let p=P(currentViewer);return !!p&&p.role==='Organizer'}
+function isOrg(){let p=P(currentViewer);return !!p&&p.role==='Organiser'}
 function av(p){return '<b>'+p.name[0].toUpperCase()+'</b>'+(p.img?'<img src="images/'+p.img+'" alt="" data-remove-on-error>':'')}
-function updateCareAccess(){let org=isOrg(),o=people.filter(function(p){return p.role==='Organizer'})[0];[].forEach.call(document.querySelectorAll('.care-edit'),function(e){e.style.display=org?'':'none'});let u=document.getElementById('careUnsetSub');if(u)u.textContent=org?"If you request a check-in and Margaret doesn't answer, this is who Olympia tries next.":'Only the Organizer can set this. Ask '+(o?o.name:'the Organizer')+' to add someone.'}
-function renderPeople(){let h='';people.forEach(function(p){let me=p.id===currentViewer,sub=p.status==='pending'?'Waiting for Margaret to approve':p.status==='declined'?'Margaret said no':p.role==='Organizer'?'Organizer. Can add and remove people.':'Member',tone=p.status==='pending'?'lav':p.status==='declined'?'red':p.tone;
+function updateCareAccess(){let org=isOrg(),o=people.filter(function(p){return p.role==='Organiser'})[0];[].forEach.call(document.querySelectorAll('.care-edit'),function(e){e.style.display=org?'':'none'});let u=document.getElementById('careUnsetSub');if(u)u.textContent=org?"If you request a check-in and Margaret doesn't answer, this is who Olympia tries next.":'Only the Organiser can set this. Ask '+(o?o.name:'the Organiser')+' to add someone.'}
+function renderPeople(){let h='';people.forEach(function(p){let me=p.id===currentViewer,sub=p.status==='pending'?'Waiting for Margaret to approve':p.status==='declined'?'Margaret said no':p.role==='Organiser'?'Organiser. Can add and remove people.':'Member',tone=p.status==='pending'?'lav':p.status==='declined'?'red':p.tone;
  h+='<div class="tone-card '+tone+' tappable" role="button" tabindex="0" style="align-items:center"'+da('openPerson',[p.id])+'><span class="mav">'+av(p)+'</span><div style="flex:1"><div class="member-name">'+(me?'You':p.name)+(p.rel?' <span class="member-rel">\u00b7 '+p.rel+'</span>':'')+'</div><div class="member-access">'+sub+'</div></div><span class="chev"><svg class="icon" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span></div>'});
  $('people').innerHTML=h;let n=people.filter(function(p){return p.status==='active'}).length;document.querySelector('#view-settings .head-sub').textContent=n+' people have access';$('addLink').style.display=isOrg()?'flex':'none';updateCareAccess()}
-function renderMe(){let p=P(currentViewer);$('meName').textContent='You';$('meRole').textContent=p?p.role:'';let i=$('meImg');if(i)i.src='images/'+hbImg[currentViewer]}
+function renderMe(){let p=P(currentViewer);$('meName').textContent=p?p.name:'You';[].forEach.call(document.querySelectorAll('[data-who]'),function(e){e.textContent=nameOf(e.dataset.who)});$('meRole').textContent=p?p.role:'';let i=$('meImg');if(i)i.src='images/'+hbImg[currentViewer]}
 function setViewer(v){currentViewer=v;[].forEach.call(document.querySelectorAll('[data-v]'),function(e){e.classList.toggle('on',e.dataset.v===v)});renderMarkHandled();renderWc();renderHandledList();renderPeople();renderMe()}
 let addRel='son';
-function openAdd(){if(!isOrg()){let o=people.filter(function(p){return p.role==='Organizer'})[0];return sheet('Only the Organizer can add people','Ask '+o.name+' to add them.',sb('OK','closeSheet'))}
+function openAdd(){if(!isOrg()){let o=people.filter(function(p){return p.role==='Organiser'})[0];return sheet('Only the Organiser can add people','Ask '+o.name+' to add them.',sb('OK','closeSheet'))}
  addRel='son';let c=['son','daughter','grandchild','friend','other'].map(function(r,i){return '<span class="chip'+(i?'':' on')+'" role="button" tabindex="0"'+da('pickAdd',['@this'])+'>'+r+'</span>'}).join('');
  sheet('Add someone','Olympia tells Margaret, and she approves it in conversation before they see anything.',sb('Cancel','closeSheet','cancel')+sb('Send request','sendAdd'),'<div class="form-field"><label class="form-label" for="addName">Name</label><input class="form-input" id="addName" placeholder="First name" autocomplete="off"></div><div class="form-field"><label class="form-label">Who are they to her?</label><div class="chip-row">'+c+'</div></div><div class="form-field"><label class="form-label" for="addC">Mobile or email</label><input class="form-input" id="addC" placeholder="So Olympia can send the invite"></div>')}
 function pickAdd(el){addRel=el.textContent;[].forEach.call(el.parentNode.children,function(x){x.classList.toggle('on',x===el)})}
@@ -1201,13 +1326,13 @@ function sendAdd(){let n=$('addName').value.trim();if(!n){$('addName').focus();r
 function openPerson(id){let p=P(id),me=id===currentViewer,org=isOrg(),d='<div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><span class="mav" style="width:56px;height:56px">'+av(p)+'</span><div><div class="wc-modal-title" style="margin:0">'+(me?'You':p.name)+'</div><div class="member-access">'+(p.rel||'')+(p.status==='active'?' \u00b7 '+p.role:'')+'</div></div></div>',done=sb('Done','closeSheet','cancel'),t,b,x='';
  if(p.status==='pending'){b='Olympia asked Margaret in conversation. Access opens once she says yes.';x=org?sb('Cancel request','cancelReq','danger',[id]):''}
  else if(p.status==='declined'){b='Margaret said no. Nothing was shared with '+p.name+'.';x=org?sb('Remove from list','cancelReq','danger',[id]):''}
- else{b=(me?'You can see Today, Memory Book, Alerts and Introductions.':p.name+' can see Today, Memory Book, Alerts and Introductions.')+' Margaret can remove access at any time by telling Olympia.';if(org&&!me)x=sb('Remove access','confRemove','danger',[id])+sb('Make Organizer','confOrg','',[id])}
+ else{b=(me?'You can see Today, Memory Book, Alerts and Introductions.':p.name+' can see Today, Memory Book, Alerts and Introductions.')+' Margaret can remove access at any time by telling Olympia.';if(org&&!me)x=sb('Remove access','confRemove','danger',[id])+sb('Make Organiser','confOrg','',[id])}
  openSheet(d+'<div class="wc-modal-body">'+b+'</div><div class="wc-modal-actions">'+done+x+'</div>')}
 function cancelReq(id){people.splice(people.indexOf(P(id)),1);closeSheet();renderPeople();toast('Removed')}
 function confRemove(id){let p=P(id);sheet('Remove '+p.name+'?','They stop seeing anything about Margaret. She is told, same as when anyone is added.',sb('Keep access','closeSheet','cancel')+sb('Remove','doRemove','danger',[id]))}
 function doRemove(id){let n=P(id).name;cancelReq(id);toast(n+' no longer has access')}
-function confOrg(id){let p=P(id);sheet('Make '+p.name+' the Organizer?','They can add and remove people. You become a Member.',sb('Not now','closeSheet','cancel')+sb('Make Organizer','doOrg','',[id]))}
-function doOrg(id){P(currentViewer).role='Member';P(id).role='Organizer';closeSheet();renderPeople();renderMe();toast(P(id).name+' is now the Organizer')}
+function confOrg(id){let p=P(id);sheet('Make '+p.name+' the Organiser?','They can add and remove people. You become a Member.',sb('Not now','closeSheet','cancel')+sb('Make Organiser','doOrg','',[id]))}
+function doOrg(id){P(currentViewer).role='Member';P(id).role='Organiser';closeSheet();renderPeople();renderMe();toast(P(id).name+' is now the Organiser')}
 function openHelp(){sheet('Help and feedback','Something unclear, or not working? We read everything.',sb('Close','closeSheet','cancel')+sb('Send feedback','closeSheetThanks'))}
 function openSignOut(){sheet('Sign out?','Alerts about Margaret stop reaching this phone until you sign in again.',sb('Cancel','closeSheet','cancel')+sb('Sign out','doSignOut','danger'))}
 function doSignOut(){closeSheet();showTab('today');replayIntro()}
@@ -1250,6 +1375,13 @@ try{let savedTheme=localStorage.getItem('olympiaTheme');if(savedTheme&&['auto','
 if(!$('themeSeg').querySelector('.on'))$('themeSeg [data-th="auto"]').classList.add('on');
 markThemeControls();
 if(themeMedia.addEventListener)themeMedia.addEventListener('change',markThemeControls);
+function setA11y(k,v){let r=document.documentElement,seg={tx:'textSeg',hc:'hcSeg',rm:'rmSeg'}[k];
+ if(k==='tx'){r.classList.remove('tx-lg','tx-xl');if(v!=='std')r.classList.add('tx-'+v);$('textSub').textContent={std:'Standard',lg:'Large',xl:'Largest'}[v]}
+ else r.classList.toggle(k,v==='on');
+ document.querySelectorAll('#'+seg+' [data-v]').forEach(function(e){let on=e.dataset.v===v;e.classList.toggle('on',on);e.setAttribute('aria-pressed',on)});
+ document.querySelectorAll('[data-dx^="'+k+':"]').forEach(function(e){let on=e.dataset.dx===k+':'+v;e.classList.toggle('on',on);e.setAttribute('aria-pressed',on)});
+ try{localStorage.setItem('olympiaA11y-'+k,v)}catch(e){}}
+try{['tx','hc','rm'].forEach(function(k){let v=localStorage.getItem('olympiaA11y-'+k);if(v)setA11y(k,v)})}catch(e){}
 
 /* alerts and wellness */
 let T0=Date.now();
@@ -1263,20 +1395,20 @@ function wkd(ms,long){return new Date(ms).toLocaleDateString([],{weekday:long?'l
 function dShort(ms){return new Date(ms).toLocaleDateString([],{weekday:'short',day:'numeric',month:'short'})}
 function isHist(a){return ageDays(a)>=7}
 function dLabel(a){let n=ageDays(a);return n<=0?'Today':n===1?'Yesterday':n<7?wkd(a.at,true):n<14?'Last week':'Earlier'}
-function relTime(a){let m=Math.floor((Date.now()-a.at)/6e4);if(ageDays(a)<=0)return m<1?'Just now':m<60?m+' min ago':t12(a.at);return isHist(a)?dShort(a.at)+', '+t12(a.at):t12(a.at)}
+function relTime(a){let m=Math.floor((Date.now()-a.at)/6e4);if(ageDays(a)<=0)return m<1?'Just now':m<60?m+' min ago':Math.floor(m/60)+' hr ago';return isHist(a)?dShort(a.at)+', '+t12(a.at):t12(a.at)}
 function shortOf(a){return ageDays(a)<=0?t12(a.at):wkd(a.at)}
 function metaOf(a){let n=ageDays(a);let when=n<=0?'today':n===1?'yesterday':isHist(a)?dShort(a.at):wkd(a.at,true);return (a.sev==='urgent'?'Urgent':'Worth a look')+', '+when+', '+t12(a.at)}
 
 /* one data object drives the list, the detail, the badge and the pushes */
 function seedAlerts(){return [
- {id:'a1',sev:'urgent',at:ago(38),text:'Margaret seemed confused about the time, twice earlier today.',push:'Seemed confused about the time, twice earlier today.'},
- {id:'a2',sev:'urgent',at:ago(380),text:'Called Olympia three times in under a minute, sounding distressed.',push:'Called Olympia three times in under a minute, sounding distressed.'},
- {id:'w1',sev:'worth',at:dayAt(1,16,40),text:'Margaret seemed quieter than usual. Nothing urgent, just flagging it.'},
- {id:'t1',sev:'worth',at:dayAt(2,18,5),text:'Missed her walk group, second week running.'},
- {id:'m1',sev:'worth',at:dayAt(4,14,20),text:'Seemed more tired than usual after lunch.'},
+ {id:'a1',sev:'urgent',at:ago(38),text:'Margaret hasn’t answered Olympia’s check-in since this morning.',push:'No answer to Olympia’s check-in since this morning.'},
+ {id:'a2',sev:'worth',at:ago(380),text:'Margaret called Olympia three times in a minute. Olympia can\u2019t tell why. She knows you\u2019ve been told.',push:'Margaret called Olympia three times in a minute.'},
+ {id:'w1',sev:'worth',at:dayAt(1,16,40),text:'Margaret spoke with Olympia less than usual yesterday. Nothing urgent, just flagging it.'},
+ {id:'t1',sev:'worth',at:dayAt(2,18,5),text:'Spoke with Olympia less than usual for a second week.'},
+ {id:'m1',sev:'worth',at:dayAt(4,14,20),text:'Was quieter than usual after lunch.'},
  {id:'o1',sev:'urgent',at:dayAt(9,11,20),text:'Didn\u2019t answer the phone for two hours.',handled:{by:'david',pick:'called',note:'She was at a neighbour\u2019s.',at:dayAt(9,11,50)}},
- {id:'o2',sev:'worth',at:dayAt(11,13,5),text:'Skipped lunch two days in a row.'},
- {id:'o3',sev:'worth',at:dayAt(16,9,30),text:'Said she felt a bit dizzy in the morning. Passed by lunch.'}
+ {id:'o2',sev:'worth',at:dayAt(11,13,5),text:'Quieter than usual two days in a row.'},
+ {id:'o3',sev:'worth',at:dayAt(16,9,30),text:'Was much quieter than usual that day.'}
 ]}
 let ALERTS=seedAlerts();
 function A(id){for(let i=0;i<ALERTS.length;i++)if(ALERTS[i].id===id)return ALERTS[i];return null}
@@ -1293,16 +1425,26 @@ let I={
 function dot(cls,p){return '<span class="st-dot '+cls+'"><svg viewBox="0 0 24 24">'+p+'</svg></span>'}
 
 /* ---------- handled notes ---------- */
-let QUICK=[['called','Called her','called her'],['neighbour','Spoke to a neighbour','spoke to a neighbour'],['visited','Visited','visited'],['none','No action needed','marked no action needed']];
+let QUICK=[['olympia','Olympia checked in','marked it handled after Margaret answered Olympia\u2019s check-in'],['care','Care contact checked in','marked it handled after the care contact checked on her'],['called','Called her','called her'],['neighbour','Spoke to a neighbour','spoke to a neighbour'],['visited','Visited','visited'],['none','No action needed','marked no action needed']];
 function verbOf(k){for(let i=0;i<QUICK.length;i++)if(QUICK[i][0]===k)return QUICK[i][2];return 'reached out'}
 function pfHTML(id){return '<span class="pf sm"><svg class="face" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"/></svg><img src="images/'+(hbImg[id]||'')+'" alt="" data-remove-on-error></span>'}
 let hPick=null;
+function handledContext(a){
+  /* how has this alert already been followed up, without the person doing anything? */
+  if(WC.alertId===a.id&&WC.status==='answered')return {pick:'olympia',line:'Margaret answered Olympia at '+t12(WC.res)+'. '};
+  if(WC.alertId===a.id&&WC.status==='noanswer'&&(CARE.status==='answered'||CARE.status==='done'))return {pick:'care',line:esc(careName)+' checked on Margaret at '+t12(CARE.at)+'. '};
+  return null;
+}
 function markHandled(){
-  let a=A(currentAlertId);if(!a||a.handled)return;hPick=null;
-  let chips=QUICK.map(function(q){return '<button type="button" class="chip" aria-pressed="false"'+da('pickHandled',['@this',q[0]])+'>'+q[1]+'</button>'}).join('');
-  sheet('How did you reach out?','Only family sees this note. Margaret isn\u2019t shown it.',
-    sb('Cancel','closeSheet','cancel')+'<button class="wc-modal-go" id="hSave" disabled'+da('saveHandled')+'>Mark as handled</button>',
-    '<div class="chip-row" role="group" aria-label="How you reached out" style="margin-bottom:24px">'+chips+'</div><div class="form-field" style="margin-bottom:24px"><label class="form-label" for="hNote">Add a note (optional)</label><input class="form-input" id="hNote" maxlength="80" placeholder="e.g. She was at a neighbour\u2019s" autocomplete="off"></div>');
+  let a=A(currentAlertId);if(!a||a.handled)return;
+  let ctx=handledContext(a);hPick=ctx?ctx.pick:null;
+  let chips=QUICK.filter(function(q){return ctx?true:(q[0]!=='olympia'&&q[0]!=='care')}).map(function(q){
+    if(ctx&&q[0]!==ctx.pick&&(q[0]==='olympia'||q[0]==='care'))return '';
+    let on=ctx&&q[0]===ctx.pick;
+    return '<button type=\"button\" class=\"chip'+(on?' on':'')+'\" aria-pressed=\"'+(on?'true':'false')+'\"'+da('pickHandled',['@this',q[0]])+'>'+q[1]+'</button>'}).join('');
+  sheet(ctx?'How was this resolved?':'How did you reach out?',(ctx?ctx.line:'')+'Only family sees this note. Margaret isn\u2019t shown it.',
+    sb('Cancel','closeSheet','cancel')+'<button class=\"wc-modal-go\" id=\"hSave\"'+(ctx?'':' disabled')+da('saveHandled')+'>Mark as handled</button>',
+    '<div class=\"chip-row\" role=\"group\" aria-label=\"How this was resolved\" style=\"margin-bottom:24px\">'+chips+'</div><div class=\"form-field\" style=\"margin-bottom:24px\"><label class=\"form-label\" for=\"hNote\">Add a note (optional)</label><input class=\"form-input\" id=\"hNote\" maxlength=\"80\" placeholder=\"'+(ctx?'e.g. I also texted her':'e.g. She was at a neighbour\u2019s')+'\" autocomplete=\"off\"></div>');
 }
 function pickHandled(el,k){hPick=k;[].forEach.call(el.parentNode.children,function(x){let on=x===el;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});let s=$('hSave');if(s)s.disabled=false}
 function saveHandled(){
@@ -1315,7 +1457,7 @@ function renderMarkHandled(){
   let btn=$('markHandledBtn'),l=$('markHandledLabel'),s=$('markHandledSub'),h=a.handled;
   if(!h){
     l.textContent='Mark as handled';btn.style.pointerEvents='auto';
-    let msg=(WC.alertId===a.id&&WC.status==='pending')?'A wellness check from this alert is still in progress':(WC.alertId===a.id&&WC.status==='noanswer')?'Wellness check from this alert: couldn\u2019t reach her, still unresolved':'';
+    let msg=(WC.alertId===a.id&&WC.status==='pending')?'A check-in from this alert is still in progress':(WC.alertId===a.id&&WC.status==='noanswer')?'Check-in from this alert: couldn\u2019t reach her, still unresolved':'';
     s.textContent=msg;s.style.display=msg?'block':'none';
   }else{
     l.textContent=nameOf(h.by)+' handled this';btn.style.pointerEvents='none';
@@ -1331,7 +1473,7 @@ function cardHTML(a){
   let pill=h?'<span class="sev-pill g">Handled</span>':hist?'<span class="sev-pill q">'+(urgent?'Urgent':'Worth a look')+'</span>':urgent?'<span class="sev-pill r">Urgent</span>':'<span class="sev-pill a">Worth a look</span>';
   let line='';
   if(h){line='<div class="hb done">'+pfHTML(h.by)+esc(nameOf(h.by)+' '+verbOf(h.pick))+'</div>'+(h.note?'<div class="hb-note">\u201c'+esc(h.note)+'\u201d</div>':'')}
-  else if(urgent&&!hist){line='<div class="hb">Nobody has acted yet</div><div class="wc-status" id="wcs-'+a.id+'"></div>'}
+  else if(urgent&&!hist){line='<div class="hb hb-open"><span>Nobody has acted yet</span><b>Open</b></div><div class="wc-status" id="wcs-'+a.id+'"></div>'}
   else if(hist){line='<div class="hb">Passed. Olympia hasn\u2019t flagged it again.</div>'}
   let label=(urgent?'Urgent. ':'Worth a look. ')+a.text+' '+relTime(a)+'.'+(h?' Handled. '+nameOf(h.by)+' '+verbOf(h.pick)+'.':'');
   return '<div class="'+cls+'" role="button" tabindex="0" aria-label="'+esc(label)+'"'+da('openAlertDetail',[a.id])+'><span class="card-icon '+iccls+'">'+icon+'</span><div style="flex:1;min-width:0"><div class="alert-text">'+esc(a.text)+'</div><div class="alert-meta">'+pill+'<span class="alert-time">'+relTime(a)+'</span></div>'+line+'</div><span class="chev">'+I.chev+'</span></div>';
@@ -1362,9 +1504,22 @@ function updateAlertBadge(){
 }
 
 /* alert detail */
+function wcAnsweredNow(){try{return WC.status==='answered'}catch(e){return false}}
+function syncHero(){let n=ALERTS.filter(function(a){return a.sev==='urgent'&&!a.handled&&!isHist(a)}).length,h=$('statusCard');if(!h)return;
+ h.classList.toggle('tone-red',n>0);h.classList.toggle('tone-green',n===0);
+ h.querySelector('.hero-title').textContent=n>0?'Needs your attention':'Doing well today';
+ $('statusTag').textContent=n>0?n+(n>1?' urgent alerts':' urgent alert')+' open'+(wcAnsweredNow()?', Margaret answered a check-in':''):'Nothing to flag';
+ $('statusTile').innerHTML=n>0?I.warn:I.check;
+ if(n>0){h.setAttribute('data-act','showTab');h.setAttribute('data-args','["alerts"]');h.setAttribute('role','button');h.tabIndex=0}else{h.removeAttribute('data-act');h.removeAttribute('data-args');h.removeAttribute('role');h.removeAttribute('tabindex')}}
+function updateA11ySummary(){let r=document.documentElement,th=r.getAttribute('data-theme'),p=[({dark:'Dark',light:'Light'}[th]||'Automatic'),(r.classList.contains('tx-xl')?'largest text':r.classList.contains('tx-lg')?'large text':'standard text')];if(r.classList.contains('hc'))p.push('stronger contrast');if(r.classList.contains('rm'))p.push('reduced motion');let e=$('a11ySummary');if(e)e.textContent=p.join(', ')}
+let _sa=setA11y;setA11y=function(){_sa.apply(this,arguments);updateA11ySummary()};
+let _st=setTheme;setTheme=function(){_st.apply(this,arguments);updateA11ySummary()};
+updateA11ySummary();
+let _uab=updateAlertBadge;updateAlertBadge=function(){_uab();syncHero()};syncHero();
+
 function openAlertDetail(id){
   currentAlertId=id;$('wcModal').classList.remove('show');syncData();
-  ['detail-connections','detail-how','detail-my','detail-mem'].forEach(function(x){$(x).style.display='none'});
+  ['detail-connections','detail-how','detail-my','detail-a11y','detail-mem'].forEach(function(x){$(x).style.display='none'});
   $('detail-alert').style.display='block';$('detailBack').textContent='Alerts';$('detail').classList.add('open');
   renderAlertDetail();updateAnnotation();
 }
@@ -1379,7 +1534,7 @@ function renderAlertDetail(){
 }
 
 /* wellness check */
-const COOLDOWN_MS=9000; // demo-scaled stand-in for a real cooldown window
+const COOLDOWN_MS=2*60*60*1000; // a guess, needs testing. The demo has a Skip cooldown button.
 let WC={status:'idle',by:null,alertId:null,at:0,res:0,cool:0};   // idle | pending | answered | noanswer
 let CARE={status:'idle',at:0};                                    // idle | calling | answered | noanswer | done
 let wcDemoSet={wc:'answered',care:'answers'};
@@ -1428,31 +1583,32 @@ function startCare(){
 function resetWc(){clearWcTimers();WC={status:'idle',by:null,alertId:null,at:0,res:0,cool:0};CARE={status:'idle',at:0};renderWc();toast('Check-in reset')}
 function resetAlerts(){ALERTS=seedAlerts();badgeSeen=false;renderAlerts();if($('detail-alert').style.display==='block')renderAlertDetail();toast('Alerts reset')}
 function setWcDemo(k,v,b){wcDemoSet[k]=v;sib(b)}
+function skipCooldown(){if(WC.status==='answered'){WC.cool=Date.now();renderWc()}}
 
 function againBtn(){
-  let left=Math.ceil((WC.cool-Date.now())/1000);
-  return '<button class="wcp-btn sec" id="wcAgain"'+da('openWcConfirm')+''+(left>0?' disabled':'')+'>'+(left>0?'You can ask again in '+left+'s':'Check in again')+'</button>';
+  let left=WC.cool-Date.now();
+  if(left>0)return '<div class="wcp-note" style="margin:0">Olympia won\u2019t check in again until '+t12(WC.cool)+', so Margaret isn\u2019t asked over and over. You can still call her.</div>';
+  return '<button class="wcp-btn sec" id="wcAgain"'+da('openWcConfirm')+'>Check in again</button>';
 }
 function tickCooldown(){
-  clearTimeout(cdT);let b=$('wcAgain');
-  if(!b||WC.status!=='answered')return;
-  let left=Math.ceil((WC.cool-Date.now())/1000);
-  if(left>0){b.disabled=true;b.textContent='You can ask again in '+left+'s';cdT=setTimeout(tickCooldown,1000)}
-  else{b.disabled=false;b.textContent='Check in again'}
+  clearTimeout(cdT);
+  if(WC.status!=='answered')return;
+  let left=WC.cool-Date.now();
+  if(left>0)cdT=setTimeout(renderWc,Math.min(left+50,2000000000));
 }
 function wcPanelHTML(a){
-  let who=nameOf(WC.by),from=WC.alertId!==a.id&&A(WC.alertId)?' from the '+shortOf(A(WC.alertId))+' alert':'';
+  let who=nameOf(WC.by),asker=(WC.by===currentViewer)?'you':esc(nameOf(WC.by)),from=WC.alertId!==a.id&&A(WC.alertId)?' from the '+shortOf(A(WC.alertId))+' alert':'';
   let care=careState==='set',cn=esc(careName),cs=CARE.status;
   let st,icon,t,s,steps='',acts='',wave='',note='';
   let tryBtn='<button class="wcp-btn"'+da('startWc',[true])+'>Try again</button>';
   let callM='<button class="wcp-btn sec"'+da('callMargaret')+'>Call Margaret</button>';
   if(WC.status==='pending'){
     st='pending';icon=I.heart;t='Olympia is checking in';
-    s=esc(who)+' asked at '+t12(WC.at)+from+'. Margaret isn\u2019t told anyone asked.';
+    s=esc(who)+' asked at '+t12(WC.at)+from+'. If Margaret asks, Olympia tells her it was '+asker+'.';
     wave='<div class="wv wcp-wave" aria-hidden="true"></div>';
   }else if(WC.status==='answered'){
-    st='ok';icon=I.check;t='Margaret says she\u2019s fine';
-    s='Olympia checked in at '+t12(WC.res)+', asked by '+esc(who)+from+'.';acts=againBtn();
+    st='ok';icon=I.check;t='Margaret answered';
+    s='Olympia checked in at '+t12(WC.res)+' because '+asker+' asked'+from+'. Nothing to flag. Mark the alert as handled when you\u2019re ready.';acts=againBtn();
   }else if(!care||cs==='idle'){
     st='bad';icon=I.warn;t='Couldn\u2019t reach her';
     s='Olympia checked in at '+t12(WC.res)+' and didn\u2019t get an answer.';
@@ -1479,6 +1635,7 @@ function renderWc(){
     tickCooldown();
   }
   renderAlertListWc();renderMarkHandled();updateAnnotation();
+  if(typeof syncHero==='function')syncHero();
 }
 function stOf(){
   if(WC.status==='pending')return 'pending';if(WC.status==='answered')return 'ok';
@@ -1487,9 +1644,9 @@ function stOf(){
 }
 function wcStatusFor(){
   if(WC.status==='pending')return {cls:'pending',text:(WC.by===currentViewer?'You asked':nameOf(WC.by)+' asked')+' \u00b7 Olympia is checking in'};
-  if(WC.status==='answered')return {cls:'ok',text:'Wellness check: Margaret\u2019s fine'};
+  if(WC.status==='answered')return {cls:'ok',text:'Check-in: Margaret answered'};
   if(WC.status==='noanswer'){
-    if(careState!=='set'||CARE.status==='idle')return {cls:'bad',text:'Wellness check: couldn\u2019t reach her'};
+    if(careState!=='set'||CARE.status==='idle')return {cls:'bad',text:'Check-in: couldn\u2019t reach her'};
     if(CARE.status==='calling')return {cls:'pending',text:'Couldn\u2019t reach her \u00b7 calling '+careName};
     if(CARE.status==='answered')return {cls:'ok',text:careName+' answered, checking on her'};
     if(CARE.status==='done')return {cls:'ok',text:careName+' has checked on her'};
@@ -1505,7 +1662,7 @@ function renderAlertListWc(){
 function renderCareDependent(){
   let line=$('wcEscalationLine');
   if(line)line.innerHTML=careState==='unset'
-    ?'There\u2019s no care contact set yet, so for now a missed check-in just stays visible here for family. <span class="inline-link" role="button" tabindex="0"'+da('openCareModal')+'>Add one</span>'
+    ?'There\u2019s no care contact set yet, so for now a missed check-in just sits here, visible to family. <span class="inline-link" role="button" tabindex="0"'+da('openCareModal')+'>Add one</span>'
     :'If she doesn\u2019t answer, Olympia calls '+esc(careName)+' next, not whoever\u2019s nearest.';
   if(WC.status==='noanswer'&&careState==='set'&&CARE.status==='idle')startCare();
   if(careState!=='set'&&CARE.status!=='idle'){clearTimeout(careT);clearTimeout(careT2);CARE={status:'idle',at:0}}
@@ -1518,10 +1675,10 @@ function pushWc(text){
   let onIt=$('detail').classList.contains('open')&&$('detail-alert').style.display==='block'&&currentAlertId===WC.alertId;
   if(onIt)return;
   pushKind='wc';pushTarget=WC.alertId;
-  $('pushTitle').textContent='Wellness check';$('pushText').textContent=text;showPushBanner();
+  $('pushTitle').textContent='Check-in';$('pushText').textContent=text;showPushBanner();
 }
 function pushWcResult(){
-  if(WC.status==='answered')pushWc('Margaret\u2019s fine, she answered when Olympia checked in.');
+  if(WC.status==='answered')pushWc('Margaret answered when Olympia checked in. Nothing to flag.');
   else pushWc('No answer when Olympia checked in.'+(careState==='set'?' Calling '+careName+'.':''));
 }
 function pushCare(){
@@ -1557,7 +1714,7 @@ function callMargaret(who){
   let im=c.querySelector('.call-av img');if(im)im.style.display=callWho==='care'?'none':'';
   c.classList.add('show');callSt('Calling\u2026','calling');
   callT=setTimeout(function(){
-    if(demo.call==='unavailable'){callSt(nm+' is unavailable','off',callWho==='care'?'Try again in a little while.':'Olympia can\u2019t put a call through right now. Try again in a little while, or ask her to check in instead.');return}
+    if(demo.call==='unavailable'){callSt(nm+' is unavailable','off',callWho==='care'?'Try again in a little while.':'Olympia can\u2019t put a call through right now. Try again in a little while, or ask Olympia to check in instead.');return}
     callSt('Connecting\u2026','calling');
     callT=setTimeout(function(){
       if(demo.call==='no')callSt('No answer','off',nm+' didn\u2019t pick up.');
@@ -1606,6 +1763,7 @@ let ACTIONS={
   openHowDetail:function(el,ev){return openHowDetail.apply(null,[].slice.call(arguments,2))},
   openMem:function(el,ev){return openMem.apply(null,[].slice.call(arguments,2))},
   openMySettings:function(el,ev){return openMySettings.apply(null,[].slice.call(arguments,2))},
+  setA11y:function(el,ev){return setA11y.apply(null,[].slice.call(arguments,2))},
   openPerson:function(el,ev){return openPerson.apply(null,[].slice.call(arguments,2))},
   openSignOut:function(el,ev){return openSignOut.apply(null,[].slice.call(arguments,2))},
   openWcConfirm:function(el,ev){return openWcConfirm.apply(null,[].slice.call(arguments,2))},
@@ -1616,6 +1774,9 @@ let ACTIONS={
   replayLaunch:function(el,ev){return replayLaunch.apply(null,[].slice.call(arguments,2))},
   resetAlerts:function(el,ev){return resetAlerts.apply(null,[].slice.call(arguments,2))},
   resetWc:function(el,ev){return resetWc.apply(null,[].slice.call(arguments,2))},
+  openA11y:function(el,ev){return openA11y.apply(null,[].slice.call(arguments,2))},
+  setLock:function(el,ev){return setLock.apply(null,[].slice.call(arguments,2))},
+  skipCooldown:function(el,ev){return skipCooldown.apply(null,[].slice.call(arguments,2))},
   saveCareContact:function(el,ev){return saveCareContact.apply(null,[].slice.call(arguments,2))},
   saveHandled:function(el,ev){return saveHandled.apply(null,[].slice.call(arguments,2))},
   sendAdd:function(el,ev){return sendAdd.apply(null,[].slice.call(arguments,2))},
