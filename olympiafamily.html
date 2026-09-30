@@ -3124,9 +3124,9 @@
 <div class="phone"><div class="screen">
 <i class="notch"></i>
 <div class="launch" id="launch"><div class="launch-mark"><svg aria-hidden="true" viewBox="0 0 140 140"><use href="#hlogo"/></svg></div><div class="launch-name">Olympia Family</div><div class="launch-waves" aria-hidden="true"><svg class="lw lw1" viewBox="0 0 800 200" preserveAspectRatio="none"><path d="M0 62Q100 8 200 62T400 62T600 62T800 62V200H0Z"/></svg><svg class="lw lw2" viewBox="0 0 1040 200" preserveAspectRatio="none"><path d="M0 92Q130 140 260 92T520 92T780 92T1040 92V200H0Z"/></svg><svg class="lw lw3" viewBox="0 0 920 200" preserveAspectRatio="none"><path d="M0 122Q115 76 230 122T460 122T690 122T920 122V200H0Z"/></svg></div></div>
-<div class="intro" id="intro"><div class="intro-brand"><svg aria-hidden="true" class="brand-dot" viewBox="0 0 140 140"><use href="#hlogo"/></svg>Olympia Family</div>
-<div class="intro-track"><div class="intro-slide" id="introSlide"><div class="intro-page"><div class="intro-ic" style="background:linear-gradient(145deg,#7DC07C,#3F8A44);color:#fff"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.6" style="width:46px;height:46px" viewbox="0 0 64 64"><path d="M9 34c4 0 5-11 9-11s5 20 10 20 5-27 10-27 5 24 9 24 4-6 8-6"></path></svg></div><h2>Know she's okay.</h2><p>Olympia keeps Margaret company at home. This app lets you know how she is, and when something changes.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><rect height="9" rx="2.5" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3"></path></svg></div><h2>What she says stays hers.</h2><p>You’ll hear if something is wrong, never a transcript. The only words you can hear are stories Margaret chooses to keep in her Memory Book.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l3 3 5-6"></path></svg></div><h2>She’s in charge.</h2><p>Margaret is told about anything urgent at the same moment you are. She approves who has access, and she agrees to the few things Olympia may pass on.</p></div></div></div>
-<div class="intro-foot"><div class="intro-dots" id="introDots"><i class="on"></i><i></i><i></i></div>
+<div class="intro gone" id="intro"><div class="intro-brand"><svg aria-hidden="true" class="brand-dot" viewBox="0 0 140 140"><use href="#hlogo"/></svg>Olympia Family</div>
+<div class="intro-track"><div class="intro-slide" id="introSlide"><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><rect height="9" rx="2.5" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3"></path></svg></div><h2>What she says stays hers.</h2><p>You’ll hear if something is wrong, never a transcript. The only words you can hear are stories Margaret chooses to keep in her Memory Book.</p></div><div class="intro-page"><div class="intro-ic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l3 3 5-6"></path></svg></div><h2>She’s in charge.</h2><p>Margaret is told about anything urgent at the same moment you are. She approves who has access, and she agrees to the few things Olympia may pass on.</p></div></div></div>
+<div class="intro-foot"><div class="intro-dots" id="introDots"><i class="on"></i><i></i></div>
 <button type="button" class="intro-btn" data-act="introNext" id="introBtn">Continue</button>
 <button type="button" class="intro-skip" data-act="closeIntro" id="introSkip">Skip</button></div></div>
 <div class="wc-modal" data-act="overlayCancelWc" data-args='["@this","@event"]' id="wcModal">
@@ -3349,10 +3349,10 @@
 <details class="review demo"><summary>Demo controls</summary>
 <div class="rv-body">
 <div class="controls"><b>Demo: appearance</b><div class="state-btns spaced"><button type="button" class="state-btn" data-act="setTheme" data-args='["light"]' data-th="light">Light</button><button type="button" class="state-btn" data-act="setTheme" data-args='["dark"]' data-th="dark">Dark</button></div></div>
+<div class="controls"><b>Demo: opening the app</b><div class="state-btns"><button type="button" class="state-btn on" data-act="setOpening" data-args='["returning","@this"]'>Launch screen</button><button type="button" class="state-btn" data-act="setOpening" data-args='["first","@this"]'>First-time user</button></div></div>
 <div class="controls"><b>Demo: accessibility</b><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setA11y" data-args='["tx","std"]' data-dx="tx:std">Standard text</button><button type="button" class="state-btn" data-act="setA11y" data-args='["tx","lg"]' data-dx="tx:lg">Large text</button><button type="button" class="state-btn" data-act="setA11y" data-args='["tx","xl"]' data-dx="tx:xl">Largest text</button></div><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setA11y" data-args='["hc","off"]' data-dx="hc:off">Normal contrast</button><button type="button" class="state-btn" data-act="setA11y" data-args='["hc","on"]' data-dx="hc:on">Stronger contrast</button></div><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setA11y" data-args='["rm","off"]' data-dx="rm:off">Motion on</button><button type="button" class="state-btn" data-act="setA11y" data-args='["rm","on"]' data-dx="rm:on">Reduce motion</button></div></div>
 <div class="controls"><b>Demo: who is viewing</b><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setViewer" data-args='["you"]' data-v="you">Emma (Organiser)</button><button type="button" class="state-btn" data-act="setViewer" data-args='["david"]' data-v="david">David</button><button type="button" class="state-btn" data-act="setViewer" data-args='["priya"]' data-v="priya">Priya</button></div></div><div class="controls"><b>Demo: Today</b><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setToday" data-args='["norm", "@this"]'>Normal</button><button type="button" class="state-btn" data-act="setToday" data-args='["fresh", "@this"]'>Brand-new install</button></div></div><div class="controls"><b>Demo: viewer location</b><div class="state-btns spaced"><button type="button" class="state-btn" data-act="setTz" data-args='[false, "@this"]'>Same time zone</button><button type="button" class="state-btn on" data-act="setTz" data-args='[true, "@this"]'>Abroad, 5 hours behind</button></div></div><div class="controls"><b>Demo: check-in</b><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setWcDemo" data-args='["wc", "answered", "@this"]'>Margaret answers</button><button type="button" class="state-btn" data-act="setWcDemo" data-args='["wc", "noanswer", "@this"]'>Margaret doesn't answer</button></div><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="setWcDemo" data-args='["care", "answers", "@this"]'>Care contact answers</button><button type="button" class="state-btn" data-act="setWcDemo" data-args='["care", "noanswer", "@this"]'>Care contact doesn't answer</button></div><div class="state-btns"><button type="button" class="state-btn" data-act="skipCooldown">Skip cooldown</button><button type="button" class="state-btn" data-act="resetWc">Reset check-in</button><button type="button" class="state-btn" data-act="resetAlerts">Reset alerts</button></div></div><div class="controls"><b>Demo: notification</b><div class="state-btns"><button type="button" class="state-btn" data-act="firePush">Send urgent alert push</button></div></div>
 <div class="controls"><b>Demo: what Margaret does</b><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="dp" data-args='["call", "answer", "@this"]'>Call: answers</button><button type="button" class="state-btn" data-act="dp" data-args='["call", "no", "@this"]'>Call: no answer</button><button type="button" class="state-btn" data-act="dp" data-args='["call", "unavailable", "@this"]'>Call: unavailable</button></div><div class="state-btns spaced"><button type="button" class="state-btn on" data-act="dp" data-args='["add", "approve", "@this"]'>New person: approves</button><button type="button" class="state-btn" data-act="dp" data-args='["add", "decline", "@this"]'>New person: declines</button></div></div>
-<div class="controls"><b>Demo: opening the app</b><div class="state-btns"><button type="button" class="state-btn on" data-act="replayLaunch">Launch screen</button><button type="button" class="state-btn" data-act="replayIntro">First-run intro</button></div></div>
 <div class="controls">
 <b>Demo: Introductions state on Today</b>
 <div class="state-btns">
@@ -3407,7 +3407,7 @@
 <li><b>Two roles, one clear line of authority.</b> Setting the care contact is the Organiser's call, seen by everyone so nobody is surprised by who Olympia tries next, but not editable by Members. Marking an alert handled has no approval step, since an emergency shouldn't wait on one; only the Organiser can add or remove people, and Margaret can remove anyone by telling Olympia. The Organiser role can be handed over: it asks first, says what the role allows, and the person handing it over becomes a Member, so there is always exactly one.</li>
 <li><b>Settings is one gear.</b> The Family tab holds the circle (people, roles, care contact). The gear opens My settings, which are personal: alert cadence, account, help.</li>
 <li><b>Today shows how she is doing.</b> Last spoke with Olympia, a good time to call, something to ask about from her own Memory Book, and who last called. Each one helps family connect. None of them says what she said.</li>
-<li><b>The intro says the promise before anything else.</b> Three screens: know she is okay, hear if something is wrong, and she’s in charge.</li>
+<li><b>The promise is said once, to first-time users.</b> Two intro screens: what she says stays hers, and she’s in charge. Everyone else goes straight to Today. Pulling down at the top of Today refreshes the app and replays the opening.</li>
 </ul>
 <h4>What the research says</h4>
 <ul>
@@ -3752,6 +3752,7 @@
     document.getElementById("pushBanner").classList.remove("show");
   }
 
+  const INTRO_LAST = document.querySelectorAll("#introSlide .intro-page").length - 1;
   let introI = 0;
   function introGo(n) {
     introI = n;
@@ -3761,12 +3762,12 @@
       d.classList.toggle("on", i === n);
     });
     document.getElementById("introBtn").textContent =
-      n === 2 ? "Get started" : "Continue";
+      n === INTRO_LAST ? "Get started" : "Continue";
     document.getElementById("introSkip").style.visibility =
-      n === 2 ? "hidden" : "visible";
+      n === INTRO_LAST ? "hidden" : "visible";
   }
   function introNext() {
-    if (introI < 2) introGo(introI + 1);
+    if (introI < INTRO_LAST) introGo(introI + 1);
     else closeIntro();
   }
   function closeIntro() {
@@ -3793,7 +3794,7 @@
       if (x0 === null) return;
       let dx = e.clientX - x0;
       x0 = null;
-      if (dx < -40 && introI < 2) introGo(introI + 1);
+      if (dx < -40 && introI < INTRO_LAST) introGo(introI + 1);
       else if (dx > 40 && introI > 0) introGo(introI - 1);
     });
   })();
@@ -3808,6 +3809,35 @@
     document.getElementById("detail").classList.add("open");
     updateAnnotation();
   }
+
+  let openingMode = "returning";
+  function setOpening(mode, btn) {
+    openingMode = mode;
+    if (btn && btn.parentNode)
+      btn.parentNode.querySelectorAll(".state-btn").forEach(function (b) {
+        b.classList.toggle("on", b === btn);
+      });
+    if (mode === "first") replayIntro();
+    else closeIntro();
+    replayLaunch();
+  }
+  // Pull down at the top of Today to refresh: replays the opening for the current mode.
+  (function () {
+    const today = document.getElementById("view-today"),
+      embedded = document.documentElement.classList.contains("embedded");
+    let y0 = null;
+    const start = (y) => {
+      y0 = today.scrollTop === 0 && !embedded ? y : null;
+    };
+    const end = (y) => {
+      if (y0 !== null && y - y0 > 80) setOpening(openingMode);
+      y0 = null;
+    };
+    today.addEventListener("touchstart", (e) => start(e.touches[0].clientY), { passive: true });
+    today.addEventListener("touchend", (e) => end(e.changedTouches[0].clientY));
+    today.addEventListener("mousedown", (e) => start(e.clientY));
+    today.addEventListener("mouseup", (e) => end(e.clientY));
+  })();
 
   var launchT;
   function hideLaunch() {
@@ -4272,7 +4302,8 @@
   function doSignOut() {
     closeSheet();
     showTab("today");
-    replayIntro();
+    if (openingMode === "first") replayIntro();
+    replayLaunch();
   }
 
   let callT,
@@ -5594,6 +5625,7 @@
     closeIntro: closeIntro,
     closePush: closePush,
     closeSheet: closeSheet,
+    setOpening: setOpening,
     confOrg: confOrg,
     confRemove: confRemove,
     confirmWc: confirmWc,
@@ -5620,8 +5652,6 @@
     pickAdd: pickAdd,
     pickCareRel: pickCareRel,
     pickHandled: pickHandled,
-    replayIntro: replayIntro,
-    replayLaunch: replayLaunch,
     resetAlerts: resetAlerts,
     resetWc: resetWc,
     openA11y: openA11y,
