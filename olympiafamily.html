@@ -3115,7 +3115,35 @@
     #markHandledBtn {
       margin-bottom: 20px;
     }
-  </style>
+      /* Slim themed scrollbar: 6px rounded thumb in the accent colour, shown on hover */
+    @supports selector(::-webkit-scrollbar) {
+      .view::-webkit-scrollbar, .detail::-webkit-scrollbar, .wc-modal-card::-webkit-scrollbar {
+        width: 10px;
+      }
+      .view::-webkit-scrollbar-track, .detail::-webkit-scrollbar-track, .wc-modal-card::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .view::-webkit-scrollbar-thumb, .detail::-webkit-scrollbar-thumb, .wc-modal-card::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        border-radius: 999px;
+      }
+      .view:hover::-webkit-scrollbar-thumb, .detail:hover::-webkit-scrollbar-thumb, .wc-modal-card:hover::-webkit-scrollbar-thumb {
+        background-color: var(--accent);
+        background-clip: padding-box;
+      }
+    }
+    @supports not selector(::-webkit-scrollbar) {
+      .view, .detail, .wc-modal-card {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+      }
+      .view:hover, .detail:hover, .wc-modal-card:hover {
+        scrollbar-color: var(--accent) transparent;
+      }
+    }
+</style>
 
 <link href="images/favicon.svg?v=2" rel="icon" type="image/svg+xml"/><link href="images/olympia-favicon.png?v=2" rel="icon" sizes="192x192" type="image/png"/><link href="images/apple-touch-icon.png" rel="apple-touch-icon"/></head>
 <body><svg aria-hidden="true" style="position:absolute;width:0;height:0"><symbol id="hlogo" viewBox="29.5 29.5 140 140"><g fill="#fe860e"><circle cx="74.5" cy="54.5" r="16"/><circle cx="125.5" cy="54.5" r="16"/><circle cx="74.5" cy="145" r="16"/><circle cx="125.5" cy="145" r="16"/><ellipse cx="47.5" cy="99.5" rx="16" ry="28"/><ellipse cx="100.5" cy="99.5" rx="16" ry="28"/><ellipse cx="151.5" cy="99.5" rx="16" ry="28"/></g></symbol></svg>

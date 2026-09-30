@@ -375,68 +375,6 @@
       font-size: 12px;
       line-height: 1.4;
     }
-    .consent-grid {
-      display: grid;
-      grid-template-columns: 0.37fr 0.63fr;
-      gap: 80px;
-      align-items: start;
-    }
-    .consent-sticky {
-      position: sticky;
-      top: 104px;
-    }
-    .layer-stack {
-      --step: 28px;
-      display: grid;
-      gap: 12px;
-      padding-right: calc(var(--step) * 2);
-    }
-    .layer-top {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px 12px;
-    }
-    .layer strong {
-      font-size: 19px;
-      letter-spacing: -0.03em;
-    }
-    .layer p {
-      font-size: 12px;
-      line-height: 1.45;
-      margin: 9px 0 0;
-      color: var(--muted);
-    }
-    .layer p.ask {
-      font-style: italic;
-      color: var(--ink);
-    }
-    .confidence-tag {
-      flex: none;
-      font: 600 9px/1 "DM Sans", sans-serif;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 5px 9px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    .layer:nth-child(2) {
-      transform: translateX(var(--step));
-      background: var(--soft);
-    }
-    .layer:nth-child(3) p {
-      color: rgba(255, 248, 242, 0.58);
-    }
-    .layer:nth-child(3) p.ask {
-      color: var(--white);
-    }
-    .layer:nth-child(3) .confidence-tag {
-      background: rgba(255, 248, 242, 0.14);
-      color: var(--white);
-    }
     .match-grid {
       display: grid;
       grid-template-columns: 0.4fr 0.6fr;
@@ -598,46 +536,6 @@
       line-height: 1.4;
       color: var(--muted);
     }
-    .flywheel-foot {
-      align-items: end;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 12px;
-      margin-top: 60px;
-    }
-    .flywheel-foot-image {
-      min-height: 340px;
-    }
-    .flywheel-callout {
-      background: #080807;
-      color: #fff;
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      min-height: 340px;
-    }
-    .flywheel-callout small {
-      font-size: 9px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-    }
-    .flywheel-callout strong {
-      font-weight: 600;
-      display: block;
-      font-size: clamp(22px, 2.6vw, 32px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 14px 0 10px;
-    }
-    .flywheel-callout p {
-      font-size: 12px;
-      line-height: 1.5;
-      color: rgba(255, 255, 255, 0.72);
-      max-width: 34ch;
-      margin: 0;
-    }
     @media (max-width: 680px) {
       .flywheel-canvas {
         margin-top: 40px;
@@ -658,12 +556,6 @@
       }
       .flywheel-step strong {
         font-size: 28px;
-      }
-      .flywheel-foot {
-        grid-template-columns: 1fr;
-      }
-      .flywheel-foot-image, .flywheel-callout {
-        min-height: 260px;
       }
     }
     .precedent-cards {
@@ -709,25 +601,6 @@
       align-items: center;
       gap: 16px;
       margin-bottom: 16px;
-    }
-    .match-person {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .match-box {
-      padding: 16px;
-      border-radius: 18px;
-      background: var(--soft2);
-    }
-    .match-box h4 {
-      font-size: 14px;
-      margin: 0 0 10px;
-    }
-    .match-box p {
-      margin: 0;
-      font-size: 11px;
-      line-height: 1.45;
     }
     .checklist {
       display: grid;
@@ -799,31 +672,6 @@
       padding: 6px 8px;
       background: rgba(8, 8, 7, 0.06);
       color: var(--muted);
-    }
-    .call-grid {
-      display: grid;
-      grid-template-columns: 0.35fr 0.65fr;
-      gap: 80px;
-      align-items: start;
-    }
-    .call-title {
-      position: sticky;
-      top: 104px;
-      color: var(--ink);
-    }
-    .call-title h2 {
-      color: #fff;
-      font-size: clamp(32px, 4.2vw, 52px);
-      line-height: 1.04;
-    }
-    .call-panel {
-      max-width: 760px;
-    }
-    @media (min-width: 1001px) {
-      .call-panel {
-        border-left: 1px solid var(--darkline);
-        padding-left: 30px;
-      }
     }
     .private {
       margin-top: 15px;
@@ -906,11 +754,11 @@
       gap: 20px;
     }
     @media (max-width: 1000px) {
-      .hero-grid, .split, .prototype-grid, .consent-grid, .match-grid, .call-grid, .pilot-grid {
+      .hero-grid, .split, .prototype-grid, .match-grid, .pilot-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 45px;
       }
-      .split-note, .consent-sticky, .call-title, .pilot-sticky, .match-sticky {
+      .split-note, .pilot-sticky, .match-sticky {
         position: static;
       }
       .proto-side {
@@ -934,12 +782,6 @@
       .prototype-head {
         flex-direction: column;
         align-items: flex-start;
-      }
-      .consent-grid {
-        gap: 35px;
-      }
-      .layer-stack {
-        --step: 10px;
       }
       .match-grid {
         gap: 35px;
@@ -1336,21 +1178,8 @@
       background: rgba(8, 8, 7, 0.06);
       font-weight: 600;
     }
-    .layer, .matrix-card, .exclude-item, .proto-card, .side-callout, .operator, .match-box {
+    .matrix-card, .exclude-item, .proto-card, .side-callout, .operator {
       border-radius: 0;
-    }
-    .layer {
-      border-radius: 24px;
-      padding: 24px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      color: #080807;
-    }
-    .layer:nth-child(3) {
-      transform: translateX(calc(var(--step) * 2));
-      background: var(--ink);
-      color: #fff;
-      border-color: transparent;
     }
     .status {
       font: 500 9px/1 "DM Sans", sans-serif;
@@ -1647,20 +1476,19 @@
     .hero-photo:after {
       background: linear-gradient(0deg, transparent 45%, rgba(8, 8, 7, 0.34));
     }
-    .call-media {
-      aspect-ratio: 16/9;
-      margin: 0 0 26px;
-    }
     .storyboard {
-      margin-top: 32px;
+      margin-top: 60px;
     }
     .sb-strip {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 0.8fr 0.8fr 1.778fr 0.8fr; /* proportional to 4:5, 4:5, 16:9, 4:5 so all frames share one height */
       gap: 8px;
     }
     .sb-frame {
       aspect-ratio: 4/5;
+    }
+    .sb-frame:nth-child(3) {
+      aspect-ratio: 16/9;
     }
     .sb-frame:nth-child(2):before {
       background: linear-gradient(200deg, #eadfd0, #a98f77);
@@ -1688,10 +1516,21 @@
       left: 16px;
       bottom: auto;
     }
+    .sb-frame.media:after {
+      z-index: 2; /* above the photo, below the caption and number */
+      background:
+        linear-gradient(180deg, rgba(8, 8, 7, 0.35), transparent 30%),
+        linear-gradient(0deg, rgba(8, 8, 7, 0.82), rgba(8, 8, 7, 0.5) 30%, transparent 60%);
+    }
     .sb-frame .ph {
       left: 16px;
       right: 16px;
       bottom: 16px;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+    }
+    .sb-frame .ph span {
+      font-size: 13px;
+      opacity: 1;
     }
     .display:before {
       content: "";
@@ -1712,6 +1551,9 @@
     @media (max-width: 1000px) {
       .sb-strip {
         grid-template-columns: 1fr 1fr;
+      }
+      .sb-frame:nth-child(3) {
+        grid-column: 1 / -1;
       }
     }
     @media (max-width: 680px) {
@@ -2084,16 +1926,6 @@
       border-radius: 99px;
       cursor: pointer;
     }
-    .layer .eg {
-      margin-top: 10px;
-      font-weight: 600;
-      font-size: 13px;
-      color: inherit;
-      opacity: 0.95;
-    }
-    .layer:nth-child(3) p.eg {
-      color: #fff;
-    }
     .hand {
       font-family: "Caveat", "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
       font-weight: 600;
@@ -2177,9 +2009,7 @@
       }
       #experience .proto-main > .scene, #experience .proto-side {
         overflow-y: auto;
-        scrollbar-width: thin;
         scrollbar-gutter: stable;
-        scrollbar-color: transparent transparent;
       }
       #experience .proto-main > .scene {
         max-height: calc(100cqh - 40px);
@@ -2190,9 +2020,32 @@
         font-size: clamp(12px, 1.8cqh, 15px);
       }
     }
-    @media (hover: hover) and (pointer: fine) {
+    /* Slim scrollbar: a 6px rounded thumb that appears on hover (width minus 2px border each side) */
+    @supports selector(::-webkit-scrollbar) {
+      #experience .proto-main > .scene::-webkit-scrollbar, #experience .proto-side::-webkit-scrollbar {
+        width: 10px;
+      }
+      #experience .proto-main > .scene::-webkit-scrollbar-track, #experience .proto-side::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      #experience .proto-main > .scene::-webkit-scrollbar-thumb, #experience .proto-side::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        border-radius: 999px;
+      }
+      #experience .proto-main > .scene:hover::-webkit-scrollbar-thumb, #experience .proto-side:hover::-webkit-scrollbar-thumb {
+        background-color: var(--red);
+        background-clip: padding-box;
+      }
+    }
+    @supports not selector(::-webkit-scrollbar) {
+      #experience .proto-main > .scene, #experience .proto-side {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+      }
       #experience .proto-main > .scene:hover, #experience .proto-side:hover {
-        scrollbar-color: var(--muted) transparent;
+        scrollbar-color: var(--red) transparent;
       }
     }
     #experience .proto-main {
@@ -2970,9 +2823,6 @@
       color:#fff;
       padding:22px 20px 20px;
     }
-    .body.mw-380 {
-      max-width:380px;
-    }
     .gate-timeline.gate-spacing {
       margin:30px 0 10px;
       max-width:680px;
@@ -3031,9 +2881,6 @@
       .funnel-band, .operator, .matrix-card {
         padding: 16px;
       }
-      .match-person {
-        grid-template-columns: 1fr;
-      }
       #experience .proto-main {
         padding: 18px 16px 16px;
       }
@@ -3054,19 +2901,19 @@
       .small, .side-hint, #experience .proto-aside, #experience .reason-box, p.northstar-note {
         font-size: 13px;
       }
-      #experience .proto-copy, .layer .eg, .research-status p {
+      #experience .proto-copy, .research-status p {
         font-size: 15px;
       }
-      .layer p, .matrix-card p, .side-callout, .precedent-card p, .flywheel-callout p, .check-row div strong {
+      .matrix-card p, .side-callout, .precedent-card p, .check-row div strong {
         font-size: 14px;
       }
-      .filter-pill, .check-row div span, .match-box p {
+      .filter-pill, .check-row div span {
         font-size: 13px;
       }
       .evidence-grid span, .check-divider, .excluded span, .footer {
         font-size: 11px;
       }
-      .evidence-grid small, .confidence-tag, .side-label, .proto-kicker, .wi-btn small, .flywheel-callout small {
+      .evidence-grid small, .side-label, .proto-kicker, .wi-btn small {
         font-size: 10px;
       }
     }
@@ -3094,25 +2941,23 @@
   </style>
 </head>
 <body><a class="skip" href="#top">Skip to content</a>
-<header class="nav"><div class="nav-inner"><div class="nav-brand-group"><a class="brand" href="#top">olympia</a><span class="nav-eyebrow"><svg aria-hidden="true" class="hl" viewBox="29.5 29.5 140 140"><g fill="#fe860e"><circle cx="74.5" cy="54.5" r="16"/><circle cx="125.5" cy="54.5" r="16"/><circle cx="74.5" cy="145" r="16"/><circle cx="125.5" cy="145" r="16"/><ellipse cx="47.5" cy="99.5" rx="16" ry="28"/><ellipse cx="100.5" cy="99.5" rx="16" ry="28"/><ellipse cx="151.5" cy="99.5" rx="16" ry="28"/></g></svg>A design pitch for Harmonica</span></div><nav aria-label="Key sections" class="nav-links"><a href="#tension">Family app</a><a href="#experience">Introductions</a><a href="#consent">Consent</a><a href="#pilot">Pilot</a></nav><button aria-label="Toggle dark mode" class="theme-toggle" id="themeToggle" type="button"><svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-moon" fill="currentColor" viewbox="0 0 24 24"><path d="M20.4 14.7A8.5 8.5 0 1 1 9.3 3.6a7 7 0 0 0 11.1 11.1Z"></path></svg></button></div><div class="nav-progress"><i id="ncP"></i></div></header>
+<header class="nav"><div class="nav-inner"><div class="nav-brand-group"><a class="brand" href="#top">olympia</a><span class="nav-eyebrow"><svg aria-hidden="true" class="hl" viewBox="29.5 29.5 140 140"><g fill="#fe860e"><circle cx="74.5" cy="54.5" r="16"/><circle cx="125.5" cy="54.5" r="16"/><circle cx="74.5" cy="145" r="16"/><circle cx="125.5" cy="145" r="16"/><ellipse cx="47.5" cy="99.5" rx="16" ry="28"/><ellipse cx="100.5" cy="99.5" rx="16" ry="28"/><ellipse cx="151.5" cy="99.5" rx="16" ry="28"/></g></svg>A design pitch for Harmonica</span></div><nav aria-label="Key sections" class="nav-links"><a href="#tension">Family app</a><a href="#experience">Introductions</a><a href="#pilot">Pilot</a></nav><button aria-label="Toggle dark mode" class="theme-toggle" id="themeToggle" type="button"><svg class="icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="icon-moon" fill="currentColor" viewbox="0 0 24 24"><path d="M20.4 14.7A8.5 8.5 0 1 1 9.3 3.6a7 7 0 0 0 11.1 11.1Z"></path></svg></button></div><div class="nav-progress"><i id="ncP"></i></div></header>
 <div class="nav-current-wrap" id="navCurrentWrap"><button aria-controls="navMenu" aria-expanded="false" class="nav-current" id="navCurrentBtn" type="button"><b id="ncI">Intro</b><span id="ncL">Start here</span><svg aria-hidden="true" class="nav-chevron" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M6 9l6 6 6-6"></path></svg></button></div>
 <div aria-label="Jump to section" class="nav-menu" id="navMenu">
 <a class="nav-menu-item" data-id="top-hero" href="#top-hero"><span class="idx">Intro</span><span class="lbl">Start here</span></a>
 <a class="nav-menu-item" data-id="tension" href="#tension"><span class="idx">01</span><span class="lbl">The gap</span></a>
 <a class="nav-menu-item" data-id="experience" href="#experience"><span class="idx">02</span><span class="lbl">Introductions: the scripts</span></a>
 <a class="nav-menu-item" data-id="loop" href="#loop"><span class="idx">03</span><span class="lbl">The loop</span></a>
-<a class="nav-menu-item" data-id="consent" href="#consent"><span class="idx">04</span><span class="lbl">Consent</span></a>
-<a class="nav-menu-item" data-id="match" href="#match"><span class="idx">05</span><span class="lbl">How matches are made</span></a>
-<a class="nav-menu-item" data-id="human" href="#human"><span class="idx">06</span><span class="lbl">The handoff</span></a>
-<a class="nav-menu-item" data-id="pilot" href="#pilot"><span class="idx">07</span><span class="lbl">Pilot</span></a>
-<a class="nav-menu-item" data-id="note" href="#note"><span class="idx">08</span><span class="lbl">Why I built both</span></a>
+<a class="nav-menu-item" data-id="match" href="#match"><span class="idx">04</span><span class="lbl">How matches are made</span></a>
+<a class="nav-menu-item" data-id="pilot" href="#pilot"><span class="idx">05</span><span class="lbl">Pilot</span></a>
+<a class="nav-menu-item" data-id="note" href="#note"><span class="idx">06</span><span class="lbl">Why I built both</span></a>
 <a class="nav-menu-item" data-id="close" href="#close"><span class="idx">End</span><span class="lbl">Close</span></a>
 </div>
 <main id="top">
 <section class="hero" data-label="Start here" id="top-hero">
 <div class="container hero-copy">
 <h1 class="hero-giant">Designing<span aria-hidden="true" class="hero-chip hero-chip-placeholder media" data-file="images/olympia-hero-3.webp"><span class="ph"></span></span>for people<span aria-hidden="true" class="hero-chip hero-chip-photo media" data-file="images/olympia-hero.webp"><span class="ph"></span></span>who would rather just <span class="serif">talk</span><span aria-hidden="true" class="hero-chip hero-chip-placeholder media" data-file="images/olympia-hero-2.webp"><span class="ph"></span></span></h1>
-<p class="lead lead-fluid"><strong>Two prototypes. About ten minutes.</strong> Olympia Family keeps relatives connected without turning an older person’s conversations into a shared record. <span class="feat">Introductions</span> helps one Olympia user meet another: one suggestion, two private yeses, one hello. It only works once there are enough Olympia users to meet.</p>
+<p class="lead lead-fluid"><strong>Two prototypes. About ten minutes.</strong> The Olympia Family app keeps relatives connected and makes aiding in companionship a group effort instead of the duty of the oldest/favourite child. <span class="feat">Introductions</span> is a feature which helps one Olympia user meet another, they're a generation that deeply valued community and sometimes the occasional call from grandkids and an AI companion isn't enough.</p>
 <p class="hand hand-links"><a href="olympiafamily.html?v=6" target="_blank" rel="noopener" class="u-underline">Open the family app ↗</a> &nbsp;·&nbsp; <a href="#experience" class="u-underline">Read the Introductions scripts ↓</a></p>
 </div>
 </section>
@@ -3141,7 +2986,7 @@
 <div class="prototype-grid">
 <div class="proto-nav" id="protoNav"></div>
 <div class="proto-stage"><div class="display"><div class="proto-window" id="protoWindow"></div></div></div>
-<div class="proto-aside">The normal path is only half the service. The difficult moments show where the rules matter.</div>
+<div class="proto-aside">Les scripts.</div>
 </div>
 </div>
 </section>
@@ -3158,20 +3003,12 @@
 <div class="flywheel-step" data-fly="3"><b>04</b><div><strong>MEET</strong><span>Olympia introduces them, then steps back.</span></div></div>
 <div class="flywheel-step" data-fly="4"><b>05</b><div><strong>CONTINUE?</strong><span>A second call happens only if both want one.</span></div></div>
 </div>
-<div class="flywheel-foot">
-<div class="flywheel-foot-image media" data-file="images/olympia-loop-still.webp" data-alt="Two older people’s hands clasped together, one wearing turquoise beaded bracelets."><div class="file">olympia-loop-still.webp</div><div class="ph"><b>The loop, seen end to end</b></div></div>
-<div class="flywheel-callout"><strong>A good conversation does not create an obligation.</strong></div>
-</div>
-</div>
-</section>
-<section class="section green" data-label="Consent" id="consent">
-<div class="container consent-grid">
-<div class="consent-sticky"><span class="eyebrow">04 · CONSENT IS PART OF THE PRODUCT</span><h2>A memory is not a <span class="serif">permission.</span></h2></div>
-<div>
-<div class="layer-stack">
-<div class="layer"><div class="layer-top"><strong>Olympia memory</strong><span class="confidence-tag">Unconfirmed</span></div><p>Olympia may remember something without knowing whether it can be used for matching.</p><p class="eg">Margaret told her about the Lisbon tram.</p></div>
-<div class="layer"><div class="layer-top"><strong>What she’d enjoy</strong><span class="confidence-tag">Confirmed with Margaret</span></div><p>Usable for matching only after Margaret confirms it.</p><p class="eg">Margaret said Olympia could use music, storytelling and long talks for Introductions.</p></div>
-<div class="layer"><div class="layer-top"><strong>What gets shared when they meet</strong><span class="confidence-tag">Stated by Margaret</span></div><p>Only confirmed details go into the introduction.</p><p class="eg">Rosa hears: “Margaret likes talking about music and stories. Would you like to speak with her?”</p></div>
+<div class="storyboard">
+<div class="sb-strip">
+<div class="sb-frame media" data-file="images/olympia-shot-1.webp" data-alt="Margaret on her sofa with a cup of tea, mid-sentence, with an Olympia speaker on the side table beside her."><div class="sb-n">1</div><div class="file">olympia-shot-1.webp</div><div class="ph"><b>The ask</b><span>Olympia offers Rosa and says why.</span></div></div>
+<div class="sb-frame media" data-file="images/olympia-shot-2.webp" data-alt="A hand resting beside a ceramic cup on a wooden table, next to an Olympia speaker with its light on."><div class="sb-n">2</div><div class="file">olympia-shot-2.webp</div><div class="ph"><b>The second yes</b><span>Rosa decides separately.</span></div></div>
+<div class="sb-frame media" data-file="images/olympia-call-split.webp" data-alt="Two women in separate living rooms, each holding a cup of tea with an Olympia speaker close by, looking across as if in conversation."><div class="sb-n">3</div><div class="file">olympia-call-split.webp</div><div class="ph"><b>They meet</b><span>Olympia steps away.</span></div></div>
+<div class="sb-frame media" data-file="images/olympia-shot-4.webp" data-alt="A handwritten note reading “Phonecall 3:30 pm” on a table beside a cup of coffee."><div class="sb-n">4</div><div class="file">olympia-shot-4.webp</div><div class="ph"><b>After</b><span>Olympia checks in with each, privately.</span></div></div>
 </div>
 </div>
 </div>
@@ -3179,9 +3016,9 @@
 <section class="section dark" data-label="How matches are made" id="match">
 <div class="container match-grid">
 <div class="match-sticky">
-<span class="eyebrow op-full">05 · HOW MATCHES ARE MADE</span>
+<span class="eyebrow op-full">04 · HOW MATCHES ARE MADE</span>
 <h2><span class="serif">Why Rosa?</span></h2>
-<p class="body sd-muted-72 mw-400">Olympia narrows the pool to one candidate. Every introduction has a reason both people can understand, and Margaret can correct it before anything moves.</p>
+<p class="body sd-muted-72 mw-400">Olympia narrows the pool to one candidate.</p>
 </div>
 <div class="funnel">
 <div class="funnel-band">
@@ -3205,17 +3042,13 @@
 <div class="operator">
 <div class="operator-head"><div><div class="eyebrow c-muted">Human safeguarding review, during the pilot</div><strong class="operator-title">One candidate to consider</strong></div></div>
 <p class="body operator-note">A reviewer checks the relationship around the match as well as the shared interests.</p>
-<div class="match-person">
-<div class="match-box"><h4>Margaret</h4><p>Long conversations<br/>Music and stories<br/>Weekday afternoons</p></div>
-<div class="match-box"><h4>Rosa</h4><p>Long conversations<br/>Music and stories<br/>Thursday afternoons</p></div>
-</div>
 <div class="checklist">
 <div class="check-row"><span class="check-mark">✓</span><div><strong>Did each person choose the information being used?</strong><span>The reviewer works from what each has said they enjoy talking about.</span></div></div>
 <div class="check-row"><span class="check-mark">✓</span><div><strong>Is there any existing relationship that should prevent the match?</strong><span>Care, financial or professional ties change the decision.</span></div></div>
 <div class="check-row"><span class="check-mark">✓</span><div><strong>Can each person make the decision independently?</strong><span>The reviewer needs to be confident each can decide for themselves.</span></div></div>
 </div>
 <div class="check-divider mt-18b">THE OVERRIDE</div>
-<div class="side-callout callout-red-lg"><strong>DO NOT PROCEED</strong><br/>Any safety, identity, consent or privacy concern stops the introduction. If someone was already contacted, Olympia closes it without saying why.</div>
+<div class="side-callout callout-red-lg"><strong>DO NOT PROCEED</strong><br/>Any safety, identity, consent or privacy concern stops the introduction.</div>
 <div class="side-label">Not used for matching</div>
 <div class="excluded"><span>Health information</span><span>Private family circumstances</span><span>Financial information</span><span>Unrelated memories</span><span>Details the person has kept for Olympia alone</span></div>
 </div>
@@ -3223,25 +3056,9 @@
 </div>
 </div>
 </section>
-<section class="section green" data-label="The handoff" id="human">
-<div class="container call-grid">
-<div class="call-title"><span class="eyebrow op-full">06 · THE HANDOFF</span><h2>Then Olympia <span class="serif">leaves.</span></h2><p class="body mw-380">By the time they meet, each person knows why Olympia thought of the other. The rest belongs to them.</p></div>
-<div class="call-panel">
-<div class="call-media media" data-file="images/olympia-call-split.webp" data-alt="Two women in separate living rooms, each holding a cup of tea with an Olympia speaker close by, looking across as if in conversation."><div class="file">olympia-call-split.webp</div><div class="ph"><b>The first call</b><span>Margaret and Rosa, each in their own home.</span></div></div>
-</div>
-</div>
-<div class="container storyboard">
-<div class="sb-strip">
-<div class="sb-frame media" data-file="images/olympia-shot-1.webp" data-alt="Margaret on her sofa with a cup of tea, mid-sentence, with an Olympia speaker on the side table beside her."><div class="sb-n">1</div><div class="file">olympia-shot-1.webp</div><div class="ph"><b>The ask</b><span>Olympia offers Rosa and says why.</span></div></div>
-<div class="sb-frame media" data-file="images/olympia-shot-2.webp" data-alt="A hand resting beside a ceramic cup on a wooden table, next to an Olympia speaker with its light on."><div class="sb-n">2</div><div class="file">olympia-shot-2.webp</div><div class="ph"><b>The second yes</b><span>Rosa decides separately.</span></div></div>
-<div class="sb-frame media" data-file="images/olympia-shot-3.webp" data-alt="Seen through a doorway, Margaret sits on the sofa gesturing as she talks, an Olympia speaker on a table in the foreground."><div class="sb-n">3</div><div class="file">olympia-shot-3.webp</div><div class="ph"><b>They meet</b><span>Olympia steps away.</span></div></div>
-<div class="sb-frame media" data-file="images/olympia-shot-4.webp" data-alt="A handwritten note reading “Phonecall 3:30 pm” on a table beside a cup of coffee."><div class="sb-n">4</div><div class="file">olympia-shot-4.webp</div><div class="ph"><b>After</b><span>Olympia checks in with each, privately.</span></div></div>
-</div>
-</div>
-</section>
 <section class="section red" data-label="Pilot" id="pilot">
 <div class="container pilot-grid">
-<div class="pilot-sticky"><span class="eyebrow">07 · PILOT: LEARN BEFORE YOU SCALE</span><p class="pilot-number">30</p><p class="small">pairs in one language and time zone</p></div>
+<div class="pilot-sticky"><span class="eyebrow">05 · PILOT: LEARN BEFORE YOU SCALE</span><p class="pilot-number">30</p><p class="small">pairs in one language and time zone</p></div>
 <div class="pilot-main">
 <p class="pilot-copy">The first test is whether the service works as a relationship. Matching starts only when one language and time zone has enough active Olympia users, and Olympia’s real numbers set that threshold. Calls are recorded only if someone separately agrees.</p>
 <div class="gate-timeline gate-spacing">
@@ -3257,13 +3074,13 @@
 </div>
 </div>
 </section>
-<section class="section note-sec" data-label="Why I built both" id="note">
+<section class="section note-sec" data-label="Why both?" id="note">
 <div class="container founder-note">
-<span class="eyebrow">08 · BEFORE YOU GO</span>
+<span class="eyebrow">06 · BEFORE YOU GO</span>
 <p class="hand fn-title">Why I built both</p>
-<p class="body">Paolo, your post says you are building an interface that learns the person. What Olympia learns first is what someone loves talking about, and the best person to share that with is often another Olympia user. Introductions is that step.</p>
-<p class="body">I would ship the family app first, because families are a big part of how Olympia grows. Emma can check on her mum without being invasive, the care of an older adult is shared between relatives instead of falling to the favourite child, and they can see their mother is being social beyond the family without hearing what she said.</p>
-<p class="body">I built the family app to show Introductions in context, and as the other arm of what technology can do: keep someone company, and help them find company.</p>
+<p class="body">What Olympia learns first is what someone loves, and the best person to share that with is often another Olympia user. Introductions is that step.</p>
+<p class="body">Ship the family app first, because families are a big part of how Olympia grows. Emma can check on her mum without being invasive, the care of an older adult is shared between relatives instead of falling to the favourite child, and they can see their mother is being social beyond the family without hearing what she said.</p>
+<p class="body">The family app is to show Introductions in context, and as the other arm of what technology can do: keep someone company, and help them find company.</p>
 <p class="hand fn-sign">Essah</p>
 </div>
 </section>
@@ -3279,8 +3096,8 @@
 <h4>Three decisions that shaped it</h4>
 <ul>
 <li><b>Memory Book belongs to Margaret.</b> The stories are in her own words and she decides what is kept, by voice. Family reads and listens. She stays the only author.</li>
-<li><b>Alerts record who reached out.</b> Each card says who acted and how. The app does not record who looked, because read receipts would turn a calm app into a scoreboard between siblings. Anything older than a week settles into History.</li>
-<li><b>Olympia always says what she is doing.</b> A wellness check moves from "Olympia is checking in" to "Margaret is fine" or "Couldn't reach her", and a failure always offers Try again and Call Margaret. Every state has a next step.</li>
+<li><b>Alerts record who reached out.</b> Each card says who acted and how. The app does not note down who looked, because read receipts would turn a calm app into a scoreboard between siblings. Anything older than a week settles into History.</li>
+<li><b>Olympia always says what she is doing.</b> A wellness check moves from "Olympia is checking in" to "Margaret is fine" or "Couldn't reach her", and a failure always offers Try again and Call Margaret.</li>
 </ul>
 <details class="fn"><summary>More decisions</summary><ul><li><b>The badge lights for urgent alone.</b> A badge promises something deserves an interruption. Reserving it for urgent keeps that promise believable. Amber items wait inside the tab.</li>
 <li><b>Call Margaret lives on Today.</b> Inside an alert it would suggest calling is for emergencies. On Today it says a check-in is something families do on any day.</li>
@@ -4165,7 +3982,7 @@
     if (s.panel === "preference")
       return (
         common +
-        `<div class="proto-card dark"><div class="say o" style="--d:0s"><b>Olympia</b>“You’ve mentioned Nina Simone more than once, and you always talk longer once music comes into it. Would it be all right if I kept that in mind, for who I introduce you to?”</div><div class="say m" style="--d:0.8s"><b>Margaret</b>“Go on then. As long as it’s not a form about me.”</div><div class="say o" style="--d:1.6s"><b>Olympia</b>“No form. Just what you’ve already told me, kept somewhere I can find it. Though I’ll admit, the good conversations do tend to run long, don’t they.”</div><div class="say m" style="--d:2.4s"><b>Margaret</b>“They do. Weekday afternoons, mind, mornings are spoken for. The crossword doesn’t do itself.”</div><div class="say o" style="--d:3.2s"><b>Olympia</b>“Weekday afternoons it is.”</div><div class="tiny-caption">CONNECTION PREFERENCES · CONFIRMED WITH MARGARET</div><div class="chip-row"><span class="device-pill">Nina Simone</span><span class="device-pill">long conversations</span><span class="device-pill">weekday afternoons</span></div><div class="reason-box reason-dark">Nothing here was collected. It was already said. Olympia only asked permission to use it.</div></div>`
+        `<div class="proto-card dark"><div class="say o" style="--d:0s"><b>Olympia</b>“You’ve mentioned Nina Simone more than once, and you always talk longer once music comes into it. Would it be all right if I kept that in mind, for who I introduce you to?”</div><div class="say m" style="--d:0.8s"><b>Margaret</b>“Go on then. As long as it’s not a form about me.”</div><div class="say o" style="--d:1.6s"><b>Olympia</b>“No form. Just what you’ve already told me, kept somewhere I can find it. Though I’ll admit, the good conversations do tend to run long, don’t they.”</div><div class="say m" style="--d:2.4s"><b>Margaret</b>“They do. Weekday afternoons, mind, mornings are spoken for. The crossword doesn’t do itself.”</div><div class="say o" style="--d:3.2s"><b>Olympia</b>“Weekday afternoons it is.”</div><div class="tiny-caption">CONNECTION PREFERENCES · CONFIRMED WITH MARGARET</div><div class="chip-row"><span class="device-pill">Nina Simone</span><span class="device-pill">nostalgic conversations</span><span class="device-pill">weekday afternoons</span></div><div class="reason-box reason-dark">Nothing here was collected. It was already said. Olympia only asked permission to use it.</div></div>`
       );
     const D = STG[s.panel];
     if (D)
