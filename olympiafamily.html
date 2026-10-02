@@ -8,7 +8,13 @@
 <meta content="Olympia Family: connected prototype" property="og:title"/>
 <meta content="Prototype of the Olympia Family app: how relatives see how an older parent is doing, get alerts, and keep in touch without watching over them." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="summary" name="twitter:card"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="images/og-olympia-family.png" property="og:image"/>
+<meta content="The Today screen of the Olympia Family prototype" property="og:image:alt"/>
+<meta content="images/og-olympia-family.png" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=swap" rel="stylesheet"/>
 <style>
     :root {
       --pink-2: #fbc7d4;
@@ -27,8 +33,8 @@
       --person-accent: #e06b52;
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px);
-      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
-      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
       --ink: var(--t1);
       --gray: var(--t2);
       --gray-dark: var(--t2);
@@ -39,9 +45,10 @@
       --green: #3f7d2a;
       --r-lg: 20px;
       --r-md: 12px;
-      --shadow-card: none;
-      --bg: #faf9f9;
-      --surface: #fcfbf9;
+      --shadow-card: 0 0 0 1px rgba(40, 30, 20, 0.06), 0 1px 2px rgba(40, 30, 20, 0.06), 0 10px 22px -14px rgba(40, 30, 20, 0.24);
+      --bg: #fffdfa;
+      --fill: #f3efe8;
+      --surface: #fffdfa;
       --surface2: #fff;
       --t1: #1f1b18;
       --t2: #5f5851;
@@ -76,6 +83,7 @@
       color: var(--ink);
       font-family: var(--font-body);
       -webkit-font-smoothing: antialiased;
+      font-variant-numeric: tabular-nums;
       flex-direction: column;
       justify-content: flex-start;
       padding: 32px 24px 64px;
@@ -200,7 +208,7 @@
       border-radius: 20px;
       display: flex;
       align-items: center;
-      box-shadow: none;
+      cursor: default;
       padding: 24px 20px;
       gap: 16px;
       margin-bottom: 0;
@@ -219,6 +227,15 @@
       background: linear-gradient(135deg, var(--red-soft) 0%, #fdeee9 100%);
       --wave: #d70015;
       --wash: rgba(208, 67, 42, 0.15);
+    }
+    .hero[role="button"] {
+      cursor: pointer;
+    }
+    .hero:not([role="button"]) > .chev {
+      display: none;
+    }
+    .hero > .chev {
+      margin-left: auto;
     }
     .hero-icon {
       border-radius: 50%;
@@ -240,8 +257,9 @@
       color: var(--red);
     }
     .hero-title {
-      font: 700 32px/36px ui-rounded, "SF Pro Rounded", "Nunito", "Varela Round", var(--font-display);
+      font: 600 24px/30px var(--font-display);
       letter-spacing: -0.2px;
+      text-wrap: balance;
     }
     .hero-tag {
       display: inline-block;
@@ -279,7 +297,7 @@
       align-items: center;
       justify-content: center;
       font-size: 0.8125rem;
-      font-weight: 800;
+      font-weight: 700;
       font-family: var(--font-display);
       flex: none;
       position: relative;
@@ -306,7 +324,7 @@
       border-radius: 20px;
       background: var(--surface);
       border: none;
-      box-shadow: none;
+      box-shadow: var(--shadow-card);
       overflow: hidden;
       margin-bottom: 4px;
     }
@@ -388,7 +406,7 @@
     .discover-card {
       border-radius: 20px;
       border: none;
-      box-shadow: none;
+      box-shadow: var(--shadow-card);
       display: flex;
       align-items: center;
       gap: 12px;
@@ -450,7 +468,7 @@
       border-radius: 20px;
       background: var(--surface);
       border: none;
-      box-shadow: none;
+      box-shadow: var(--shadow-card);
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -570,7 +588,7 @@
       border: 1.5px solid var(--line);
       font-family: inherit;
       cursor: pointer;
-      background: var(--bg);
+      background: var(--fill);
       color: var(--accent-ink);
     }
     .wc-modal-cancel:active {
@@ -596,7 +614,7 @@
       font-size: 17px;
       border-radius: 14px;
       border: none;
-      background: var(--bg);
+      background: var(--fill);
     }
     .form-input:focus {
       outline: none;
@@ -614,7 +632,7 @@
       font-weight: 500;
       padding: 10px 14px;
       border: none;
-      background: var(--bg);
+      background: var(--fill);
       color: var(--t1);
       font-family: inherit;
       cursor: pointer;
@@ -664,7 +682,7 @@
       border-radius: var(--r-lg);
       align-items: flex-start;
       background: var(--surface);
-      box-shadow: none;
+      box-shadow: var(--shadow-card);
       border: none;
     }
     .mem-icon {
@@ -784,14 +802,15 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 0.8125rem;
-      font-weight: 800;
+      font-size: 1rem;
+      font-weight: 700;
       font-family: var(--font-display);
-      width: 44px;
-      height: 44px;
+      width: 52px;
+      height: 52px;
       position: relative;
       overflow: hidden;
       background: linear-gradient(135deg, #a2a2a7, #7c7c81);
+      margin: -3px -8px -3px 0;
     }
     .mav.you {
       background: linear-gradient(135deg, var(--accent), #3f7d2a);
@@ -908,7 +927,7 @@
       border-radius: 20px;
       background: var(--surface);
       border: none;
-      box-shadow: none;
+      box-shadow: var(--shadow-card);
       padding: 20px 16px 16px;
       margin-top: 24px;
     }
@@ -1032,7 +1051,7 @@
     .tone-card {
       border-radius: var(--r-lg);
       padding: 14px 15px;
-      box-shadow: 0 1px 2px rgba(40, 30, 20, 0.04), 0 10px 22px -16px rgba(40, 30, 20, 0.2);
+      box-shadow: var(--shadow-card);
       margin-bottom: 10px;
       display: flex;
       gap: 12px;
@@ -1198,7 +1217,7 @@
       font-size: 13px;
       padding: 8px 12px;
       border: none;
-      background: var(--bg);
+      background: var(--fill);
       color: var(--t1);
     }
     .state-btn.on {
@@ -1258,7 +1277,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 0.8125rem;
       flex: none;
       font-family: var(--font-display);
@@ -1683,14 +1702,12 @@
     }
     .lr:last-child {
       border-bottom: none;
-      align-items: flex-start;
-      padding-left: 16px;
     }
     .lr.tap {
       cursor: pointer;
     }
     .lr.tap:active {
-      background: var(--bg);
+      background: var(--fill);
     }
     .lic {
       width: 40px;
@@ -1735,14 +1752,12 @@
       color: var(--t2);
       margin-top: 2px;
     }
-    .lr:last-child .lb > span {
-      margin-bottom: 8px;
-    }
     .who {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-height: 40px;
+      padding-block: 12px;
+    }
+    .who .pf {
+      width: 40px;
+      height: 40px;
     }
     .who b {
       font-size: 17px;
@@ -1751,6 +1766,8 @@
     .who em {
       margin: 0 0 0 auto;
       font-size: 15px;
+      font-style: normal;
+      color: var(--t2);
     }
     .launch {
       position: absolute;
@@ -1807,7 +1824,7 @@
       background: linear-gradient( 120deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.28) ), linear-gradient(to top, var(--wash), transparent 62%), rgba(255, 254, 251, 0.6);
       -webkit-backdrop-filter: blur(22px) saturate(180%);
       backdrop-filter: blur(22px) saturate(180%);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), inset 0 0 0 1px rgba(255, 255, 255, 0.5), 0 12px 26px -18px rgba(40, 60, 30, 0.25);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), inset 0 0 0 1px rgba(255, 255, 255, 0.5), var(--shadow-card);
     }
     .hero::after {
       content: "";
@@ -1836,11 +1853,11 @@
     .call-pill, .intro-btn, .wc-modal-go, .chip.on, .state-btn.on {
       color: var(--on-accent);
     }
-    .tone-card.tappable, .discover-card, .call-row, .lr.tap, .link, .navbtn, .chip, .state-btn, .seg span, .icon-btn, .call-pill, .intro-btn, .wc-modal-go, .wc-modal-cancel, .intro-skip, .back, .expl-toggle {
+    .tone-card.tappable, .discover-card, .call-row, .hero[role="button"], .lr.tap, .link, .navbtn, .chip, .state-btn, .seg span, .icon-btn, .call-pill, .intro-btn, .wc-modal-go, .wc-modal-cancel, .intro-skip, .back, .expl-toggle {
       transition: transform 0.12s, opacity 0.12s, background-color 0.12s;
       -webkit-tap-highlight-color: transparent;
     }
-    .tone-card.tappable:active, .discover-card:active, .call-row:active {
+    .tone-card.tappable:active, .discover-card:active, .call-row:active, .hero[role="button"]:active {
       transform: scale(0.98);
       opacity: 0.85;
     }
@@ -1876,6 +1893,8 @@
         --glass: rgba(38, 34, 31, 0.72);
         --pop: rgba(38, 34, 31, 0.88);
         --gray-light: #5a554f;
+        --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.06);
+        --fill: var(--bg);
       }
       :root:not([data-theme="light"]) body {
         background: #0b0a09;
@@ -1883,7 +1902,7 @@
       :root:not([data-theme="light"]) .phone {
         background: #000;
       }
-      :root:not([data-theme="light"]) .sev-pill.r {
+      :root:not([data-theme="light"]) .sev-pill.r, :root:not([data-theme="light"]) .hero-tag.r {
         color: #ff7a70;
       }
       :root:not([data-theme="light"]) .sev-pill.a {
@@ -1897,7 +1916,7 @@
         --wave: #ff7a70;
         --wash: rgba(255, 90, 80, 0.14);
       }
-      :root:not([data-theme="light"]) .tile.g, :root:not([data-theme="light"]) .hero-icon.g {
+      :root:not([data-theme="light"]) .tile.g, :root:not([data-theme="light"]) .hero-icon.g, :root:not([data-theme="light"]) .hero-tag.g {
         color: #5fd07e;
       }
       :root:not([data-theme="light"]) .card-icon.amber, :root:not([data-theme="light"]) .tile.a {
@@ -1922,6 +1941,8 @@
       --glass: rgba(38, 34, 31, 0.72);
       --pop: rgba(38, 34, 31, 0.88);
       --gray-light: #5a554f;
+      --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.06);
+      --fill: var(--bg);
       --danger: #ff7a70;
       --lavc: #c9b8e8;
       --lav-bg: rgba(201, 184, 232, 0.16);
@@ -1934,7 +1955,7 @@
     :root[data-theme="dark"] .phone {
       background: #000;
     }
-    :root[data-theme="dark"] .sev-pill.r {
+    :root[data-theme="dark"] .sev-pill.r, :root[data-theme="dark"] .hero-tag.r {
       color: #ff7a70;
     }
     :root[data-theme="dark"] .sev-pill.a {
@@ -1948,7 +1969,7 @@
       --wave: #ff7a70;
       --wash: rgba(255, 90, 80, 0.14);
     }
-    :root[data-theme="dark"] .tile.g, :root[data-theme="dark"] .hero-icon.g {
+    :root[data-theme="dark"] .tile.g, :root[data-theme="dark"] .hero-icon.g, :root[data-theme="dark"] .hero-tag.g {
       color: #5fd07e;
     }
     :root[data-theme="dark"] .card-icon.amber, :root[data-theme="dark"] .tile.a {
@@ -2107,6 +2128,7 @@
       background: var(--surface);
       border-radius: 20px;
       padding: 24px 20px 20px;
+      box-shadow: var(--shadow-card);
     }
     .fresh-t {
       font: 600 28px/34px var(--font-display);
@@ -2368,6 +2390,7 @@
       border-radius: 20px;
       padding: 20px;
       margin-top: 12px;
+      box-shadow: var(--shadow-card);
     }
     .mem-card::before {
       content: "\201C";
@@ -2434,7 +2457,7 @@
       color: var(--ok);
     }
     .alerts-filled .tone-card.hist .card-icon {
-      background: var(--bg);
+      background: var(--fill);
       color: var(--t2);
     }
     .alerts-filled .tone-card.hist .alert-text {
@@ -2465,6 +2488,7 @@
       font: 600 17px/22px var(--font-body);
       cursor: pointer;
       text-align: left;
+      box-shadow: var(--shadow-card);
     }
     .hist-toggle span {
       flex: 1;
@@ -2605,7 +2629,7 @@
       align-items: center;
       justify-content: center;
       margin-top: 1px;
-      background: var(--bg);
+      background: var(--fill);
       color: var(--t2);
     }
     .st-dot svg {
@@ -2653,7 +2677,7 @@
       transition: opacity 0.12s, transform 0.12s;
     }
     .wcp-btn.sec {
-      background: var(--bg);
+      background: var(--fill);
       color: var(--accent-ink);
     }
     .wcp-btn:active {
@@ -2767,13 +2791,6 @@
         opacity: 1;
         transform: none;
       }
-    }
-    #view-alerts .head-name {
-      font-size: 34px;
-      line-height: 1.1;
-      letter-spacing: -0.8px;
-      font-family: ui-rounded, "SF Pro Rounded", "Nunito", var(--font-display);
-      font-weight: 700;
     }
     #view-alerts .head-sub {
       font-size: 15px;
@@ -3108,7 +3125,7 @@
       border-color: rgba(255, 59, 48, 0.3);
     }
     #markHandledBtn, #wcBtn {
-      background: var(--bg);
+      background: var(--fill);
       border: 1px solid var(--sep);
       padding: 11px 15px;
     }
@@ -3193,15 +3210,17 @@
 <div class="hero tone-green" id="statusCard">
 <div class="hero-icon g" id="statusTile"><svg class="icon" viewbox="0 0 24 24"><path d="M5 12l5 5 9-10"></path></svg></div>
 <div><div class="hero-title">Doing well today</div><span class="hero-tag g" id="statusTag">Nothing to flag</span></div>
+<span class="chev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span>
 </div>
 <div class="section-label">When you call</div>
 <div class="group-card">
-<div class="lr"><span class="lic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="lb"><span>Good time to call</span><h3>After 4pm</h3><em>She's usually up for a chat</em></div></div>
-<div class="lr tap" data-act="showMemoryAndOpen"><span class="lic"><svg class="icon" viewbox="0 0 24 24"><path d="M5 5.2c1.5-1 3.5-1 5 0v13.6c-1.5-1-3.5-1-5 0z"></path><path d="M19 5.2c-1.5-1-3.5-1-5 0v13.6c1.5-1 3.5-1 5 0z"></path></svg></span><div class="lb"><span>Something to ask about</span><h3>The bakery on Kirkstall Road</h3><em>From her Memory Book</em></div><span class="chev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></div>
-<div class="lr"><div class="lb"><span>Family last called</span>
-<div class="who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="David" data-remove-on-error src="images/david.webp"/></span><b data-who="david">David</b><em>yesterday</em></div>
-<div class="who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="You" data-remove-on-error src="images/emma.webp"/></span><b data-who="you">You</b><em>6 days ago</em></div></div></div>
+<div class="lr"><span class="lic"><svg class="icon" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="lb"><span>Good time to call</span><h3 id="callWhen">After 4pm</h3><em id="callWhy">She’s usually up for a chat</em></div></div>
+<div class="lr tap" data-act="showMemoryAndOpen"><span class="lic"><svg class="icon" viewbox="0 0 24 24"><path d="M12 6.5C10.3 5.3 8 4.8 4.5 5v12.5c3.5-.2 5.8.3 7.5 1.5 1.7-1.2 4-1.7 7.5-1.5V5C16 4.8 13.7 5.3 12 6.5z"></path><path d="M12 6.5V19"></path></svg></span><div class="lb"><span>Something to ask about</span><h3>The bakery on Kirkstall Road</h3><em>From her Memory Book</em></div><span class="chev"><svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></div>
 </div>
+<div class="section-label">Family last called</div>
+<div class="group-card">
+<div class="lr who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="David" data-remove-on-error src="images/david.webp"/></span><b data-who="david">David</b><em>yesterday</em></div>
+<div class="lr who"><span class="pf"><svg class="face" viewbox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4 20c0-4.5 3.6-7 8-7s8 2.5 8 7z"></path></svg><img alt="You" data-remove-on-error src="images/emma.webp"/></span><b data-who="you">You</b><em>6 days ago</em></div></div>
 <div class="section-label conn-section">Introductions</div>
 <div class="conn-section">
 <div class="discover-card conn-active-only" data-act="openDetail">
@@ -3248,7 +3267,7 @@
 <div class="group-card" id="view-settings-care">
 <div class="row care-unset" style="flex-direction:column;align-items:stretch;gap:9px;padding-top:13px;padding-bottom:13px;border-bottom:none">
 <div style="display:flex;gap:11px;align-items:center">
-<span class="tile" style="width:34px;height:34px;background:var(--bg);color:var(--t2)"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" fill="currentColor" r=".5" stroke="none"></circle></svg></span>
+<span class="tile" style="width:34px;height:34px;background:var(--fill);color:var(--t2)"><svg class="icon" style="width:16px;height:16px" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" fill="currentColor" r=".5" stroke="none"></circle></svg></span>
 <div class="fill"><div class="member-name">No one set yet</div><div class="member-access" id="careUnsetSub">If you request a check-in and Margaret doesn't answer, this is who Olympia tries next.</div></div>
 </div>
 <button class="link care-edit" data-act="openCareModal" style="padding:0;border-bottom:none" type="button">Add a care contact <svg class="icon" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button>
@@ -3369,7 +3388,7 @@
 </div>
 <div aria-label="Sections" class="navbar" role="tablist">
 <button type="button" aria-controls="view-today" aria-selected="true" class="navbtn active" data-act="showTab" data-args='["today"]' id="nav-today" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5"></path><path d="M6 10v9h5v-5h2v5h5v-9"></path></svg>Today</button>
-<button type="button" aria-controls="view-memory" aria-selected="false" class="navbtn" data-act="showTab" data-args='["memory"]' id="nav-memory" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M5 5.2c1.5-1 3.5-1 5 0v13.6c-1.5-1-3.5-1-5 0z"></path><path d="M19 5.2c-1.5-1-3.5-1-5 0v13.6c1.5-1 3.5-1 5 0z"></path></svg>Memory Book</button>
+<button type="button" aria-controls="view-memory" aria-selected="false" class="navbtn" data-act="showTab" data-args='["memory"]' id="nav-memory" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M12 6.5C10.3 5.3 8 4.8 4.5 5v12.5c3.5-.2 5.8.3 7.5 1.5 1.7-1.2 4-1.7 7.5-1.5V5C16 4.8 13.7 5.3 12 6.5z"></path><path d="M12 6.5V19"></path></svg>Memory Book</button>
 <button type="button" aria-controls="view-alerts" aria-selected="false" class="navbtn" data-act="showTab" data-args='["alerts"]' id="nav-alerts" role="tab"><svg class="icon" viewbox="0 0 24 24"><path d="M7 9a5 5 0 0110 0c0 4.3 1.6 5.6 1.6 5.6H5.4S7 13.3 7 9z"></path><path d="M10.4 17.6a1.6 1.6 0 003.2 0"></path></svg>Alerts<span aria-hidden="true" class="badge" id="alertBadge"></span></button>
 <button type="button" aria-controls="view-settings" aria-selected="false" class="navbtn" data-act="showTab" data-args='["settings"]' id="nav-settings" role="tab"><svg class="icon" viewbox="0 0 24 24"><circle cx="9" cy="8" r="2.6"></circle><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5"></path><circle cx="17" cy="9" opacity=".55" r="2"></circle><path d="M14.6 14.3c2.1.4 3.7 2.1 3.7 4.2" opacity=".55"></path></svg>Family</button>
 </div>
@@ -3944,14 +3963,22 @@
   function fmt(d) {
     return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
   }
+  const HER_AHEAD_H = 5; // prototype: Margaret is 5 hours ahead of the viewer
   function tick() {
-    let d = new Date();
+    let d = new Date(),
+      her = new Date(+d + HER_AHEAD_H * 36e5),
+      late = her.getHours() >= 20,
+      asleep = late || her.getHours() < 7;
     $("clk").textContent = fmt(d).replace(/\s?[AP]M/i, "");
+    $("callWhen").textContent = late ? "Tomorrow after 4pm" : "After 4pm";
+    $("callWhy").textContent = asleep
+      ? "It\u2019s late for her now"
+      : "She\u2019s usually up for a chat";
     let z = $("tzLine");
     z.style.display = tzOn ? "block" : "none";
     z.textContent =
       "It\u2019s " +
-      fmt(new Date(+d + 5 * 36e5)).replace(/\s?([AP])M/i, function (m, x) {
+      fmt(her).replace(/\s?([AP])M/i, function (m, x) {
         return x.toLowerCase() + "m";
       }) +
       " for Margaret";
@@ -4378,6 +4405,12 @@
         e.target.remove();
     },
     true,
+  );
+  [].forEach.call(
+    document.querySelectorAll("img[data-remove-on-error]"),
+    function (img) {
+      if (img.complete && !img.naturalWidth) img.remove();
+    },
   );
   renderPeople();
   renderMe();
@@ -5065,6 +5098,7 @@
     h.classList.toggle("tone-green", n === 0);
     h.querySelector(".hero-title").textContent =
       n > 0 ? "Needs your attention" : "Doing well today";
+    $("statusTag").className = "hero-tag " + (n > 0 ? "r" : "g");
     $("statusTag").textContent =
       n > 0
         ? n +
